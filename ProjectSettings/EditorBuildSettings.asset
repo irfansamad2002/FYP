@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scene/Marcus.unity
     guid: 0e6618897660ed14eb8bcbe0e15916b3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/Main Scene.unity
     guid: ee5a79b8c0ff9a940991a3321e2a18d5
   - enabled: 1
