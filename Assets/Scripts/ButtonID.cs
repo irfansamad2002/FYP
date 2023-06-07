@@ -6,9 +6,18 @@ public class ButtonID : MonoBehaviour
 {
 
     public ButtonENUM buttonID;
+    public DTHEnum dthButtonID;
 
     public void AssignBackButtonID()
     {
         ButtonReferenceManager.Instance.storedButtonID = buttonID;
+        Debug.Log("stored buttonID with" + buttonID);
+    }
+
+    public void AssignDTHButtonID()
+    {
+        ButtonReferenceManager.Instance.storedDTHButtonID = dthButtonID;
+        Debug.Log("stored dthButtonID with" + dthButtonID);
+
     }
 }

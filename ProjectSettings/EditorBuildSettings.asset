@@ -5,15 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scene/Marcus.unity
-    guid: 0e6618897660ed14eb8bcbe0e15916b3
   - enabled: 1
     path: Assets/Scene/Main Scene.unity
     guid: ee5a79b8c0ff9a940991a3321e2a18d5
-  - enabled: 0
-    path: Assets/Scene/Vuforia_Sample.unity
-    guid: 6dfc1fb7cada32742bb9db9716f399fa
+  - enabled: 1
+    path: Assets/Scene/AR Scene.unity
+    guid: 0c217fc635c399344a47a3f1804e3be1
+  - enabled: 1
+    path: Assets/Scene/Demo Videos.unity
+    guid: 336eb0dc2f87a2448906192dcf5a4bfa
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: e852e3ebeb934c742b3ccc96c3559b15, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: a1232e9f205092147a90b19be2a6205e, type: 2}

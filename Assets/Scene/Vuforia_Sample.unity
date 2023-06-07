@@ -1709,10 +1709,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1717065121}
   mHiddenRoot: {fileID: 0}
-  mTargetName: botol
-  mDatasetName: Vuforia/botol.xml
+  mTargetName: planebotol
+  mDatasetName: Vuforia/planebotol.xml
   mCastedBehaviour: {fileID: 1717065121}
-  mModelScale: {x: 0.21001, y: 0.067616, z: 0.21001}
+  mModelScale: {x: 0.169528, y: 0.070634, z: 0.169528}
   mModelTargetPreview: {fileID: 0}
 --- !u!114 &1717065120
 MonoBehaviour:
@@ -1773,20 +1773,20 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: botol
+  mTrackableName: planebotol
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/botol.xml
-  mBaseSize: 0.21001
-  mAspectRatioXY: 0.3219656
+  mDataSetPath: Vuforia/planebotol.xml
+  mBaseSize: 0.169528
+  mAspectRatioXY: 0.41665095
   mAspectRatioXZ: 1
   mShowBoundingBox: 0
   mOverrideSnappingPose: 0
-  mBBoxMin: {x: -0.105005, y: -0.005005, z: -0.105005}
-  mBBoxMax: {x: 0.105005, y: 0.062611, z: 0.105005}
+  mBBoxMin: {x: -0.084764, y: -0.00429, z: -0.084764}
+  mBBoxMax: {x: 0.084764, y: 0.066344, z: 0.084764}
   mPreviewImage: {fileID: 0}
-  mLength: 0.21001
-  mWidth: 0.067616
-  mHeight: 0.21001
+  mLength: 0.169528
+  mWidth: 0.070634
+  mHeight: 0.169528
   m3DGuideViewModel: {fileID: 0}
   m2DGuideViewImage: {fileID: 0}
   mGuideViewDisplayMode: 0
