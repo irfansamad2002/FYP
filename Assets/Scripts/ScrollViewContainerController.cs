@@ -4,8 +4,8 @@ using UnityEngine.UI;
 
 public class ScrollViewContainerController : MonoBehaviour
 {
-    public GameObject containerPrefab;
-    public ScrollRect scroll;
+    [SerializeField] private GameObject containerPrefab;
+    [SerializeField] private ScrollRect scroll;
 
     // Start is called before the first frame update
     void Start()
@@ -23,5 +23,13 @@ public class ScrollViewContainerController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void GenerateContainer()
+    {
+        GameObject container = Instantiate(containerPrefab, scroll.content);
+        RectTransform rectTransformContainer = (RectTransform)containerPrefab.transform;
+        float containerHeight = rectTransformContainer.rect.height;
+        scroll.content.sizeDelta = new Vector3(scroll.content.sizeDelta.x, scroll.content.sizeDelta.y + containerHeight);
     }
 }
