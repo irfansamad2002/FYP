@@ -501,7 +501,7 @@ GameObject:
   - component: {fileID: 9089795221559233933}
   - component: {fileID: 9089795221559233936}
   m_Layer: 5
-  m_Name: Scroll View
+  m_Name: Tool Selection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -647,7 +647,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0010206582}
+  m_AnchoredPosition: {x: 0, y: 0.0010197755}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &9089795221691276827
@@ -798,7 +798,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 9089795222905378657}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.9999982
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
