@@ -14,35 +14,30 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject MainMenu;
     [SerializeField] private Button DentalTherapyButton;
     [SerializeField] private Button DentalHealthButton;
+    [SerializeField] private Button ScanButton; 
 
-    [Header("Selection Screen")]
-    [SerializeField] private GameObject SelectionMenu;
-    [SerializeField] private Button ToolsButton;
-    [SerializeField] private Button AssessmentButton;
-    [SerializeField] private Button ScanButton;
+    //[Header("Selection Screen")]
+    //[SerializeField] private GameObject MainMenu;
+    //[SerializeField] private Button ToolsButton;
+    //[SerializeField] private Button AssessmentButton;
 
     [Header("Tool Selection")]
     [SerializeField] private GameObject ToolSelectionMenu;
+    [SerializeField] private GameObject AssessmentButton;
 
     [Header("Tool Info")]
     [SerializeField] private GameObject ToolInfoMenu;
-    [SerializeField] private TMP_Text InfoText;
-    [SerializeField] private Button ToolAssessmentButton;
     [SerializeField] private Button DemoVideoButton;
-
-    [Header("Assessment")]
-    [SerializeField] private GameObject AssessmentMenu;
 
     public SceneChanger sceneChanger;
 
     void Start()
     {
-        //HomeButton.SetActive(false);
-        //BackButton.SetActive(false);
-        //MainMenu.SetActive(true);
-        //SelectionMenu.SetActive(false);
-        //ToolSelectionMenu.SetActive(false);
-        //ToolInfoMenu.SetActive(false);
+        HomeButton.SetActive(false);
+        BackButton.SetActive(false);
+        MainMenu.SetActive(true);
+        ToolSelectionMenu.SetActive(false);
+        ToolInfoMenu.SetActive(false);
         //AssessmentMenu.SetActive(false);
 
         sceneChanger = GetComponent<SceneChanger>();
@@ -52,7 +47,7 @@ public class MenuManager : MonoBehaviour
     public void OnDTHClicked()
     {
         MainMenu.SetActive(false);
-        SelectionMenu.SetActive(true);
+        MainMenu.SetActive(true);
         HomeButton.SetActive(true);
     }
 
@@ -60,7 +55,7 @@ public class MenuManager : MonoBehaviour
     #region selection screen buttons
     public void OnToolsClicked()
     {
-        SelectionMenu.SetActive(false);
+        MainMenu.SetActive(false);
         ToolSelectionMenu.SetActive(true);
         HomeButton.SetActive(false);
         BackButton.SetActive(true);
@@ -68,10 +63,8 @@ public class MenuManager : MonoBehaviour
 
     public void OnAssessmentClicked()
     {
-        SelectionMenu.SetActive(false);
-        AssessmentMenu.SetActive(true);
-        HomeButton.SetActive(false);
-        BackButton.SetActive(true);
+        // change to assessment scene
+        sceneChanger.ChangeToAssessmentScene();
     }
 
     public void OnScanClicked()
@@ -91,12 +84,12 @@ public class MenuManager : MonoBehaviour
     #endregion
 
     #region Tool info screen
-    public void OnToolAssessmentClicked()
-    {
-        ToolInfoMenu.SetActive(false);
-        AssessmentMenu.SetActive(true);
-        BackButton.SetActive(true);
-    }
+    //public void OnToolAssessmentClicked()
+    //{
+    //    ToolInfoMenu.SetActive(false);
+    //    AssessmentMenu.SetActive(true);
+    //    BackButton.SetActive(true);
+    //}
 
     public void OnDemoVidClicked()
     {
@@ -108,13 +101,11 @@ public class MenuManager : MonoBehaviour
 
     public void OnHomeClicked()
     {
-        HomeButton.SetActive(true);
-        MainMenu.SetActive(true);
+        HomeButton.SetActive(false);
         BackButton.SetActive(false);
-        SelectionMenu.SetActive(false);
+        MainMenu.SetActive(true);
         ToolSelectionMenu.SetActive(false);
         ToolInfoMenu.SetActive(false);
-        AssessmentMenu.SetActive(false);
     }
 
     // Update is called once per frame

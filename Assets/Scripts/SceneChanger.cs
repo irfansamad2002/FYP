@@ -20,4 +20,9 @@ public class SceneChanger : MonoBehaviour
     {
         SceneManager.LoadScene("Main Scene");
     }
+
+    public void ChangeToAssessmentScene()
+    {
+        SceneManager.LoadScene("Assessment Scene");
+    }
 }
