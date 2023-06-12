@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class BackController : MonoBehaviour
 {
-    
-    // Start is called before the first frame update
+    public MenuManager menuManager;
+    public SceneChanger sceneChanger;
+
     void Start()
     {
-        
+        menuManager = GetComponent<MenuManager>();
+        sceneChanger = GetComponent<SceneChanger>();
     }
 
     // Update is called once per frame
@@ -45,14 +47,23 @@ public class BackController : MonoBehaviour
         switch (storedButtonID)
         {
             case ButtonENUM.MAINSCENE:
+                menuManager.OnHomeClicked();
                 break;
             case ButtonENUM.SELECTIONSCREEN:
+                menuManager.OnToolClicked();
                 break;
             case ButtonENUM.ARBIT:
+                sceneChanger.ChangeToARScene();
                 break;
             case ButtonENUM.TOOLINFO:
+                sceneChanger.ChangeToMainScene();
+                menuManager.OnToolClicked();
                 break;
             case ButtonENUM.ASSESSMENT:
+                sceneChanger.ChangeToAssessmentScene();
+                break;
+            case ButtonENUM.DEMOVID:
+                sceneChanger.ChangeToVideoScene();
                 break;
         }
     }

@@ -38,7 +38,6 @@ public class MenuManager : MonoBehaviour
         MainMenu.SetActive(true);
         ToolSelectionMenu.SetActive(false);
         ToolInfoMenu.SetActive(false);
-        //AssessmentMenu.SetActive(false);
 
         sceneChanger = GetComponent<SceneChanger>();
     }
@@ -53,7 +52,7 @@ public class MenuManager : MonoBehaviour
 
 
     #region selection screen buttons
-    public void OnToolsClicked()
+    public void OnToolSelectClicked()
     {
         MainMenu.SetActive(false);
         ToolSelectionMenu.SetActive(true);
@@ -70,7 +69,7 @@ public class MenuManager : MonoBehaviour
     public void OnScanClicked()
     {
         // change to AR scene
-        sceneChanger.ChangeToARScene();
+        //sceneChanger.ChangeToARScene();
     }
     #endregion
 
@@ -84,13 +83,6 @@ public class MenuManager : MonoBehaviour
     #endregion
 
     #region Tool info screen
-    //public void OnToolAssessmentClicked()
-    //{
-    //    ToolInfoMenu.SetActive(false);
-    //    AssessmentMenu.SetActive(true);
-    //    BackButton.SetActive(true);
-    //}
-
     public void OnDemoVidClicked()
     {
         ToolInfoMenu.SetActive(false);
@@ -106,6 +98,31 @@ public class MenuManager : MonoBehaviour
         MainMenu.SetActive(true);
         ToolSelectionMenu.SetActive(false);
         ToolInfoMenu.SetActive(false);
+    }
+
+    // main menu active 
+    public void MainMenuActive()
+    {
+        HomeButton.SetActive(false);
+        BackButton.SetActive(false);
+        MainMenu.SetActive(true);
+        ToolSelectionMenu.SetActive(false);
+        ToolInfoMenu.SetActive(false);
+    }
+    // tool selection screen active
+    public void ToolSelectActive()
+    {
+        MainMenu.SetActive(false);
+        ToolSelectionMenu.SetActive(true);
+        HomeButton.SetActive(true);
+    }
+
+    // tool info screen active
+    public void ToolInfoActive()
+    {
+        ToolSelectionMenu.SetActive(false);
+        ToolInfoMenu.SetActive(true);
+        BackButton.SetActive(true);
     }
 
     // Update is called once per frame

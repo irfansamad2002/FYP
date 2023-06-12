@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/Assessment Scene.unity
     guid: 0e975ca794bc5f545a12213dacdce344
+  - enabled: 0
+    path: Assets/Scene/Vuforia_Sample.unity
+    guid: 6dfc1fb7cada32742bb9db9716f399fa
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: e852e3ebeb934c742b3ccc96c3559b15, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: a1232e9f205092147a90b19be2a6205e, type: 2}
