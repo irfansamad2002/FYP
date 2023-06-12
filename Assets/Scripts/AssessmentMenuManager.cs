@@ -21,11 +21,11 @@ public class AssessmentMenuManager : MonoBehaviour
     void Start()
     {
         TopParent.SetActive(true);
-        BackButton.SetActive(true);
         HomeButton.SetActive(false);
+        BackButton.SetActive(true);
         AssessmentMenu.SetActive(true);
 
-        sceneChanger = GetComponent<SceneChanger>();
+        
     }
 
     public void OnHomeClicked()

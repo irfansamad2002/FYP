@@ -39,7 +39,6 @@ public class MenuManager : MonoBehaviour
         ToolSelectionMenu.SetActive(false);
         ToolInfoMenu.SetActive(false);
 
-        sceneChanger = GetComponent<SceneChanger>();
     }
 
     // main menu page
@@ -47,7 +46,7 @@ public class MenuManager : MonoBehaviour
     {
         MainMenu.SetActive(false);
         ToolSelectionMenu.SetActive(true);
-        HomeButton.SetActive(true);
+        BackButton.SetActive(true);
     }
 
 
@@ -69,7 +68,7 @@ public class MenuManager : MonoBehaviour
     public void OnScanClicked()
     {
         // change to AR scene
-        //sceneChanger.ChangeToARScene();
+        sceneChanger.ChangeToARScene();
     }
     #endregion
 

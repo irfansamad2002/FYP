@@ -740,6 +740,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd21c70b35e4f34419c2ce2ba0a483ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuManager: {fileID: 0}
+  sceneChanger: {fileID: 0}
 --- !u!114 &465922609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -752,8 +754,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ac56625a33399a41b6fa88a127d1b7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonID: 0
-  dthButtonID: 0
+  buttonID: 2
+  dthButtonID: 2
 --- !u!114 &465922610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1359,8 +1361,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 679485585}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 312.37704, y: 1075.4701, z: 64.052246}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 312.37708, y: 1075.4701, z: 64.052246}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
