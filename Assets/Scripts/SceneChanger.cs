@@ -10,12 +10,10 @@ public class SceneChanger : MonoBehaviour
         SceneManager.LoadScene("AR Scene");
         
     }
-    
     public void ChangeToVideoScene()
     {
         SceneManager.LoadScene("Demo Videos");
     }
-
     public void ChangeToMainScene()
     {
         SceneManager.LoadScene("Main Scene");

@@ -14,8 +14,9 @@ public class ScrollViewContainerController : MonoBehaviour
     
     void Start()
     {
-        Debug.Log(ButtonReferenceManager.Instance.GetToolData(0,DTHEnum.DH).Instrumentation);
-
+        foreach (DentistTool dentistTools in ButtonReferenceManager.Instance.DHToolDatabase.Values) {
+            GenerateContainerWithTool(dentistTools);
+        }
     }
     private void Awake()
     {
@@ -32,7 +33,8 @@ public class ScrollViewContainerController : MonoBehaviour
     }
     void GenerateContainerWithTool(DentistTool dentistTool)
     {
-
+        GameObject container = Instantiate(containerPrefab, scroll.content);
+        container.GetComponent<AppIconContainerController>().Initialize(dentistTool.Icon, dentistTool.Name);
     }
     
 

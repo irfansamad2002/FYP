@@ -47,7 +47,7 @@ public class MenuManager : MonoBehaviour
     public void OnDTHClicked()
     {
         MainMenu.SetActive(false);
-        MainMenu.SetActive(true);
+        ToolSelectionMenu.SetActive(true);
         HomeButton.SetActive(true);
     }
 
