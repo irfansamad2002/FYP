@@ -1,6 +1,8 @@
 using System;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class ScrollViewContainerController : MonoBehaviour
 {
@@ -8,15 +10,19 @@ public class ScrollViewContainerController : MonoBehaviour
     [SerializeField] private ScrollRect scroll;
 
     // Start is called before the first frame update
+
+    
     void Start()
     {
-        SetupContent();
-        
-    }
+        Debug.Log(ButtonReferenceManager.Instance.GetToolData(0,DTHEnum.DH).Instrumentation);
 
+    }
+    private void Awake()
+    {
+        //Debug.Log(ButtonReferenceManager.Instance.GetToolData(0, DTHEnum.DH));
+    }
     private void SetupContent()
     {
-        scroll.content.sizeDelta = new Vector3(scroll.content.sizeDelta.x, 0);
     }
 
     // Update is called once per frame
@@ -24,12 +30,22 @@ public class ScrollViewContainerController : MonoBehaviour
     {
         
     }
-
-    public void GenerateContainer()
+    void GenerateContainerWithTool(DentistTool dentistTool)
     {
-        GameObject container = Instantiate(containerPrefab, scroll.content);
-        RectTransform rectTransformContainer = (RectTransform)containerPrefab.transform;
-        float containerHeight = rectTransformContainer.rect.height;
-        scroll.content.sizeDelta = new Vector3(scroll.content.sizeDelta.x, scroll.content.sizeDelta.y + containerHeight);
+
+    }
+    
+
+    void LoadTools(DTHEnum dthEnum)
+    {
+        if (dthEnum == DTHEnum.DT) {
+
+        }
+        else if (dthEnum == DTHEnum.DH) {
+            
+        }
+        else {
+            Debug.Log("Something sus goin on... check if u set the DTHEnum correctly, should be DT or DH and not NONE");
+        }
     }
 }

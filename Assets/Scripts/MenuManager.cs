@@ -33,11 +33,11 @@ public class MenuManager : MonoBehaviour
 
     void Start()
     {
-        HomeButton.SetActive(false);
-        BackButton.SetActive(false);
-        MainMenu.SetActive(true);
-        ToolSelectionMenu.SetActive(false);
-        ToolInfoMenu.SetActive(false);
+        //HomeButton.SetActive(false);
+        //BackButton.SetActive(false);
+        //MainMenu.SetActive(true);
+        //ToolSelectionMenu.SetActive(false);
+        //ToolInfoMenu.SetActive(false);
         //AssessmentMenu.SetActive(false);
 
         sceneChanger = GetComponent<SceneChanger>();
