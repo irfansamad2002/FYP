@@ -31,13 +31,19 @@ public class MenuManager : MonoBehaviour
 
     public SceneChanger sceneChanger;
 
+    [Header("Toogle On if want to start from Menu")]
+    [SerializeField] private bool startFromMenu;
+
     void Start()
     {
-        HomeButton.SetActive(false);
-        BackButton.SetActive(false);
-        MainMenu.SetActive(true);
-        ToolSelectionMenu.SetActive(false);
-        ToolInfoMenu.SetActive(false);
+        if (startFromMenu)
+        {
+            HomeButton.SetActive(false);
+            BackButton.SetActive(false);
+            MainMenu.SetActive(true);
+            ToolSelectionMenu.SetActive(false);
+            ToolInfoMenu.SetActive(false);
+        }
 
     }
 

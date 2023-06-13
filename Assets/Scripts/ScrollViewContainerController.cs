@@ -14,13 +14,7 @@ public class ScrollViewContainerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        LoadTheContent(DTHEnum.DH);//dt for now
-        LoadTheContent(DTHEnum.DH);//dt for now
-        LoadTheContent(DTHEnum.DH);//dt for now
-        LoadTheContent(DTHEnum.DH);//dt for now
-
-        ClearContent();
-        LoadTheContent(DTHEnum.DH);//dt for now
+       
     }
 
     public void LoadTheContent(DTHEnum dth)
@@ -65,5 +59,13 @@ public class ScrollViewContainerController : MonoBehaviour
             GameObject.Destroy(child.gameObject);
         }
     }
-   
+
+    private void OnEnable()
+    {
+        Debug.Log("On the tool selection");
+        ClearContent();
+        if(ButtonReferenceManager.Instance)
+            LoadTheContent(ButtonReferenceManager.Instance.storedDTHButtonID);
+    }
+
 }
