@@ -214,7 +214,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &133893080
 Transform:
   m_ObjectHideFlags: 0
@@ -1585,6 +1585,8 @@ MonoBehaviour:
   bottleButton: {fileID: 1902848111}
   spiderButton: {fileID: 336297532}
   videoCanvas: {fileID: 2081232100}
+  BottlebackButton: {fileID: 0}
+  SpiderbackButton: {fileID: 0}
 --- !u!4 &710326575
 Transform:
   m_ObjectHideFlags: 0
@@ -2256,7 +2258,6 @@ GameObject:
   m_Component:
   - component: {fileID: 979321485}
   - component: {fileID: 979321484}
-  - component: {fileID: 979321486}
   m_Layer: 0
   m_Name: ARMenuManager
   m_TagString: Untagged
@@ -2283,7 +2284,7 @@ MonoBehaviour:
   ToolInfoButton: {fileID: 251129423}
   ToolInfoMenu: {fileID: 875794967}
   DemoVideoButton: {fileID: 1837620729}
-  sceneChanger: {fileID: 979321486}
+  sceneChanger: {fileID: 1994893970}
 --- !u!4 &979321485
 Transform:
   m_ObjectHideFlags: 0
@@ -2299,18 +2300,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &979321486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 979321483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25f713dcc29a7264eb02090b2f3a25ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1028933749
 GameObject:
   m_ObjectHideFlags: 0
@@ -5468,6 +5457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd21c70b35e4f34419c2ce2ba0a483ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuManager: {fileID: 0}
 --- !u!114 &1964762814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5576,6 +5566,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1964762811}
   m_CullTransparentMesh: 1
+--- !u!1 &1994893969
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1994893971}
+  - component: {fileID: 1994893970}
+  m_Layer: 0
+  m_Name: SceneChanger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1994893970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994893969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f713dcc29a7264eb02090b2f3a25ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1994893971
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994893969}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 201.12653, y: 909.47925, z: -128.60976}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2021732455
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class BackController : MonoBehaviour
 {
-    
-    // Start is called before the first frame update
+    public MenuManager menuManager;
+
     void Start()
     {
-        
+        ////menuManager = GetComponent<MenuManager>();
+        //sceneChanger = GetComponent<SceneChanger>();
+        //SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     // Update is called once per frame
@@ -21,8 +23,7 @@ public class BackController : MonoBehaviour
 
     public void GoBackTo()
     {
-        Debug.Log("id" + ButtonReferenceManager.Instance.storedButtonID);
-        Debug.Log("dth" + ButtonReferenceManager.Instance.storedDTHButtonID);
+        
 
         if(checkIfInMainScene())
         {
@@ -30,6 +31,7 @@ public class BackController : MonoBehaviour
         }
         else
         {
+
             changeBackToOldScene();
         }
 
@@ -37,7 +39,8 @@ public class BackController : MonoBehaviour
 
     private void changeBackToOldScene()
     {
-
+        Debug.Log("Go back to " + ButtonReferenceManager.Instance.storedButtonID + " scene with dthEnum " + ButtonReferenceManager.Instance.storedDTHButtonID);
+        SceneChanger.Instance.ChangeToMainScene();
     }
 
     private void TurnOnOffGameObj(ButtonENUM storedButtonID, DTHEnum storedDTHButtonID)
@@ -45,14 +48,23 @@ public class BackController : MonoBehaviour
         switch (storedButtonID)
         {
             case ButtonENUM.MAINSCENE:
+                menuManager.OnHomeClicked();
                 break;
             case ButtonENUM.SELECTIONSCREEN:
+                menuManager.OnToolClicked();
                 break;
             case ButtonENUM.ARBIT:
+                SceneChanger.Instance.ChangeToARScene();
                 break;
             case ButtonENUM.TOOLINFO:
+                SceneChanger.Instance.ChangeToMainScene();
+                menuManager.OnToolClicked();
                 break;
             case ButtonENUM.ASSESSMENT:
+                SceneChanger.Instance.ChangeToAssessmentScene();
+                break;
+            case ButtonENUM.DEMOVID:
+                SceneChanger.Instance.ChangeToVideoScene();
                 break;
         }
     }
@@ -68,6 +80,8 @@ public class BackController : MonoBehaviour
             return false;
         }
     }
+
+
 }
 
 
