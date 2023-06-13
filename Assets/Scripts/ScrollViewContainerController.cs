@@ -14,7 +14,7 @@ public class ScrollViewContainerController : MonoBehaviour
     
     void Start()
     {
-        foreach (DentistTool dentistTools in ButtonReferenceManager.Instance.DHToolDatabase.Values) {
+        foreach (DentistTool dentistTools in ButtonReferenceManager.Instance.dhTools) {
             GenerateContainerWithTool(dentistTools);
         }
     }
