@@ -8,46 +8,62 @@ public class ScrollViewContainerController : MonoBehaviour
 {
     [SerializeField] private GameObject containerPrefab;
     [SerializeField] private ScrollRect scroll;
+    [SerializeField] private Transform contentTransform;
+
 
     // Start is called before the first frame update
-
-    
     void Start()
     {
-        foreach (DentistTool dentistTools in ButtonReferenceManager.Instance.dhTools) {
-            GenerateContainerWithTool(dentistTools);
-        }
-    }
-    private void Awake()
-    {
-        //Debug.Log(ButtonReferenceManager.Instance.GetToolData(0, DTHEnum.DH));
-    }
-    private void SetupContent()
-    {
+        LoadTheContent(DTHEnum.DH);//dt for now
+        LoadTheContent(DTHEnum.DH);//dt for now
+        LoadTheContent(DTHEnum.DH);//dt for now
+        LoadTheContent(DTHEnum.DH);//dt for now
+
+        ClearContent();
+        LoadTheContent(DTHEnum.DH);//dt for now
     }
 
-    // Update is called once per frame
-    void Update()
+    public void LoadTheContent(DTHEnum dth)
     {
-        
+        if(dth == DTHEnum.DT)
+        {
+            int i = 0;
+            foreach (DentistTool dentistTools in ButtonReferenceManager.Instance.dtTools)
+            {
+                //for now just add dht
+                GenerateContainerWithTool(i, dentistTools);
+                i++;
+            }
+        }
+        else if (dth == DTHEnum.DH)
+        {
+            int i = 0;
+            foreach (DentistTool dentistTools in ButtonReferenceManager.Instance.dhTools)
+            {
+                //for now just add dht
+                GenerateContainerWithTool(i, dentistTools);
+                i++;
+            }
+        }
+        else
+        {
+            Debug.Log("trying to generate content with NONE as DTHEnum");
+        }
+       
     }
-    void GenerateContainerWithTool(DentistTool dentistTool)
+
+    void GenerateContainerWithTool(int index, DentistTool dentistTool)
     {
         GameObject container = Instantiate(containerPrefab, scroll.content);
-        container.GetComponent<AppIconContainerController>().Initialize(dentistTool.Icon, dentistTool.Name);
+        container.GetComponent<AppIconContainerController>().Initialize(index, dentistTool.Icon, dentistTool.Name);
     }
     
-
-    void LoadTools(DTHEnum dthEnum)
+    public void ClearContent()
     {
-        if (dthEnum == DTHEnum.DT) {
-
-        }
-        else if (dthEnum == DTHEnum.DH) {
-            
-        }
-        else {
-            Debug.Log("Something sus goin on... check if u set the DTHEnum correctly, should be DT or DH and not NONE");
+        foreach (Transform child in contentTransform)
+        {
+            GameObject.Destroy(child.gameObject);
         }
     }
+   
 }

@@ -25,9 +25,9 @@ public class ButtonReferenceManager : MonoBehaviour
     public static ButtonReferenceManager Instance { get; private set; }
     public ButtonENUM storedButtonID;
     public DTHEnum storedDTHButtonID;
+    public int storedIndex;
     public DentistTool[] dtTools;
     public DentistTool[] dhTools;
-    
 
 
     private void Awake()
