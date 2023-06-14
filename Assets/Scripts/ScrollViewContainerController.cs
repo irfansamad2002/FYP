@@ -19,12 +19,13 @@ public class ScrollViewContainerController : MonoBehaviour
 
     public void LoadTheContent(DTHEnum dth)
     {
-        if(dth == DTHEnum.DT)
+        ClearContent();
+        if (dth == DTHEnum.DT)
         {
+            Debug.Log("loading for dt");
             int i = 0;
             foreach (DentistTool dentistTools in ButtonReferenceManager.Instance.dtTools)
             {
-                //for now just add dht
                 GenerateContainerWithTool(i, dentistTools);
                 i++;
             }
@@ -34,7 +35,8 @@ public class ScrollViewContainerController : MonoBehaviour
             int i = 0;
             foreach (DentistTool dentistTools in ButtonReferenceManager.Instance.dhTools)
             {
-                //for now just add dht
+                Debug.Log("loading for dh");
+
                 GenerateContainerWithTool(i, dentistTools);
                 i++;
             }
@@ -62,10 +64,17 @@ public class ScrollViewContainerController : MonoBehaviour
 
     private void OnEnable()
     {
-        Debug.Log("On the tool selection");
+        Debug.Log("OnEnable tool selection" + ButtonReferenceManager.Instance.storedDTHButtonID);
         ClearContent();
-        if(ButtonReferenceManager.Instance)
+        if (ButtonReferenceManager.Instance)
             LoadTheContent(ButtonReferenceManager.Instance.storedDTHButtonID);
+    }
+
+    private void OnDisable()
+    {
+        Debug.Log("OnDisable tool selection" + ButtonReferenceManager.Instance.storedDTHButtonID);
+        ClearContent();
+
     }
 
 }

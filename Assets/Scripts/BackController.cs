@@ -23,15 +23,15 @@ public class BackController : MonoBehaviour
 
     public void GoBackTo()
     {
-        
 
-        if(checkIfInMainScene())
+        if (checkIfInMainScene())
         {
+            //In the same scene
+
             TurnOnOffGameObj(ButtonReferenceManager.Instance.storedButtonID, ButtonReferenceManager.Instance.storedDTHButtonID);
         }
         else
         {
-
             changeBackToOldScene();
         }
 
@@ -48,22 +48,28 @@ public class BackController : MonoBehaviour
         switch (storedButtonID)
         {
             case ButtonENUM.MAINSCENE:
+                //Debug.Log("go back to MAINSCENE");
                 menuManager.OnHomeClicked();
                 break;
-            case ButtonENUM.SELECTIONSCREEN:
-                menuManager.OnToolClicked();
+            case ButtonENUM.TOOLSELECTION:
+                //Debug.Log("go back to SELECTIONSCREEN");
+                menuManager.FromInfoToSelection();
                 break;
             case ButtonENUM.ARBIT:
+                //Debug.Log("go back to ARBIT");
                 SceneChanger.Instance.ChangeToARScene();
                 break;
             case ButtonENUM.TOOLINFO:
+                //Debug.Log("go back to TOOLINFO");
                 SceneChanger.Instance.ChangeToMainScene();
                 menuManager.OnToolClicked();
                 break;
             case ButtonENUM.ASSESSMENT:
-                SceneChanger.Instance.ChangeToAssessmentScene();
+                //Debug.Log("go back to ASSESSMENT");
+                SceneChanger.Instance.ChangeToQuizScene();
                 break;
             case ButtonENUM.DEMOVID:
+                //Debug.Log("go back to DEMOVID");
                 SceneChanger.Instance.ChangeToVideoScene();
                 break;
         }
