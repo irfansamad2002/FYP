@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/Assessment Scene.unity
     guid: 0e975ca794bc5f545a12213dacdce344
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scene/Vuforia_Sample.unity
     guid: 6dfc1fb7cada32742bb9db9716f399fa
   m_configObjects:

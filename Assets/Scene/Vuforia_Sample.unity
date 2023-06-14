@@ -847,14 +847,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: tool31
+  mTrackableName: test_image
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/test_database.xml
-  mAspectRatio: 1.3333333
+  mAspectRatio: 0.9867257
   mImageTargetType: 3
-  mWidth: 0.15
-  mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 208759f0c052ddd47966be0cd8fb19c6, type: 3}
+  mWidth: 0.2
+  mHeight: 0.19734514
+  mRuntimeTexture: {fileID: 2800000, guid: 9ce1db4eb917b83468054463bba6bb0e, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -889,7 +889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 835316602}
   mHiddenRoot: {fileID: 0}
-  mTargetName: tool31
+  mTargetName: test_image
   mDatasetName: Vuforia/test_database.xml
   mCastedBehaviour: {fileID: 835316602}
   mMeshFilter: {fileID: 0}
@@ -1476,14 +1476,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: tool32
+  mTrackableName: smiley
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/test_database.xml
-  mAspectRatio: 1.3333333
+  mAspectRatio: 0.99583334
   mImageTargetType: 3
-  mWidth: 0.15
-  mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: cad3f726540a54a4d9d91c34b22dd5f0, type: 3}
+  mWidth: 0.19999997
+  mHeight: 0.19916664
+  mRuntimeTexture: {fileID: 2800000, guid: fab371364b953b04e937d9fcbcdf8f33, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -1518,7 +1518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1344415966}
   mHiddenRoot: {fileID: 0}
-  mTargetName: tool32
+  mTargetName: smiley
   mDatasetName: Vuforia/test_database.xml
   mCastedBehaviour: {fileID: 1344415966}
   mMeshFilter: {fileID: 0}
