@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class QuizMenuManager : MonoBehaviour
 {
@@ -10,8 +11,8 @@ public class QuizMenuManager : MonoBehaviour
     [SerializeField] private GameObject HomeButton;
     [SerializeField] private GameObject BackButton;
 
-    [Header("Assessment Menu")]
-    [SerializeField] private GameObject AssessmentMenu;
+    [Header("Quiz Menu")]
+    [SerializeField] private GameObject QuizMenu;
     [SerializeField] private Button Option1Button;
     [SerializeField] private Button Option2Button;
     [SerializeField] private Button Option3Button;
@@ -21,21 +22,26 @@ public class QuizMenuManager : MonoBehaviour
     [SerializeField] private GameObject CorrectWrongPage;
     [SerializeField] private Button NextQnButton;
 
-    [Header("Score Menu")]
-    [SerializeField] private GameObject ScoreMenu;
-    [SerializeField] private Button ScoreHomeButton;
+    [Header("Quiz Over Menu")]
+    [SerializeField] private GameObject QuizOverMenu;
+    [SerializeField] private Button QuizToHomeButton;
     [SerializeField] private Button TryAgainButton;
 
     public SceneChanger sceneChanger;
     public QuizManager quizManager;
+
+    public TMP_Text ScoreText;
+
+    public int qnNumber;
     void Start()
     {
         TopParent.SetActive(true);
         HomeButton.SetActive(false);
         BackButton.SetActive(true);
-        AssessmentMenu.SetActive(true);
+        QuizMenu.SetActive(true);
         CorrectWrongPage.SetActive(false);
-        ScoreMenu.SetActive(false);
+        QuizOverMenu.SetActive(false);
+        qnNumber = 1;
     }
 
     public void OnHomeClicked()
@@ -46,29 +52,47 @@ public class QuizMenuManager : MonoBehaviour
     public void OnOptionClicked()
     {
         TopParent.SetActive(false);
-        AssessmentMenu.SetActive(false);
+        QuizMenu.SetActive(false);
 
         // if on questions <= 9
-        CorrectWrongPage.SetActive(true);
-
-        // if on question 10 
-        //ScoreMenu.SetActive(true);
+        if (qnNumber < 10)
+        {
+            qnNumber += 1;
+            CorrectWrongPage.SetActive(true);
+        }
+        else
+        {
+            // if on question 10 
+            //ScoreText.text = quizManager.score + "/10";
+            //Debug.Log(quizManager.score + "/10");
+            QuizOverMenu.SetActive(true);
+        }
     }
+
+    
 
     public void OnNextQnClicked()
     {
         CorrectWrongPage.SetActive(false);
         TopParent.SetActive(true);
-        AssessmentMenu.SetActive(true);
+        QuizMenu.SetActive(true);
+    }
 
+    public void QuizOver()
+    {
+        QuizMenu.SetActive(false);
+        QuizOverMenu.SetActive(true);
+        ScoreText.text = quizManager.score + "/10";
+        Debug.Log(quizManager.score + "/10");
     }
 
     #region when on score page
     public void OnTryAgainClicked()
     {
         TopParent.SetActive(true);
-        AssessmentMenu.SetActive(true);
-        ScoreMenu.SetActive(false);
+        QuizMenu.SetActive(true);
+        QuizOverMenu.SetActive(false);
+        quizManager.Retry();
     }
     #endregion
 

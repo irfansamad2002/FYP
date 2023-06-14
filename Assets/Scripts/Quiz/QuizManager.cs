@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class QuizManager : MonoBehaviour
 {
@@ -10,18 +11,62 @@ public class QuizManager : MonoBehaviour
     public GameObject[] options;
     public int currentQn;
 
+    public TMP_Text QuestionNumber;
     public TMP_Text QuestionText;
+    public TMP_Text CorrectWrongText;
+
+    public int totalQuestions = 0;
+    public int score = 0;
+    public bool isQuizOver = false;
+
+    [Header("QuizMenuManager")]
+    public QuizMenuManager quizMenuManager;
+
+    AnswerScript answerScript;
 
     private void Start()
     {
+        totalQuestions = QnA.Count;
+        //QuestionNumber.text = 1.ToString();
         GenerateQn();
     }
 
-    public void correct()
+
+    public void Retry()
     {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void Correct()
+    {
+        score += 1;
         QnA.RemoveAt(currentQn);
         GenerateQn();
+        //SetCorrectWrongText();
     }
+
+    public void Wrong()
+    {
+        // wrong answer
+        QnA.RemoveAt(currentQn);
+        GenerateQn();
+        //SetCorrectWrongText();
+    }
+
+    //public void SetCorrectWrongText()
+    //{
+    //    //Debug.Log("isCorrect is " + answerScript.isCorrect);
+    //    if (answerScript.isCorrect)
+    //    {
+    //        Debug.Log("good job");
+    //        CorrectWrongText.text = "Good Job!";
+    //    }
+    //    else
+    //    {
+    //        Debug.Log("try again");
+    //        CorrectWrongText.text = "Try again!";
+    //    }
+    //}
 
     void SetAnswers()
     {
@@ -29,18 +74,37 @@ public class QuizManager : MonoBehaviour
         {
             options[i].GetComponent<AnswerScript>().isCorrect = false;
             options[i].transform.GetChild(0).GetComponent<TMP_Text>().text = QnA[currentQn].answers[i];
+            CorrectWrongText.text = "GOOdaodoadas!";
+
             if (QnA[currentQn].correctAnswer == i + 1)
             {
                 options[i].GetComponent<AnswerScript>().isCorrect = true;
+                // check this tmr (thurs) 
+                if (options[i].GetComponent<AnswerScript>().isCorrect == true)
+                {
+                    CorrectWrongText.text = "Good Job!";
+                }
             }
+            Debug.Log(options[i].GetComponent<AnswerScript>().isCorrect);
+            //Debug.Log(i);
         }
     }
 
     void GenerateQn()
     {
-        currentQn = Random.Range(0, QnA.Count);
-
-        QuestionText.text = QnA[currentQn].question;
-        SetAnswers();
+        if (QnA.Count > 5)
+        {
+            currentQn = Random.Range(0, QnA.Count);
+            QuestionNumber.text = quizMenuManager.qnNumber.ToString();
+            QuestionText.text = QnA[currentQn].question;
+            SetAnswers();
+        }
+        else
+        {
+            isQuizOver = true;
+            quizMenuManager.QuizOver();
+            Debug.Log("Out of questions");
+            Debug.Log(isQuizOver);
+        }
     }
 }

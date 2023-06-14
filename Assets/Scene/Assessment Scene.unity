@@ -1375,7 +1375,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 337895879}
+      - m_Target: {fileID: 479197990}
         m_TargetAssemblyTypeName: AnswerScript, Assembly-CSharp
         m_MethodName: Answer
         m_Mode: 1
@@ -1716,7 +1716,7 @@ GameObject:
   - component: {fileID: 570829445}
   - component: {fileID: 570829446}
   m_Layer: 5
-  m_Name: Assessment
+  m_Name: Quiz
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1856,8 +1856,9 @@ GameObject:
   m_Component:
   - component: {fileID: 679485587}
   - component: {fileID: 679485586}
+  - component: {fileID: 679485588}
   m_Layer: 0
-  m_Name: AssessmentMenuManager
+  m_Name: QuizMenuManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1878,18 +1879,20 @@ MonoBehaviour:
   TopParent: {fileID: 1540819943}
   HomeButton: {fileID: 782530774}
   BackButton: {fileID: 465922606}
-  AssessmentMenu: {fileID: 570829444}
+  QuizMenu: {fileID: 570829444}
   Option1Button: {fileID: 1097056072}
   Option2Button: {fileID: 1705589152}
   Option3Button: {fileID: 337895876}
   Option4Button: {fileID: 479197987}
   CorrectWrongPage: {fileID: 1245980840}
   NextQnButton: {fileID: 1286070994}
-  ScoreMenu: {fileID: 1797448423}
-  ScoreHomeButton: {fileID: 1039314589}
+  QuizOverMenu: {fileID: 1797448423}
+  QuizToHomeButton: {fileID: 1039314589}
   TryAgainButton: {fileID: 386390842}
   sceneChanger: {fileID: 2039151504}
-  quizManager: {fileID: 0}
+  quizManager: {fileID: 1172908148}
+  ScoreText: {fileID: 2129372301}
+  qnNumber: 0
 --- !u!4 &679485587
 Transform:
   m_ObjectHideFlags: 0
@@ -1905,6 +1908,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &679485588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679485585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7b189c4aeea0a74ea21ae062880305e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCorrect: 0
+  quizManager: {fileID: 1172908148}
 --- !u!1 &722213641
 GameObject:
   m_ObjectHideFlags: 0
@@ -2640,7 +2657,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 337895879}
+      - m_Target: {fileID: 1097056075}
         m_TargetAssemblyTypeName: AnswerScript, Assembly-CSharp
         m_MethodName: Answer
         m_Mode: 1
@@ -2873,811 +2890,140 @@ MonoBehaviour:
   QnA:
   - question: Select an appropriate instrument which is used for supragingival debridement
       of anterior teeth
+    questionNumber: 1
     answers:
     - Anterior sickle
     - 5/6 Barnhart
     - Posterior sickle
     - Gracey 1/2
-    correctAnswer: 0
+    correctAnswer: 2
   - question: Select an appropriate instrument which is used for supragingival debridement
       of posterior teeth
+    questionNumber: 2
     answers:
     - 'Posterior sickle '
     - 4R4L Universal curette
     - Anterior sickle
     - Gracey 11/12
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
-    answers:
-    - Gracey 11/12
-    - Gracey 9/10
-    - Gracey 13/14
-    - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
+    correctAnswer: 2
+  - question: ryfyjrsdtjnrsykvugtijwzgb5
+    questionNumber: 3
     answers:
     - Gracey 11/12
     - Gracey 9/10
     - Gracey 13/14
     - Gracey 17/18
-    correctAnswer: 0
+    correctAnswer: 2
   - question: Which instrument is used for debridement of distal surface of posterior
       teeth
+    questionNumber: 4
     answers:
     - Gracey 11/12
     - Gracey 9/10
     - Gracey 13/14
     - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
+    correctAnswer: 2
+  - question: ffwerewrfdsrwererwewerwerrtrtarwerweraerwea
+    questionNumber: 0
     answers:
     - Gracey 11/12
     - Gracey 9/10
     - Gracey 13/14
     - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
+    correctAnswer: 2
+  - question: ffwerewrfdsrwererwewerwerrtrtarwerweraerwea
+    questionNumber: 0
     answers:
     - Gracey 11/12
     - Gracey 9/10
     - Gracey 13/14
     - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
+    correctAnswer: 2
+  - question: ffwerewrfdsrwererwewerwerrtrtarwerweraerwea
+    questionNumber: 5
     answers:
     - Gracey 11/12
     - Gracey 9/10
     - Gracey 13/14
     - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
+    correctAnswer: 2
+  - question: ffwerewrfdsrwererwewerwerrtrtarwerweraerwea
+    questionNumber: 5
     answers:
     - Gracey 11/12
     - Gracey 9/10
     - Gracey 13/14
     - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
+    correctAnswer: 2
+  - question: ffwerewrfdsrwererwewerwerrtrtarwerweraerwea
+    questionNumber: 5
     answers:
     - Gracey 11/12
     - Gracey 9/10
     - Gracey 13/14
     - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
+    correctAnswer: 2
+  - question: ffwerewrfdsrwererwewerwerrtrtarwerweraerwea
+    questionNumber: 5
     answers:
     - Gracey 11/12
     - Gracey 9/10
     - Gracey 13/14
     - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
+    correctAnswer: 2
+  - question: ffwerewrfdsrwererwewerwerrtrtarwerweraerwea
+    questionNumber: 5
     answers:
     - Gracey 11/12
     - Gracey 9/10
     - Gracey 13/14
     - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
+    correctAnswer: 2
+  - question: ffwerewrfdsrwererwewerwerrtrtarwerweraerwea
+    questionNumber: 5
     answers:
     - Gracey 11/12
     - Gracey 9/10
     - Gracey 13/14
     - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
+    correctAnswer: 2
+  - question: ffwerewrfdsrwererwewerwerrtrtarwerweraerwea
+    questionNumber: 5
     answers:
     - Gracey 11/12
     - Gracey 9/10
     - Gracey 13/14
     - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
+    correctAnswer: 1
+  - question: ffwerewrfdsrwererwewerwerrtrtarwerweraerwea
+    questionNumber: 5
     answers:
     - Gracey 11/12
     - Gracey 9/10
     - Gracey 13/14
     - Gracey 17/18
-    correctAnswer: 0
-  - question: Which instrument is used for debridement of distal surface of posterior
-      teeth
+    correctAnswer: 2
+  - question: this the right qn
+    questionNumber: 5
     answers:
     - Gracey 11/12
     - Gracey 9/10
     - Gracey 13/14
     - Gracey 17/18
-    correctAnswer: 0
+    correctAnswer: 2
   options:
   - {fileID: 1097056070}
   - {fileID: 1705589150}
   - {fileID: 337895874}
   - {fileID: 479197985}
   currentQn: 0
+  QuestionNumber: {fileID: 9388782}
   QuestionText: {fileID: 502527333}
+  CorrectWrongText: {fileID: 1309731620}
+  totalQuestions: 0
+  score: 0
+  isQuizOver: 0
+  quizMenuManager: {fileID: 679485586}
 --- !u!4 &1172908149
 Transform:
   m_ObjectHideFlags: 0
@@ -4039,7 +3385,7 @@ GameObject:
   - component: {fileID: 1309731621}
   - component: {fileID: 1309731620}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Correct/Wrong Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4967,7 +4313,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 337895879}
+      - m_Target: {fileID: 1705589155}
         m_TargetAssemblyTypeName: AnswerScript, Assembly-CSharp
         m_MethodName: Answer
         m_Mode: 1
@@ -5177,7 +4523,7 @@ GameObject:
   - component: {fileID: 1797448424}
   - component: {fileID: 1797448425}
   m_Layer: 5
-  m_Name: Score
+  m_Name: QuizOver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5378,7 +4724,7 @@ GameObject:
   - component: {fileID: 2004771434}
   - component: {fileID: 2004771433}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Header
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5809,7 +5155,7 @@ GameObject:
   - component: {fileID: 2129372302}
   - component: {fileID: 2129372301}
   m_Layer: 5
-  m_Name: Question
+  m_Name: ScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
