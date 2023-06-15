@@ -156,10 +156,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 201570281}
   mHiddenRoot: {fileID: 0}
-  mTargetName: irfanTestHandleNew
-  mDatasetName: Vuforia/irfanTestHandleNew.xml
+  mTargetName: irfanTestHandleNewWithTip
+  mDatasetName: Vuforia/irfanTestHandleNewWithTip.xml
   mCastedBehaviour: {fileID: 201570281}
-  mModelScale: {x: 0.020107001, y: 0.140136, z: 0.020107001}
+  mModelScale: {x: 0.031039, y: 0.178087, z: 0.020107001}
   mModelTargetPreview: {fileID: 0}
 --- !u!114 &201570280
 MonoBehaviour:
@@ -220,26 +220,26 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: irfanTestHandleNew
+  mTrackableName: irfanTestHandleNewWithTip
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/irfanTestHandleNew.xml
-  mBaseSize: 0.020107001
-  mAspectRatioXY: 6.969513
-  mAspectRatioXZ: 1
+  mDataSetPath: Vuforia/irfanTestHandleNewWithTip.xml
+  mBaseSize: 0.031039
+  mAspectRatioXY: 5.7375236
+  mAspectRatioXZ: 0.647798
   mShowBoundingBox: 0
   mOverrideSnappingPose: 0
-  mBBoxMin: {x: -0.010039, y: -0.070068, z: -0.010039}
-  mBBoxMax: {x: 0.010068, y: 0.070068, z: 0.010068}
-  mPreviewImage: {fileID: 2800000, guid: ab2d39d9c91b462db5da091668b61ff8, type: 3}
-  mLength: 0.020107001
-  mWidth: 0.140136
-  mHeight: 0.020107001
+  mBBoxMin: {x: -0.01102, y: -0.070068, z: -0.010039}
+  mBBoxMax: {x: 0.020019, y: 0.108019, z: 0.010068}
+  mPreviewImage: {fileID: 0}
+  mLength: 0.21611676
+  mWidth: 1.239975
+  mHeight: 0.14
   m3DGuideViewModel: {fileID: 0}
   m2DGuideViewImage: {fileID: 0}
   mGuideViewDisplayMode: 0
   m2DGuideViewMaterial: {fileID: 792614239}
   m3DGuideViewMaterial: {fileID: 0}
-  mSelectedGuideView: GuideView_0001
+  mSelectedGuideView: 
   mMotionHint: 1
   mTrackingMode: 1
   mTrackingOptimization: 0
@@ -255,7 +255,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201570278}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.652, y: 0, z: 0.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -404,7 +404,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1244920611}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1334, y: 0.0758, z: -0.5}
+  m_LocalPosition: {x: 0.643, y: 0.0758, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
