@@ -34,6 +34,7 @@ public class AppIconContainerController : MonoBehaviour
             ButtonReferenceManager.Instance.storedIndex = index;
             ButtonReferenceManager.Instance.storedButtonID = ButtonENUM.TOOLSELECTION;
             menuManager.OnToolClicked();
+            Debug.Log(index + " name: " + name);
             
         });
     }

@@ -10,11 +10,9 @@ public class ScrollViewContainerController : MonoBehaviour
     [SerializeField] private ScrollRect scroll;
     [SerializeField] private Transform contentTransform;
 
-
     // Start is called before the first frame update
     void Start()
     {
-       
     }
 
     public void LoadTheContent(DTHEnum dth)
@@ -26,6 +24,7 @@ public class ScrollViewContainerController : MonoBehaviour
             int i = 0;
             foreach (DentistTool dentistTools in ButtonReferenceManager.Instance.dtTools)
             {
+                Debug.Log("Loaded: " + dentistTools.name + "Index: " + i);
                 GenerateContainerWithTool(i, dentistTools);
                 i++;
             }
@@ -33,10 +32,10 @@ public class ScrollViewContainerController : MonoBehaviour
         else if (dth == DTHEnum.DH)
         {
             int i = 0;
+            Debug.Log("loading for dh");
+
             foreach (DentistTool dentistTools in ButtonReferenceManager.Instance.dhTools)
             {
-                Debug.Log("loading for dh");
-
                 GenerateContainerWithTool(i, dentistTools);
                 i++;
             }
@@ -45,7 +44,7 @@ public class ScrollViewContainerController : MonoBehaviour
         {
             Debug.Log("trying to generate content with NONE as DTHEnum");
         }
-       
+
     }
 
     void GenerateContainerWithTool(int index, DentistTool dentistTool)
@@ -64,15 +63,19 @@ public class ScrollViewContainerController : MonoBehaviour
 
     private void OnEnable()
     {
-        Debug.Log("OnEnable tool selection" + ButtonReferenceManager.Instance.storedDTHButtonID);
         ClearContent();
         if (ButtonReferenceManager.Instance)
+        {
+            //Debug.Log("OnEnable tool selection" + ButtonReferenceManager.Instance.storedDTHButtonID);
             LoadTheContent(ButtonReferenceManager.Instance.storedDTHButtonID);
+
+        }
     }
 
     private void OnDisable()
     {
-        Debug.Log("OnDisable tool selection" + ButtonReferenceManager.Instance.storedDTHButtonID);
+        //Debug.Log("OnDisable tool selection" + ButtonReferenceManager.Instance.storedDTHButtonID);
+        
         ClearContent();
 
     }

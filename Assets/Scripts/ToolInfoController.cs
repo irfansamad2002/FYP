@@ -16,7 +16,15 @@ public class ToolInfoController : MonoBehaviour
 
     private void OnEnable()
     {
-        LoadContent(ButtonReferenceManager.Instance.dhTools[ButtonReferenceManager.Instance.storedIndex]);
+        //LoadContent(ButtonReferenceManager.Instance.dhTools[ButtonReferenceManager.Instance.storedIndex]);
+        if (ButtonReferenceManager.Instance.storedDTHButtonID == DTHEnum.DH)
+        {
+            LoadContent(ButtonReferenceManager.Instance.dhTools[ButtonReferenceManager.Instance.storedIndex]);
+        }
+        else if (ButtonReferenceManager.Instance.storedDTHButtonID == DTHEnum.DT)
+        {
+            LoadContent(ButtonReferenceManager.Instance.dtTools[ButtonReferenceManager.Instance.storedIndex]);
+        }
 
     }
     public void LoadContent(DentistTool dentistTool)

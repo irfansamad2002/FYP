@@ -44,6 +44,7 @@ public class MenuManager : MonoBehaviour
             ToolSelectionMenu.SetActive(false);
             ToolInfoMenu.SetActive(false);
         }
+        AssessmentButton.SetActive(false);
 
     }
 
@@ -55,6 +56,7 @@ public class MenuManager : MonoBehaviour
         ToolSelectionMenu.SetActive(true);
         BackButton.SetActive(true);
         HomeButton.SetActive(false);
+        AssessmentButton.SetActive(true);
 
     }
 
@@ -79,6 +81,7 @@ public class MenuManager : MonoBehaviour
         ToolSelectionMenu.SetActive(false);
         ToolInfoMenu.SetActive(true);
         BackButton.SetActive(true);
+        AssessmentButton.SetActive(false);
     }
     #endregion
 
@@ -90,6 +93,7 @@ public class MenuManager : MonoBehaviour
         ToolSelectionMenu.SetActive(true);
         ToolInfoMenu.SetActive(false);
         BackButton.SetActive(true);
+        AssessmentButton.SetActive(true);
         ButtonReferenceManager.Instance.storedButtonID = ButtonENUM.MAINSCENE;
     }
     //  irfan note: from tool info to demo
@@ -113,6 +117,7 @@ public class MenuManager : MonoBehaviour
         MainMenu.SetActive(true);
         ToolSelectionMenu.SetActive(false);
         ToolInfoMenu.SetActive(false);
+        AssessmentButton.SetActive(false);
     }
 
 }
