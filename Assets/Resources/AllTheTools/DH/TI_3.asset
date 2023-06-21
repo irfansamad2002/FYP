@@ -13,7 +13,20 @@ MonoBehaviour:
   m_Name: TI_3
   m_EditorClassIdentifier: 
   Name: 4R4L Universal Curette
-  Icon: {fileID: 0}
-  Usage: 
-  InstrumentGrasp: 
-  Instrumentation: 
+  Icon: {fileID: 21300000, guid: 9aebd705574f9e642aef1e5f59b3e4d8, type: 3}
+  Usage: "- Subgingival\r\n- Removes small-medium sized calculus deposits on crown
+    and root surfaces\r"
+  InstrumentGrasp: "1. Position the thumb and index finger opposite \r\none another
+    on the handle, No touching or overlap\r\n2. Rest pad of middle finger lightly
+    on side \r\nof instrument shank, touches ring finger\r\n3. Position the thumb,
+    index and middle finger \r\nproperly without hyperextension of joints\r\n4. Maintain
+    a neutral wrist position"
+  Instrumentation: "1. Select correct working-end (terminal shank is parallel to
+    distal surface and functional shank is up and over the tooth)\r\n2. Begin at
+    distal line angle\r\n3. Establish a 0-40\xB0 closed angle to insert and lower
+    working-end beneath gingival margin\r\n4. Establish 60-80\xB0 angulation to get
+    ready to activate instrumentation stroke\r\n5. Adapt only toe-third of the cutting
+    edge\r\n6. When repositioning working end at the distal line angle, apply oblique
+    strokes across the buccal/lingual surface until the mesio-buccal line angle\r\n7.
+    When instrumenting interproximal surfaces, ensure that your instrumentation strokes
+    extend past the midline of the tooth surface while maintaining proper angulation."

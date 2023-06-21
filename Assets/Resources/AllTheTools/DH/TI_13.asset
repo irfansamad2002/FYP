@@ -13,7 +13,15 @@ MonoBehaviour:
   m_Name: TI_13
   m_EditorClassIdentifier: 
   Name: Gracey 17/18
-  Icon: {fileID: 0}
-  Usage: 
-  InstrumentGrasp: 
-  Instrumentation: 
+  Icon: {fileID: 21300000, guid: 9aebd705574f9e642aef1e5f59b3e4d8, type: 3}
+  Usage: 'Posterior teeth: Distal surfaces of the molar only (good to use on hard
+    to reach surfaces, eg: wisdom tooth'
+  InstrumentGrasp: "1. Position the thumb and index finger \r\nopposite one another
+    on the handle, No \r\ntouching or overlap\r\n2. Rest pad of middle finger lightly
+    on side of \r\ninstrument shank, touches ring finger\r\n3. Position the thumb,
+    index and middle \r\nfinger properly without hyperextension of joints\r\n4. Maintain
+    a neutral wrist position\r\n"
+  Instrumentation: "1. Maintain terminal shank parallel to long axis of tooth\r\n2.
+    Constantly maintain toe third of the cutting edge to the tooth surface\r\n3.
+    Begin at the distal line angle\r\n4. Establish and maintain correct face-to-tooth
+    surface angulation for insertion at 0\xB0 and start scaling between 70-80\xB0 "

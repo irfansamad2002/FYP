@@ -19,19 +19,19 @@ MonoBehaviour:
     - Assess tooth/root surfaces on anterior and posterior
     teeth.
 
-    
+
 
     - Obtain tactile information
 
-    - Detect the texture and
-    character of tooth surface before, during and after periodontal debridement to
-    assess the progress and completeness of instrumentation.
+    - Detect the texture and character
+    of tooth surface before, during and after periodontal debridement to assess the
+    progress and completeness of instrumentation.
 
-    - Instrument of
-    choice for detecting subgingival calculus
+    - Instrument of choice for
+    detecting subgingival calculus
 
-    - Examine tooth surfaces for
-    calculus, carious lesions, dental anomalies, and anatomic features.
+    - Examine tooth surfaces for calculus, carious
+    lesions, dental anomalies, and anatomic features.
 
 '
   InstrumentGrasp: "1. Position the thumb and index finger opposite one another on
@@ -48,8 +48,8 @@ MonoBehaviour:
     3. Make assessment
     strokes (Oblique, featherlight, overlapping, sweeping strokes)
 
-    4. Roll
-    the instrument handle to move tip around mesio-facial line angle
+    4. Roll the
+    instrument handle to move tip around mesio-facial line angle
 
-    5. Access
-    at least halfway across the mesial surface from facial aspect.'
+    5. Access at
+    least halfway across the mesial surface from facial aspect.'
