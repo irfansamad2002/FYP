@@ -20,11 +20,11 @@ public class ScrollViewContainerController : MonoBehaviour
         ClearContent();
         if (dth == DTHEnum.DT)
         {
-            Debug.Log("loading for dt");
+            //Debug.Log("loading for dt");
             int i = 0;
             foreach (DentistTool dentistTools in ButtonReferenceManager.Instance.dtTools)
             {
-                Debug.Log("Loaded: " + dentistTools.name + "Index: " + i);
+                //Debug.Log("Loaded: " + dentistTools.name + "Index: " + i);
                 GenerateContainerWithTool(i, dentistTools);
                 i++;
             }
@@ -32,7 +32,7 @@ public class ScrollViewContainerController : MonoBehaviour
         else if (dth == DTHEnum.DH)
         {
             int i = 0;
-            Debug.Log("loading for dh");
+            //Debug.Log("loading for dh");
 
             foreach (DentistTool dentistTools in ButtonReferenceManager.Instance.dhTools)
             {
@@ -42,7 +42,7 @@ public class ScrollViewContainerController : MonoBehaviour
         }
         else
         {
-            Debug.Log("trying to generate content with NONE as DTHEnum");
+            //Debug.Log("trying to generate content with NONE as DTHEnum");
         }
 
     }

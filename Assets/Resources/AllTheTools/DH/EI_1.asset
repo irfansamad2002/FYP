@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bcf0bd622ceeb24e981caf0f2c0e411, type: 3}
   m_Name: EI_1
   m_EditorClassIdentifier: 
-  Name: Mouth Mirror
+  Name: 'Mouth
+
+    Mirror'
   Icon: {fileID: 21300000, guid: a873e8cca110ee748a081afbdbde1d15, type: 3}
   Usage: '- Indirect Vision - Retraction of Tongue - Indirect Illumination - Transillumination'
   InstrumentGrasp: "1. Position the thumb and index finger  opposite one another

@@ -5,6 +5,7 @@ using TMPro;
 [CreateAssetMenu(fileName = "New DentistTool", menuName = "DentistTools")]
 public class DentistTool : ScriptableObject
 {
+    [TextArea]
     public string Name;
     public Sprite Icon;
 
