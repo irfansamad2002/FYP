@@ -22,7 +22,8 @@ public class QuizManager : MonoBehaviour
     [Header("QuizMenuManager")]
     public QuizMenuManager quizMenuManager;
 
-    AnswerScript answerScript;
+    [Header("Answer Script")]
+    public AnswerScript answerScript;
 
     private void Start()
     {
@@ -73,21 +74,33 @@ public class QuizManager : MonoBehaviour
         for (int i = 0; i < options.Length; i++)
         {
             options[i].GetComponent<AnswerScript>().isCorrect = false;
+            answerScript.isCorrect = false;
             options[i].transform.GetChild(0).GetComponent<TMP_Text>().text = QnA[currentQn].answers[i];
-            CorrectWrongText.text = "GOOdaodoadas!";
+            //CorrectWrongText.text = "Try Again!";
+            //Debug.Log("isCorrect is: " + answerScript.isCorrect);
 
             if (QnA[currentQn].correctAnswer == i + 1)
             {
                 options[i].GetComponent<AnswerScript>().isCorrect = true;
-                // check this tmr (thurs) 
-                if (options[i].GetComponent<AnswerScript>().isCorrect == true)
-                {
-                    CorrectWrongText.text = "Good Job!";
-                }
+                answerScript.isCorrect = true;
+                //if (options[i].GetComponent<AnswerScript>().isCorrect == true)
+                //{
+                //    CorrectWrongText.text = "Good Job!";
+                //    Debug.Log("isCorrect is: " + answerScript.isCorrect);
+                //}
             }
             Debug.Log(options[i].GetComponent<AnswerScript>().isCorrect);
-            //Debug.Log(i);
         }
+        //if (answerScript.isCorrect)
+        //{
+        //    Debug.Log("TRY AGAIN TEXT");
+        //    CorrectWrongText.text = "Try Again!";
+        //}
+        //else
+        //{
+        //    Debug.Log("GOOD JOB TEXT");
+        //    CorrectWrongText.text = "Good Job!";
+        //}
     }
 
     void GenerateQn()

@@ -36,4 +36,8 @@ public class SceneChanger : MonoBehaviour
     {
         SceneManager.LoadScene("Assessment Scene");
     }
+    public void ChangeToScoreScene()
+    {
+        SceneManager.LoadScene("PlayerScoreList");
+    }
 }

@@ -70,6 +70,11 @@ public class MenuManager : MonoBehaviour
         // change to AR scene
         sceneChanger.ChangeToARScene();
     }
+
+    public void OnScoresClicked()
+    {
+        sceneChanger.ChangeToScoreScene();
+    }
     #endregion
 
     #region tool clicked from selection screen

@@ -680,7 +680,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bottle Back
+  m_text: 'Video1 Back
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -852,8 +854,8 @@ MonoBehaviour:
   mDataSetPath: Vuforia/test_database.xml
   mAspectRatio: 0.9867257
   mImageTargetType: 3
-  mWidth: 0.2
-  mHeight: 0.19734514
+  mWidth: 0.19999997
+  mHeight: 0.19734511
   mRuntimeTexture: {fileID: 2800000, guid: 9ce1db4eb917b83468054463bba6bb0e, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
@@ -1309,7 +1311,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bottle
+  m_text: Video 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1481,8 +1483,8 @@ MonoBehaviour:
   mDataSetPath: Vuforia/test_database.xml
   mAspectRatio: 0.99583334
   mImageTargetType: 3
-  mWidth: 0.19999997
-  mHeight: 0.19916664
+  mWidth: 0.19999994
+  mHeight: 0.19916661
   mRuntimeTexture: {fileID: 2800000, guid: fab371364b953b04e937d9fcbcdf8f33, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
@@ -2137,20 +2139,20 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: planebotol
+  mTrackableName: bottle1
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/planebotol.xml
-  mBaseSize: 0.169528
-  mAspectRatioXY: 0.41665095
+  mDataSetPath: Vuforia/bottles.xml
+  mBaseSize: 0.020055
+  mAspectRatioXY: 3.1235104
   mAspectRatioXZ: 1
   mShowBoundingBox: 0
   mOverrideSnappingPose: 0
-  mBBoxMin: {x: -0.084764, y: -0.00429, z: -0.084764}
-  mBBoxMax: {x: 0.084764, y: 0.066344, z: 0.084764}
+  mBBoxMin: {x: -0.010024, y: -0.000031, z: -0.010031}
+  mBBoxMax: {x: 0.010031, y: 0.062611, z: 0.010024}
   mPreviewImage: {fileID: 0}
-  mLength: 0.169528
-  mWidth: 0.070634
-  mHeight: 0.169528
+  mLength: 0.020055
+  mWidth: 0.062642
+  mHeight: 0.020055
   m3DGuideViewModel: {fileID: 0}
   m2DGuideViewImage: {fileID: 0}
   mGuideViewDisplayMode: 0
@@ -2194,10 +2196,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1717065121}
   mHiddenRoot: {fileID: 0}
-  mTargetName: planebotol
-  mDatasetName: Vuforia/planebotol.xml
+  mTargetName: bottle1
+  mDatasetName: Vuforia/bottles.xml
   mCastedBehaviour: {fileID: 1717065121}
-  mModelScale: {x: 0.169528, y: 0.070634, z: 0.169528}
+  mModelScale: {x: 0.020055, y: 0.062642, z: 0.020055}
   mModelTargetPreview: {fileID: 0}
 --- !u!1 &1802691521
 GameObject:
@@ -2257,7 +2259,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Spider Back
+  m_text: Video2 Back
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2532,9 +2534,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Spider
-
-'
+  m_text: Video 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
