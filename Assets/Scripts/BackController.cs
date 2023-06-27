@@ -15,11 +15,7 @@ public class BackController : MonoBehaviour
         //SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-           
-    }
+    
 
     public void GoBackTo()
     {

@@ -52,6 +52,7 @@ public class MenuManager : MonoBehaviour
     // click DT or DH button from main menu
     public void OnDHorDTClicked()
     {
+        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         MainMenu.SetActive(false);
         ToolSelectionMenu.SetActive(true);
         BackButton.SetActive(true);
@@ -63,6 +64,7 @@ public class MenuManager : MonoBehaviour
     //  from main menu to ar scene
     public void OnScanClicked()
     {
+        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         sceneChanger.ChangeToARScene();
     }
     #endregion
@@ -72,12 +74,14 @@ public class MenuManager : MonoBehaviour
     //  from tool selection to assesment
     public void OnAssessmentClicked()
     {
+        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         sceneChanger.ChangeToQuizScene();
     }
 
     //  from tool selection to tool info
     public void OnToolClicked()
     {
+        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         ToolSelectionMenu.SetActive(false);
         ToolInfoMenu.SetActive(true);
         BackButton.SetActive(true);
@@ -90,6 +94,7 @@ public class MenuManager : MonoBehaviour
     //  from tool info to tool selection
     public void FromInfoToSelection()
     {
+        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         ToolSelectionMenu.SetActive(true);
         ToolInfoMenu.SetActive(false);
         BackButton.SetActive(true);
@@ -105,6 +110,7 @@ public class MenuManager : MonoBehaviour
     //  irfan note: NEED TO CHANGE CFM DOUBLE CFM
     public void OnDemoVidClicked()
     {
+        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         //ToolInfoMenu.SetActive(false);
         sceneChanger.ChangeToVideoScene();
     }
@@ -112,6 +118,7 @@ public class MenuManager : MonoBehaviour
     //  Home button / go back to main menu
     public void OnHomeClicked()
     {
+        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         HomeButton.SetActive(false);
         BackButton.SetActive(false);
         MainMenu.SetActive(true);

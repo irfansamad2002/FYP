@@ -17,7 +17,7 @@ MonoBehaviour:
     dam
 
     forceps'
-  Icon: {fileID: 21300000, guid: 9aebd705574f9e642aef1e5f59b3e4d8, type: 3}
+  Icon: {fileID: 21300000, guid: 666a4083f75994942baa9e59138e74af, type: 3}
   Usage: " To hold and place rubber dam clamps onto the tooth.\r"
   InstrumentGrasp: 
   Instrumentation: 

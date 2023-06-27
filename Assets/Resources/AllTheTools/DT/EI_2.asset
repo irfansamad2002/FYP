@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: 'Straight
 
     Probe'
-  Icon: {fileID: 21300000, guid: 9aebd705574f9e642aef1e5f59b3e4d8, type: 3}
+  Icon: {fileID: 21300000, guid: da8ed4ee063e72744b946aabc2f42e87, type: 3}
   Usage: '- To trace and explore fissures'
   InstrumentGrasp: 1. Modified Pen Grasp
   Instrumentation: 1. Explore the whole tooth surface

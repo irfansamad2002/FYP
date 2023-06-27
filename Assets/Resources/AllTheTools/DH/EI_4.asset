@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: 'Nabers
 
     Probe'
-  Icon: {fileID: 21300000, guid: 9aebd705574f9e642aef1e5f59b3e4d8, type: 3}
+  Icon: {fileID: 21300000, guid: 4898384753cb1c648b2e1fb4062ed1d8, type: 3}
   Usage: '- To probe through furcations of multi-rooted teeth to determine its grade '
   InstrumentGrasp: '- Modified pen grasp'
   Instrumentation: "1. Insert at furcation area \r\n2. Probe has 4 markings \r\n3.
