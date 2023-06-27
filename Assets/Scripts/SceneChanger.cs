@@ -32,7 +32,7 @@ public class SceneChanger : MonoBehaviour
         SceneManager.LoadScene("Main Scene");
     }
 
-    public void ChangeToAssessmentScene()
+    public void ChangeToQuizScene()
     {
         SceneManager.LoadScene("Assessment Scene");
     }

@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bcf0bd622ceeb24e981caf0f2c0e411, type: 3}
+  m_Name: TI_8
+  m_EditorClassIdentifier: 
+  Name: 'Gracey
+
+    7/8'
+  Icon: {fileID: 21300000, guid: 7ccc0835ad12f094680b4b2523201c6e, type: 3}
+  Usage: 'Posterior teeth: Facial and lingual surface of the premolar and molar only
+
+'
+  InstrumentGrasp: '1. Position the thumb and index finger opposite one another on
+    the handle, No touching or overlap
+
+    2. Rest pad of the middle finger lightly
+    on the side of the instrument shank, touches the ring finger
+
+    3. Position
+    the thumb, index and middle finger properly without hyperextension of joints
+
+    4.
+    Maintain a neutral wrist position'
+  Instrumentation: "1.  Begin at distal line angle, ends at mesial line angle\r\n2.
+    Constantly maintain toe third of the cutting edge to tooth surface\r\n3. Maintain
+    a neutral wrist position while utilizing wrist activation\r"

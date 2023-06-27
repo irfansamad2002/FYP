@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bcf0bd622ceeb24e981caf0f2c0e411, type: 3}
+  m_Name: EI_5
+  m_EditorClassIdentifier: 
+  Name: '11/12
+
+    Explorer'
+  Icon: {fileID: 21300000, guid: 2ec7656da44475f43917632b880d3d85, type: 3}
+  Usage: '- Sub gingival.
+
+    - Assess tooth/root surfaces on anterior and posterior
+    teeth.
+
+
+
+    - Obtain tactile information
+
+    - Detect the texture and character
+    of tooth surface before, during and after periodontal debridement to assess the
+    progress and completeness of instrumentation.
+
+    - Instrument of choice for
+    detecting subgingival calculus
+
+    - Examine tooth surfaces for calculus, carious
+    lesions, dental anomalies, and anatomic features.
+
+'
+  InstrumentGrasp: "1. Position the thumb and index finger opposite one another on
+    the handle, No touching or overlap\r\n2. Rest pad of middle finger lightly on
+    side of instrument shank, touches ring finger\r\n3. Position the thumb, index
+    and middle finger properly without hyperextension of joints\r\n4. Maintain a
+    neutral wrist position\r"
+  Instrumentation: '1. Select correct working-end and insert to base of the pocket
+
+    2.
+    Gently insert working-end to base of pocket and postition the tip on distal/mesial
+    line angle with the tip facing toward mesial surface.
+
+    3. Make assessment
+    strokes (Oblique, featherlight, overlapping, sweeping strokes)
+
+    4. Roll the
+    instrument handle to move tip around mesio-facial line angle
+
+    5. Access at
+    least halfway across the mesial surface from facial aspect.'

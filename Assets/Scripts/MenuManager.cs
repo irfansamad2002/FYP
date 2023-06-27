@@ -27,47 +27,44 @@ public class MenuManager : MonoBehaviour
 
     [Header("Tool Info")]
     [SerializeField] private GameObject ToolInfoMenu;
-    [SerializeField] private Button DemoVideoButton;
+    //[SerializeField] private Button DemoVideoButton;
 
     public SceneChanger sceneChanger;
 
+    [Header("Toogle On if want to start from Menu")]
+    [SerializeField] private bool startFromMenu;
+
     void Start()
     {
-        HomeButton.SetActive(false);
-        BackButton.SetActive(false);
-        MainMenu.SetActive(true);
-        ToolSelectionMenu.SetActive(false);
-        ToolInfoMenu.SetActive(false);
+        if (startFromMenu)
+        {
+            HomeButton.SetActive(false);
+            BackButton.SetActive(false);
+            MainMenu.SetActive(true);
+            ToolSelectionMenu.SetActive(false);
+            ToolInfoMenu.SetActive(false);
+        }
+        AssessmentButton.SetActive(false);
 
     }
 
-    // main menu page
-    public void OnDTHClicked()
+    #region from main menu
+    // click DT or DH button from main menu
+    public void OnDHorDTClicked()
     {
+        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         MainMenu.SetActive(false);
         ToolSelectionMenu.SetActive(true);
         BackButton.SetActive(true);
-    }
-
-
-    #region selection screen buttons
-    public void OnToolSelectClicked()
-    {
-        MainMenu.SetActive(false);
-        ToolSelectionMenu.SetActive(true);
         HomeButton.SetActive(false);
-        BackButton.SetActive(true);
+        AssessmentButton.SetActive(true);
+
     }
 
-    public void OnAssessmentClicked()
-    {
-        // change to assessment scene
-        sceneChanger.ChangeToAssessmentScene();
-    }
-
+    //  from main menu to ar scene
     public void OnScanClicked()
     {
-        // change to AR scene
+        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         sceneChanger.ChangeToARScene();
     }
 
@@ -77,64 +74,62 @@ public class MenuManager : MonoBehaviour
     }
     #endregion
 
-    #region tool clicked from selection screen
+
+    #region from tool selection
+    //  from tool selection to assesment
+    public void OnAssessmentClicked()
+    {
+        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
+        sceneChanger.ChangeToQuizScene();
+    }
+
+    //  from tool selection to tool info
     public void OnToolClicked()
     {
+        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         ToolSelectionMenu.SetActive(false);
         ToolInfoMenu.SetActive(true);
         BackButton.SetActive(true);
+        AssessmentButton.SetActive(false);
     }
     #endregion
 
-    #region Tool info screen
+
+    #region from tool info
+    //  from tool info to tool selection
+    public void FromInfoToSelection()
+    {
+        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
+        ToolSelectionMenu.SetActive(true);
+        ToolInfoMenu.SetActive(false);
+        BackButton.SetActive(true);
+        AssessmentButton.SetActive(true);
+        ButtonReferenceManager.Instance.storedButtonID = ButtonENUM.MAINSCENE;
+    }
+    //  irfan note: from tool info to demo
+
+
+
+    #endregion
+
+    //  irfan note: NEED TO CHANGE CFM DOUBLE CFM
     public void OnDemoVidClicked()
     {
-        ToolInfoMenu.SetActive(false);
-        // change scene to demo video scene
+        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
+        //ToolInfoMenu.SetActive(false);
         sceneChanger.ChangeToVideoScene();
     }
-    #endregion
 
+    //  Home button / go back to main menu
     public void OnHomeClicked()
     {
+        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         HomeButton.SetActive(false);
         BackButton.SetActive(false);
         MainMenu.SetActive(true);
         ToolSelectionMenu.SetActive(false);
         ToolInfoMenu.SetActive(false);
+        AssessmentButton.SetActive(false);
     }
 
-    // main menu active 
-    public void MainMenuActive()
-    {
-        HomeButton.SetActive(false);
-        BackButton.SetActive(false);
-        MainMenu.SetActive(true);
-        ToolSelectionMenu.SetActive(false);
-        ToolInfoMenu.SetActive(false);
-    }
-    // tool selection screen active
-    public void ToolSelectActive()
-    {
-        MainMenu.SetActive(false);
-        ToolSelectionMenu.SetActive(true);
-        HomeButton.SetActive(true);
-    }
-
-    // tool info screen active
-    public void ToolInfoActive()
-    {
-        ToolSelectionMenu.SetActive(false);
-        ToolInfoMenu.SetActive(true);
-        BackButton.SetActive(true);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //if (AssessmentMenu.active == false)
-        //{
-        //    Debug.Log("Lol");
-        //}
-    }
 }
