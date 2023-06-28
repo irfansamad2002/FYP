@@ -8,14 +8,26 @@ public class HighScoreTable : MonoBehaviour
     [SerializeField] private Transform entrytemplate;
     private List<Transform> highscoreEntryTransformList;
 
+    // IRFAN
     const string PLAYERPREFDATABASE = "highscoreTable";
     private void Awake()
     {
         //Turn off the template
         entrytemplate.gameObject.SetActive(false);
 
-      
-        
+        for (int i = 0; i < 10; i++)
+        {
+            AddHighscoreEntry(PlayerPrefs.GetInt("Scores" + i), PlayerPrefs.GetString("Names" + i));
+        }
+
+        //AddHighscoreEntry(PlayerPrefs.GetInt("Scores0"), PlayerPrefs.GetString("Names0"));
+        //AddHighscoreEntry(PlayerPrefs.GetInt("Scores1"), PlayerPrefs.GetString("Names1"));
+        //AddHighscoreEntry(PlayerPrefs.GetInt("Scores2"), PlayerPrefs.GetString("Names2"));
+        //AddHighscoreEntry(PlayerPrefs.GetInt("Scores"), PlayerPrefs.GetString("Names"));
+        //AddHighscoreEntry(PlayerPrefs.GetInt("Scores"), PlayerPrefs.GetString("Names"));
+        //AddHighscoreEntry(PlayerPrefs.GetInt("Scores"), PlayerPrefs.GetString("Names"));
+        //AddHighscoreEntry(PlayerPrefs.GetInt("Scores"), PlayerPrefs.GetString("Names"));
+
         //Get the data
         string jsonString = PlayerPrefs.GetString(PLAYERPREFDATABASE);
         HighScores highscores = JsonUtility.FromJson<HighScores>(jsonString);

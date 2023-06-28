@@ -38,6 +38,6 @@ public class SceneChanger : MonoBehaviour
     }
     public void ChangeToScoreScene()
     {
-        SceneManager.LoadScene("PlayerScoreList");
+        SceneManager.LoadScene("testSave");
     }
 }

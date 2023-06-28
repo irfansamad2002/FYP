@@ -12,8 +12,8 @@ public class DisplayPlayerScores : MonoBehaviour
 
     private void Start()
     {
-        playerName.text = PlayerPrefs.GetString("Name");
-        playerScore.text = PlayerPrefs.GetInt("Score").ToString() + "/10";
+        playerName.text = PlayerPrefs.GetString("Names");
+        playerScore.text = PlayerPrefs.GetInt("Scores").ToString() + "/10";
 
     }
 
