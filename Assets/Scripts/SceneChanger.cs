@@ -38,6 +38,6 @@ public class SceneChanger : MonoBehaviour
     }
     public void ChangeToScoreScene()
     {
-        SceneManager.LoadScene("testSave");
+        SceneManager.LoadScene("Leaderboard");
     }
 }

@@ -14,7 +14,6 @@ public class DisplayPlayerScores : MonoBehaviour
     {
         playerName.text = PlayerPrefs.GetString("Names");
         playerScore.text = PlayerPrefs.GetInt("Scores").ToString() + "/10";
-
     }
 
     public void OnHomeClicked()

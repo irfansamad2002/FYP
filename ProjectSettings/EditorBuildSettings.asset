@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scene/Assessment Scene.unity
     guid: 0e975ca794bc5f545a12213dacdce344
   - enabled: 1
-    path: Assets/Scene/testSave.unity
+    path: Assets/Scene/Leaderboard.unity
     guid: 1c79ff76aca5a5a4ca21fa415c7905f1
   - enabled: 0
     path: Assets/Scene/PlayerScoreList.unity

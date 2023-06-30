@@ -95,38 +95,20 @@ public class QuizMenuManager : MonoBehaviour
             qnNumber += 1;
             CorrectWrongPage.SetActive(true);
             // Debug.Log("correctAnsPressed is: " + quizManager.correctAnsPressed);
+            
 
-            if (quizManager.correctAnsPressed)
+            
+
+            if (quizManager.CheckIfButtonIsCorrect(GetLatestButtonIndex()))
             {
                 CorrectWrongText.text = "Good Job!";
-                Debug.Log("correctasn: " + quizManager.correctAnsPressed);
+                //Debug.Log("correctasn: " + quizManager.correctAnsPressed);
             }
             else
             {
                 CorrectWrongText.text = "Try Again!";
-                Debug.Log("correctasn: " + quizManager.correctAnsPressed);
+                //Debug.Log("correctasn: " + quizManager.correctAnsPressed);
             }
-
-            //if (quizManager.CheckIfButtonIsCorrect())
-            //{
-            //    CorrectWrongText.text = "Good Job!";
-            //}
-            //else
-            //{
-            //    CorrectWrongText.text = "Try Again!";
-            //}
-            //if (quizManager.correctAnsPressed)
-            //{
-            //    CorrectWrongText.text = "Try Again!";
-            //    //Debug.Log("correctAnsPressed is: " + quizManager.correctAnsPressed);
-            //}
-            //else
-            //{
-            //    CorrectWrongText.text = "Good Job!";
-            //    //Debug.Log("correctAnsPressed is: " + quizManager.correctAnsPressed);
-            //}
-
-
         }
         else
         {

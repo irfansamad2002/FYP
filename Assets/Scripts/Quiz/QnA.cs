@@ -5,5 +5,4 @@ public class QnA
     public string questionNumber;
     public string[] answers;
     public int correctAnswer;
-
 }

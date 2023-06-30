@@ -8,6 +8,8 @@ public class HighScoreTable : MonoBehaviour
     [SerializeField] private Transform entrytemplate;
     private List<Transform> highscoreEntryTransformList;
 
+    public SceneChanger sceneChanger;
+
     // IRFAN
     const string PLAYERPREFDATABASE = "highscoreTable";
     private void Awake()
@@ -15,18 +17,53 @@ public class HighScoreTable : MonoBehaviour
         //Turn off the template
         entrytemplate.gameObject.SetActive(false);
 
+        //if (PlayerPrefs.GetString("Names") != "")
+        //{
+        //    for (int i = 0; i < 10; i++)
+        //    {
+        //        AddHighscoreEntry(PlayerPrefs.GetInt("Scores" + i), PlayerPrefs.GetString("Names" + i));
+        //    }
+        //}
+
+        // add score after each quiz attempt
         for (int i = 0; i < 10; i++)
         {
             AddHighscoreEntry(PlayerPrefs.GetInt("Scores" + i), PlayerPrefs.GetString("Names" + i));
         }
 
-        //AddHighscoreEntry(PlayerPrefs.GetInt("Scores0"), PlayerPrefs.GetString("Names0"));
-        //AddHighscoreEntry(PlayerPrefs.GetInt("Scores1"), PlayerPrefs.GetString("Names1"));
-        //AddHighscoreEntry(PlayerPrefs.GetInt("Scores2"), PlayerPrefs.GetString("Names2"));
-        //AddHighscoreEntry(PlayerPrefs.GetInt("Scores"), PlayerPrefs.GetString("Names"));
-        //AddHighscoreEntry(PlayerPrefs.GetInt("Scores"), PlayerPrefs.GetString("Names"));
-        //AddHighscoreEntry(PlayerPrefs.GetInt("Scores"), PlayerPrefs.GetString("Names"));
-        //AddHighscoreEntry(PlayerPrefs.GetInt("Scores"), PlayerPrefs.GetString("Names"));
+        for (int i = 0; i < 50; i++)
+        {
+            AddHighscoreEntry(9 + i, "man" + i.ToString() );
+        }
+
+        AddHighscoreEntry(8, "guy10");
+        AddHighscoreEntry(9, "guy100");
+        AddHighscoreEntry(7, "guy19");
+        AddHighscoreEntry(6, "guy18");
+        AddHighscoreEntry(0, "guy17");
+        AddHighscoreEntry(5, "guy16");
+        AddHighscoreEntry(4, "guy13");
+        AddHighscoreEntry(3, "guy15");
+        AddHighscoreEntry(2, "guy12");
+        AddHighscoreEntry(1, "guy1");
+        AddHighscoreEntry(1, "guy2");
+        AddHighscoreEntry(1, "guy3");
+        AddHighscoreEntry(1, "guy4");
+        AddHighscoreEntry(1, "guy5");
+        AddHighscoreEntry(1, "guy6");
+        AddHighscoreEntry(1, "guy7");
+        AddHighscoreEntry(1, "guy8");
+        AddHighscoreEntry(1, "guy20");
+        AddHighscoreEntry(1, "guy11");
+        AddHighscoreEntry(1, "guy20");
+        AddHighscoreEntry(1, "guy21");
+        AddHighscoreEntry(1, "guy22");
+        AddHighscoreEntry(1, "guy23");
+        AddHighscoreEntry(1, "gu24");
+        AddHighscoreEntry(1, "guy57");
+        AddHighscoreEntry(1, "gu879");
+        AddHighscoreEntry(1, "guy66");
+        AddHighscoreEntry(1, "gu56765");
 
         //Get the data
         string jsonString = PlayerPrefs.GetString(PLAYERPREFDATABASE);
@@ -66,13 +103,6 @@ public class HighScoreTable : MonoBehaviour
         {
             Debug.Log("dont have highscoretable");
         }
-
-
-
-
-       
-
-
     }
 
     private bool CheckIfPlayerPrefSet()
@@ -101,7 +131,7 @@ public class HighScoreTable : MonoBehaviour
         switch (rank)
         {
             default:
-                rankString = rank + "TH"; break;
+                rankString = rank + "th"; break;
 
             case 1: rankString = "1ST"; break;
             case 2: rankString = "2ND"; break;
@@ -224,5 +254,8 @@ public class HighScoreTable : MonoBehaviour
         public string name;
     }
 
-
+    public void OnHomeClicked()
+    {
+        sceneChanger.ChangeToMainScene();
+    }
 }
