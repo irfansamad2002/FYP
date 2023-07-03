@@ -45,10 +45,6 @@ public class ButtonReferenceManager : MonoBehaviour
         LoadToolsDatabases();
 
     }
-    // Start is called before the first frame update
-    void Start()    
-    {
-    }
 
     void LoadToolsDatabases()
     {
@@ -56,44 +52,6 @@ public class ButtonReferenceManager : MonoBehaviour
         dtTools = Resources.LoadAll<DentistTool>("AllTheTools/DT");
 
         Debug.Log("loaded the databases");
-
-
-        
     }
 
-    //public DentistTool GetToolData(int index, DTHEnum DTHenum)
-    //{
-    //    if (DTHenum == DTHEnum.DT) 
-    //    {
-    //        return dtTools[index];
-    //    }
-    //    else if(DTHenum == DTHEnum.DH)
-    //    {
-    //        return dhTools[index];
-    //    }
-    //    else {
-    //        return dtTools[index];//Should show error or smth..
-    //    }
-
-    //}
-
-    //public DentistTool[] GetDHorDTList(DTHEnum DTHenum)
-    //{
-    //    switch (DTHenum) {
-    //    case DTHEnum.DT:
-    //        return dtTools;
-    //    case DTHEnum.DH:
-    //        return dhTools;
-    //    case DTHEnum.NONE://Should not be none
-    //        return dtTools;
-    //    default://Should not be none
-    //        return dtTools;
-    //    }
-    //}
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

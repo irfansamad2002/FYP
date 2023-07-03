@@ -90,6 +90,7 @@ public class MenuManager : MonoBehaviour
         ToolSelectionMenu.SetActive(false);
         ToolInfoMenu.SetActive(true);
         BackButton.SetActive(true);
+        HomeButton.SetActive(true);
         AssessmentButton.SetActive(false);
     }
     #endregion
@@ -103,6 +104,7 @@ public class MenuManager : MonoBehaviour
         ToolSelectionMenu.SetActive(true);
         ToolInfoMenu.SetActive(false);
         BackButton.SetActive(true);
+        HomeButton.SetActive(false);
         AssessmentButton.SetActive(true);
         ButtonReferenceManager.Instance.storedButtonID = ButtonENUM.MAINSCENE;
     }
