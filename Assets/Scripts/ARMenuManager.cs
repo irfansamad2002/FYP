@@ -24,11 +24,11 @@ public class ARMenuManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        TopParent.SetActive(true);
-        HomeButton.SetActive(false);
-        BackButton.SetActive(true);
-        ToolMenu.SetActive(false);
-        ToolInfoMenu.SetActive(true);
+        //TopParent.SetActive(true);
+        //HomeButton.SetActive(false);
+        //BackButton.SetActive(true);
+        //ToolMenu.SetActive(false);
+        //ToolInfoMenu.SetActive(true);
     }
 
     public void OnHomeClicked()
