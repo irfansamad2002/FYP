@@ -71,6 +71,7 @@ public class MenuManager : MonoBehaviour
     public void OnScoresClicked()
     {
         sceneChanger.ChangeToScoreScene();
+        AudioPlayer.Instance.PlayAudioOneShot(0);
     }
     #endregion
 
@@ -131,5 +132,4 @@ public class MenuManager : MonoBehaviour
         ToolInfoMenu.SetActive(false);
         AssessmentButton.SetActive(false);
     }
-
 }

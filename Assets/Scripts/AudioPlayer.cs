@@ -35,8 +35,8 @@ public class AudioPlayer : MonoBehaviour
         
     }
 
-    public void PlayAudioOneShot(int index, float volume)
+    public void PlayAudioOneShot(int index, float volume = 1f)
     {
-        audioSrc.PlayOneShot(audioClips[index],volume);
+        audioSrc.PlayOneShot(audioClips[index], volume);
     }
 }

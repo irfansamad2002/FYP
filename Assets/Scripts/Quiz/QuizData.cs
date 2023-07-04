@@ -51,26 +51,6 @@ public class QuizData : MonoBehaviour
     {
         PlayerPrefs.GetString("Names");
         PlayerPrefs.GetInt("Scores");
-        //PlayerNames.Clear();
-        //PlayerScores.Clear();
-        //savedNamesListCount = PlayerPrefs.GetInt("nameCount");
-        //savedScoresListCount = PlayerPrefs.GetInt("scoreCount");
-
-        //Debug.Log(savedNamesListCount + " " + savedScoresListCount);
-        //for (int i = 0; i < savedNamesListCount; i++)
-        //{
-        //    string player = PlayerPrefs.GetString("Names" + i);
-        //    PlayerNames.Add(player);
-        //}
-
-        //for (int i = 0; i < savedScoresListCount; i++)
-        //{
-        //    int score = PlayerPrefs.GetInt("Scores" + i);
-        //    PlayerScores.Add(score);
-        //}
-
-        //Debug.Log(PlayerPrefs.GetString("Names0"));
-
     }
     public void DeleteData()
     {

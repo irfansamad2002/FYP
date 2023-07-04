@@ -44,6 +44,7 @@ public class QuizManager : MonoBehaviour
         score += 1;
         QnA.RemoveAt(currentQn);
         GenerateQn();
+        AudioPlayer.Instance.PlayAudioOneShot(3);
     }
 
     public void Wrong()
@@ -51,6 +52,7 @@ public class QuizManager : MonoBehaviour
         // wrong answer
         QnA.RemoveAt(currentQn);
         GenerateQn();
+        AudioPlayer.Instance.PlayAudioOneShot(4);
     }
 
     void SetAnswers()
@@ -73,13 +75,12 @@ public class QuizManager : MonoBehaviour
     {
         if (index == QnA[currentQn].correctAnswer)
         {
-            Debug.Log("quizManager.CheckIfButtonIsCorrect == true");
+            //Debug.Log("quizManager.CheckIfButtonIsCorrect == true");
             return true;
         }
         else
         {
-            Debug.Log("quizManager.CheckIfButtonIsCorrect == false");
-
+            //Debug.Log("quizManager.CheckIfButtonIsCorrect == false");
             return false;
         }
     }

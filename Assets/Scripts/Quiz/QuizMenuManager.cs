@@ -54,25 +54,35 @@ public class QuizMenuManager : MonoBehaviour
         qnNumber = 1;
     }
 
+    public void OnBackClicked()
+    {
+        AudioPlayer.Instance.PlayAudioOneShot(0);
+    }
+
     public void OnCancelClicked()
     {
         sceneChanger.ChangeToMainScene();
+        AudioPlayer.Instance.PlayAudioOneShot(0);
     }
 
     public void OnContinueClicked()
     {
-        // save name playerprefs
-        quizData.SaveNames();
-        // continue to quiz
-        BackButton.SetActive(true);
-        EnterNamePage.SetActive(false);
-        QuizMenu.SetActive(true);
+        if (quizData.nameInput.text != "")
+        {
+            // save name playerprefs
+            quizData.SaveNames();
+            // continue to quiz
+            BackButton.SetActive(true);
+            EnterNamePage.SetActive(false);
+            QuizMenu.SetActive(true);
+        }
+        AudioPlayer.Instance.PlayAudioOneShot(0);
     }
 
     public void OnHomeClicked()
     {
         sceneChanger.ChangeToMainScene();
-        //quizData.LoadData();
+        AudioPlayer.Instance.PlayAudioOneShot(0);
     }
 
     public void SetLatestButtonIndex(int index)
@@ -94,27 +104,19 @@ public class QuizMenuManager : MonoBehaviour
         {
             qnNumber += 1;
             CorrectWrongPage.SetActive(true);
-            // Debug.Log("correctAnsPressed is: " + quizManager.correctAnsPressed);
-            
-
-            
-
+        
             if (quizManager.CheckIfButtonIsCorrect(GetLatestButtonIndex()))
             {
                 CorrectWrongText.text = "Good Job!";
-                //Debug.Log("correctasn: " + quizManager.correctAnsPressed);
             }
             else
             {
                 CorrectWrongText.text = "Try Again!";
-                //Debug.Log("correctasn: " + quizManager.correctAnsPressed);
             }
         }
         else
         {
             // if on question 10 
-            //ScoreText.text = quizManager.score + "/10";
-            //Debug.Log(quizManager.score + "/10");
             QuizOverMenu.SetActive(true);
         }
     }
@@ -126,6 +128,7 @@ public class QuizMenuManager : MonoBehaviour
         CorrectWrongPage.SetActive(false);
         TopParent.SetActive(true);
         QuizMenu.SetActive(true);
+        AudioPlayer.Instance.PlayAudioOneShot(0);
     }
 
     public void QuizOver()
@@ -145,10 +148,9 @@ public class QuizMenuManager : MonoBehaviour
         QuizMenu.SetActive(true);
         QuizOverMenu.SetActive(false);
         quizManager.Retry();
+        AudioPlayer.Instance.PlayAudioOneShot(0);
     }
     #endregion
-
-    // Update is called once per frame
     void Update()
     {
         

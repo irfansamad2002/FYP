@@ -19,18 +19,15 @@ public class BackController : MonoBehaviour
 
     public void GoBackTo()
     {
-
         if (checkIfInMainScene())
         {
             //In the same scene
-
             TurnOnOffGameObj(ButtonReferenceManager.Instance.storedButtonID, ButtonReferenceManager.Instance.storedDTHButtonID);
         }
         else
         {
             changeBackToOldScene();
         }
-
     }
 
     private void changeBackToOldScene()
