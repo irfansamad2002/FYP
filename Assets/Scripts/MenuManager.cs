@@ -122,7 +122,7 @@ public class MenuManager : MonoBehaviour
         sceneChanger.ChangeToVideoScene();
     }
 
-    //  Home button / go back to main menu
+    //  Home button or go back to main menu
     public void OnHomeClicked()
     {
         AudioPlayer.Instance.PlayAudioOneShot(1, .5f);
@@ -132,6 +132,7 @@ public class MenuManager : MonoBehaviour
         ToolSelectionMenu.SetActive(false);
         ToolInfoMenu.SetActive(false);
         AssessmentButton.SetActive(false);
+        ButtonReferenceManager.Instance.storedDTHButtonID = DTHEnum.NONE;
     }
 
 }

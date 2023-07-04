@@ -3,13 +3,14 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
-
+using TMPro;
 public class ScrollViewContainerController : MonoBehaviour
 {
     [SerializeField] private GameObject containerPrefab;
     [SerializeField] private ScrollRect scroll;
     [SerializeField] private Transform contentTransform;
-
+    [SerializeField] private GameObject topParentGameObject;
+    [SerializeField] private Color textColor;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,8 @@ public class ScrollViewContainerController : MonoBehaviour
 
     public void LoadTheContent(DTHEnum dth)
     {
+        Debug.Log("loadTheCntent scrollviewcontainercontroller");
+        textColor = topParentGameObject.GetComponent<TopParentColor>().GetcurrentTopParentColor();
         ClearContent();
         if (dth == DTHEnum.DT)
         {
@@ -51,6 +54,7 @@ public class ScrollViewContainerController : MonoBehaviour
     {
         GameObject container = Instantiate(containerPrefab, scroll.content);
         container.GetComponent<AppIconContainerController>().Initialize(index, dentistTool.Icon, dentistTool.Name);
+        container.transform.GetChild(1).GetComponent<TMP_Text>().color = textColor;
     }
     
     public void ClearContent()
