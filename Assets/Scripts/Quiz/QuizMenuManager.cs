@@ -40,6 +40,8 @@ public class QuizMenuManager : MonoBehaviour
     [Header("Others")]
     public TMP_Text ScoreText;
     public int qnNumber;
+
+    private int latestButtonIndex;
     void Start()
     {
         TopParent.SetActive(true);
@@ -60,7 +62,7 @@ public class QuizMenuManager : MonoBehaviour
     public void OnContinueClicked()
     {
         // save name playerprefs
-        quizData.SaveName();
+        quizData.SaveNames();
         // continue to quiz
         BackButton.SetActive(true);
         EnterNamePage.SetActive(false);
@@ -70,8 +72,18 @@ public class QuizMenuManager : MonoBehaviour
     public void OnHomeClicked()
     {
         sceneChanger.ChangeToMainScene();
+        //quizData.LoadData();
     }
 
+    public void SetLatestButtonIndex(int index)
+    {
+        latestButtonIndex = index;
+    }
+
+    public int GetLatestButtonIndex()
+    {
+        return latestButtonIndex;
+    }
     public void OnOptionClicked()
     {
         TopParent.SetActive(false);
@@ -82,15 +94,20 @@ public class QuizMenuManager : MonoBehaviour
         {
             qnNumber += 1;
             CorrectWrongPage.SetActive(true);
-            if (answerScript.isCorrect)
+            // Debug.Log("correctAnsPressed is: " + quizManager.correctAnsPressed);
+            
+
+            
+
+            if (quizManager.CheckIfButtonIsCorrect(GetLatestButtonIndex()))
             {
-                CorrectWrongText.text = "Try Again!";
-                Debug.Log("isCorrect is: " + answerScript.isCorrect);
+                CorrectWrongText.text = "Good Job!";
+                //Debug.Log("correctasn: " + quizManager.correctAnsPressed);
             }
             else
             {
-                CorrectWrongText.text = "Good Job!";
-                Debug.Log("isCorrect is: " + answerScript.isCorrect);
+                CorrectWrongText.text = "Try Again!";
+                //Debug.Log("correctasn: " + quizManager.correctAnsPressed);
             }
         }
         else
@@ -117,7 +134,8 @@ public class QuizMenuManager : MonoBehaviour
         QuizOverMenu.SetActive(true);
         ScoreText.text = quizManager.score + "/10";
         Debug.Log(quizManager.score + "/10");
-        quizData.SaveScore();
+        quizData.SaveScores();
+        quizData.LoadData();
     }
 
     #region when on score page

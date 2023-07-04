@@ -59,7 +59,7 @@ public class MenuManager : MonoBehaviour
         HomeButton.SetActive(false);
         AssessmentButton.SetActive(true);
 
-    }
+    }   
 
     //  from main menu to ar scene
     public void OnScanClicked()

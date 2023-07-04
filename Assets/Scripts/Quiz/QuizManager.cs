@@ -18,6 +18,7 @@ public class QuizManager : MonoBehaviour
     public int totalQuestions = 0;
     public int score = 0;
     public bool isQuizOver = false;
+    public bool correctAnsPressed;
 
     [Header("QuizMenuManager")]
     public QuizMenuManager quizMenuManager;
@@ -28,7 +29,6 @@ public class QuizManager : MonoBehaviour
     private void Start()
     {
         totalQuestions = QnA.Count;
-        //QuestionNumber.text = 1.ToString();
         GenerateQn();
     }
 
@@ -40,10 +40,10 @@ public class QuizManager : MonoBehaviour
 
     public void Correct()
     {
+        //Debug.Log("preesed next");
         score += 1;
         QnA.RemoveAt(currentQn);
         GenerateQn();
-        //SetCorrectWrongText();
     }
 
     public void Wrong()
@@ -51,61 +51,44 @@ public class QuizManager : MonoBehaviour
         // wrong answer
         QnA.RemoveAt(currentQn);
         GenerateQn();
-        //SetCorrectWrongText();
     }
-
-    //public void SetCorrectWrongText()
-    //{
-    //    //Debug.Log("isCorrect is " + answerScript.isCorrect);
-    //    if (answerScript.isCorrect)
-    //    {
-    //        Debug.Log("good job");
-    //        CorrectWrongText.text = "Good Job!";
-    //    }
-    //    else
-    //    {
-    //        Debug.Log("try again");
-    //        CorrectWrongText.text = "Try again!";
-    //    }
-    //}
 
     void SetAnswers()
     {
         for (int i = 0; i < options.Length; i++)
         {
             options[i].GetComponent<AnswerScript>().isCorrect = false;
-            answerScript.isCorrect = false;
             options[i].transform.GetChild(0).GetComponent<TMP_Text>().text = QnA[currentQn].answers[i];
-            //CorrectWrongText.text = "Try Again!";
-            //Debug.Log("isCorrect is: " + answerScript.isCorrect);
 
             if (QnA[currentQn].correctAnswer == i + 1)
             {
                 options[i].GetComponent<AnswerScript>().isCorrect = true;
-                answerScript.isCorrect = true;
-                //if (options[i].GetComponent<AnswerScript>().isCorrect == true)
-                //{
-                //    CorrectWrongText.text = "Good Job!";
-                //    Debug.Log("isCorrect is: " + answerScript.isCorrect);
-                //}
             }
-            Debug.Log(options[i].GetComponent<AnswerScript>().isCorrect);
         }
-        //if (answerScript.isCorrect)
-        //{
-        //    Debug.Log("TRY AGAIN TEXT");
-        //    CorrectWrongText.text = "Try Again!";
-        //}
-        //else
-        //{
-        //    Debug.Log("GOOD JOB TEXT");
-        //    CorrectWrongText.text = "Good Job!";
-        //}
+
+       Debug.Log("Correct answer: " + QnA[currentQn].correctAnswer);
     }
+
+    public bool CheckIfButtonIsCorrect(int index)
+    {
+        if (index == QnA[currentQn].correctAnswer)
+        {
+            Debug.Log("quizManager.CheckIfButtonIsCorrect == true");
+            return true;
+        }
+        else
+        {
+            Debug.Log("quizManager.CheckIfButtonIsCorrect == false");
+
+            return false;
+        }
+    }
+
+
 
     void GenerateQn()
     {
-        if (QnA.Count > 5)
+        if (QnA.Count > 5) // number of questions - 10, if 50 questions, input "> 40"
         {
             currentQn = Random.Range(0, QnA.Count);
             QuestionNumber.text = quizMenuManager.qnNumber.ToString();
@@ -116,8 +99,6 @@ public class QuizManager : MonoBehaviour
         {
             isQuizOver = true;
             quizMenuManager.QuizOver();
-            Debug.Log("Out of questions");
-            Debug.Log(isQuizOver);
         }
     }
 }
