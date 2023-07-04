@@ -55,6 +55,8 @@ public class SplashScreenTouchScreen : MonoBehaviour
             logoImage.GetComponent<Image>().color = LogoColor;
             yield return null;
         }
+        yield return new WaitForSeconds(1f);
+
         Color textColor = tapScreenText.GetComponent<TMP_Text>().color;
         fadeSpeed *= 2;
         while (tapScreenText.GetComponent<TMP_Text>().color.a < 1)
