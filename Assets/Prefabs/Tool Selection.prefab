@@ -371,6 +371,8 @@ MonoBehaviour:
   containerPrefab: {fileID: 9167593494924898894, guid: c9a917ff533fb9c4cad778b7918ea948, type: 3}
   scroll: {fileID: 9089795221559233933}
   contentTransform: {fileID: 9089795221691276826}
+  topParentGameObject: {fileID: 0}
+  testColor: {r: 0.99106026, g: 0, b: 1, a: 1}
 --- !u!1 &9089795221691276821
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,7 +555,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9089795222905378662}
   m_HandleRect: {fileID: 9089795222905378657}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
