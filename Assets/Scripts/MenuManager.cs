@@ -125,6 +125,7 @@ public class MenuManager : MonoBehaviour
     //  Home button or go back to main menu
     public void OnHomeClicked()
     {
+        ButtonReferenceManager.Instance.storedDTHButtonID = DTHEnum.NONE;
         AudioPlayer.Instance.PlayAudioOneShot(1, .5f);
         HomeButton.SetActive(false);
         BackButton.SetActive(false);
@@ -132,7 +133,6 @@ public class MenuManager : MonoBehaviour
         ToolSelectionMenu.SetActive(false);
         ToolInfoMenu.SetActive(false);
         AssessmentButton.SetActive(false);
-        ButtonReferenceManager.Instance.storedDTHButtonID = DTHEnum.NONE;
     }
 
 }

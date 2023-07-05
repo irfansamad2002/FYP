@@ -35,7 +35,8 @@ public class BackController : MonoBehaviour
 
     private void changeBackToOldScene()
     {
-        Debug.Log("Go back to " + ButtonReferenceManager.Instance.storedButtonID + " scene with dthEnum " + ButtonReferenceManager.Instance.storedDTHButtonID);
+        ButtonReferenceManager.Instance.storedDTHButtonID = DTHEnum.NONE;
+
         SceneChanger.Instance.ChangeToMainScene();
     }
 
@@ -45,6 +46,7 @@ public class BackController : MonoBehaviour
         {
             case ButtonENUM.MAINSCENE:
                 //Debug.Log("go back to MAINSCENE");
+                ButtonReferenceManager.Instance.storedDTHButtonID = DTHEnum.NONE;
                 menuManager.OnHomeClicked();
                 break;
             case ButtonENUM.TOOLSELECTION:

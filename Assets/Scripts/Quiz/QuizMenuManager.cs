@@ -56,6 +56,7 @@ public class QuizMenuManager : MonoBehaviour
 
     public void OnCancelClicked()
     {
+        ButtonReferenceManager.Instance.storedDTHButtonID = DTHEnum.NONE;
         sceneChanger.ChangeToMainScene();
     }
 
