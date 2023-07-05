@@ -56,9 +56,6 @@ public class ButtonReferenceManager : MonoBehaviour
         dtTools = Resources.LoadAll<DentistTool>("AllTheTools/DT");
 
         Debug.Log("loaded the databases");
-
-
-        
     }
 
     //public DentistTool GetToolData(int index, DTHEnum DTHenum)

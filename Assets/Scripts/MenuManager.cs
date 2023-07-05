@@ -14,7 +14,6 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject MainMenu;
     [SerializeField] private Button DentalTherapyButton;
     [SerializeField] private Button DentalHealthButton;
-    [SerializeField] private Button ScanButton; 
 
     //[Header("Selection Screen")]
     //[SerializeField] private GameObject MainMenu;
@@ -24,6 +23,7 @@ public class MenuManager : MonoBehaviour
     [Header("Tool Selection")]
     [SerializeField] private GameObject ToolSelectionMenu;
     [SerializeField] private GameObject AssessmentButton;
+    [SerializeField] private GameObject ScanButton; // only for DT page
 
     [Header("Tool Info")]
     [SerializeField] private GameObject ToolInfoMenu;
@@ -43,13 +43,15 @@ public class MenuManager : MonoBehaviour
             MainMenu.SetActive(true);
             ToolSelectionMenu.SetActive(false);
             ToolInfoMenu.SetActive(false);
+            ScanButton.SetActive(false);
         }
         AssessmentButton.SetActive(false);
 
     }
 
     #region from main menu
-    // click DT or DH button from main menu
+    // click
+    // or DH button from main menu
     public void OnDHorDTClicked()
     {
         AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
@@ -59,6 +61,15 @@ public class MenuManager : MonoBehaviour
         HomeButton.SetActive(false);
         AssessmentButton.SetActive(true);
 
+        // scan only for DT page
+        if (ButtonReferenceManager.Instance.storedDTHButtonID == DTHEnum.DT)
+        {
+            ScanButton.SetActive(true);
+        }
+        else if (ButtonReferenceManager.Instance.storedDTHButtonID == DTHEnum.DH)
+        {
+            ScanButton.SetActive(false);
+        }
     }   
 
     //  from main menu to ar scene
@@ -108,16 +119,12 @@ public class MenuManager : MonoBehaviour
         ButtonReferenceManager.Instance.storedButtonID = ButtonENUM.MAINSCENE;
     }
     //  irfan note: from tool info to demo
-
-
-
     #endregion
 
     //  irfan note: NEED TO CHANGE CFM DOUBLE CFM
     public void OnDemoVidClicked()
     {
         AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
-        //ToolInfoMenu.SetActive(false);
         sceneChanger.ChangeToVideoScene();
     }
 

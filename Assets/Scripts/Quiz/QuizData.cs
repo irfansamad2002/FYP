@@ -27,10 +27,8 @@ public class QuizData : MonoBehaviour
         for (int i = 0; i < PlayerNames.Count; i++)
         {
             PlayerPrefs.SetString("Names" + i, PlayerNames[i]);
-            //Debug.Log("Saved name: " + PlayerNames[i]);
             Debug.Log("Names: " + PlayerPrefs.GetString("Names" + i));
         }
-        //PlayerPrefs.SetString("Names", nameInput.text);
         PlayerPrefs.SetInt("nameCount", PlayerNames.Count);
     }
 
@@ -40,10 +38,8 @@ public class QuizData : MonoBehaviour
         for (int i = 0; i < PlayerScores.Count; i++)
         {
             PlayerPrefs.SetInt("Scores" + i, PlayerScores[i]);
-            //Debug.Log("Saved Score: " + PlayerScores[i]);
             Debug.Log("Saved Score: " + PlayerPrefs.GetInt("Scores" + i));
         }
-        //PlayerPrefs.SetInt("Scores", quizManager.score);
         PlayerPrefs.SetInt("scoreCount", PlayerScores.Count);
     }
 

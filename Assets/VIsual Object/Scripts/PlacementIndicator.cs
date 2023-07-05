@@ -6,7 +6,6 @@ using UnityEngine.XR.ARSubsystems;
 
 public class PlacementIndicator : MonoBehaviour
 {
-
     private ARRaycastManager rayManager;
     [SerializeField]
     private GameObject visual;

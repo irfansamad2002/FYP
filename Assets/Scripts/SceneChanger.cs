@@ -20,7 +20,7 @@ public class SceneChanger : MonoBehaviour
     }
     public void ChangeToARScene()
     {
-        SceneManager.LoadScene("AR Scene");
+        SceneManager.LoadScene("ARTest");
         
     }
     public void ChangeToVideoScene()

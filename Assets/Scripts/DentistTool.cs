@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 [CreateAssetMenu(fileName = "New DentistTool", menuName = "DentistTools")]
 public class DentistTool : ScriptableObject
 {
@@ -16,4 +17,5 @@ public class DentistTool : ScriptableObject
     [TextArea]
     public string Instrumentation;
 
+    public Image ToolImage;
 }
