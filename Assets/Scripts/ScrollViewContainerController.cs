@@ -18,7 +18,7 @@ public class ScrollViewContainerController : MonoBehaviour
 
     public void LoadTheContent(DTHEnum dth)
     {
-        Debug.Log("loadTheCntent scrollviewcontainercontroller");
+        //Debug.Log("loadTheCntent scrollviewcontainercontroller");//
         textColor = topParentGameObject.GetComponent<TopParentColor>().GetcurrentTopParentColor();
         ClearContent();
         if (dth == DTHEnum.DT)
