@@ -52,7 +52,7 @@ public class BackController : MonoBehaviour
                 break;
             case ButtonENUM.ARBIT:
                 //Debug.Log("go back to ARBIT");
-                SceneChanger.Instance.ChangeToARScene();
+                SceneChanger.Instance.ChangeToScanScene();
                 break;
             case ButtonENUM.TOOLINFO:
                 //Debug.Log("go back to TOOLINFO");

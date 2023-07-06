@@ -19,7 +19,6 @@ public enum DTHEnum
     DH,
     NONE
 }
-
 public class ButtonReferenceManager : MonoBehaviour
 {
     public static ButtonReferenceManager Instance { get; private set; }
@@ -28,7 +27,6 @@ public class ButtonReferenceManager : MonoBehaviour
     public int storedIndex;
     public DentistTool[] dtTools;
     public DentistTool[] dhTools;
-
 
     private void Awake()
     {
@@ -43,7 +41,6 @@ public class ButtonReferenceManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
 
         LoadToolsDatabases();
-
     }
 
     void LoadToolsDatabases()

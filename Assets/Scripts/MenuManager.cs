@@ -76,7 +76,7 @@ public class MenuManager : MonoBehaviour
     public void OnScanClicked()
     {
         AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
-        sceneChanger.ChangeToARScene();
+        sceneChanger.ChangeToScanScene();
     }
 
     public void OnScoresClicked()
@@ -106,6 +106,11 @@ public class MenuManager : MonoBehaviour
         AssessmentButton.SetActive(false);
     }
 
+    public void OnSpawnClicked()
+    {
+        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
+        sceneChanger.ChangeToSpawnScene();
+    }
 
     #endregion
 

@@ -18,10 +18,13 @@ public class SceneChanger : MonoBehaviour
         }
         DontDestroyOnLoad(this.gameObject);
     }
-    public void ChangeToARScene()
+    public void ChangeToScanScene()
     {
-        SceneManager.LoadScene("ARTest");
-        
+        SceneManager.LoadScene("AR Scan Scene"); 
+    }
+    public void ChangeToSpawnScene()
+    {
+        SceneManager.LoadScene("AR Spawn Scene");
     }
     public void ChangeToVideoScene()
     {

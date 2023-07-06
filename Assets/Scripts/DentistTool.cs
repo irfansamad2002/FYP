@@ -17,5 +17,5 @@ public class DentistTool : ScriptableObject
     [TextArea]
     public string Instrumentation;
 
-    public Image ToolImage;
+    public GameObject dentalItem;
 }

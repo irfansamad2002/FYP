@@ -17,6 +17,7 @@ public class PlaceOnPlane : MonoBehaviour
     [SerializeField]
     [Tooltip("Instantiates this prefab on a plane at the touch location.")]
     GameObject m_PlacedPrefab;
+    public GameObject testPrefab;
 
     UnityEvent placementUpdate;
 
@@ -72,7 +73,7 @@ public class PlaceOnPlane : MonoBehaviour
 
             if (spawnedObject == null)
             {
-                spawnedObject = Instantiate(m_PlacedPrefab, hitPose.position, hitPose.rotation);
+                spawnedObject = Instantiate(testPrefab, hitPose.position, hitPose.rotation);
 
             }
             else
