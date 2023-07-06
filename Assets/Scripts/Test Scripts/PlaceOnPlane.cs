@@ -17,7 +17,7 @@ public class PlaceOnPlane : MonoBehaviour
     [SerializeField]
     [Tooltip("Instantiates this prefab on a plane at the touch location.")]
     GameObject m_PlacedPrefab;
-    public GameObject testPrefab;
+    public GameObject placedInstrument;
 
     UnityEvent placementUpdate;
 
@@ -62,6 +62,16 @@ public class PlaceOnPlane : MonoBehaviour
 
     void Update()
     {
+        if (ButtonReferenceManager.Instance.storedDTHButtonID == DTHEnum.DT)
+        {
+            placedInstrument = ButtonReferenceManager.Instance.dtTools[ButtonReferenceManager.Instance.storedIndex].dentalItem;
+        }
+        else if (ButtonReferenceManager.Instance.storedDTHButtonID == DTHEnum.DH)
+        {
+            Debug.Log("Called DH Gameobject");
+            placedInstrument = ButtonReferenceManager.Instance.dhTools[ButtonReferenceManager.Instance.storedIndex].dentalItem;
+        }
+
         if (!TryGetTouchPosition(out Vector2 touchPosition))
             return;
 
@@ -73,8 +83,8 @@ public class PlaceOnPlane : MonoBehaviour
 
             if (spawnedObject == null)
             {
-                spawnedObject = Instantiate(testPrefab, hitPose.position, hitPose.rotation);
-
+                spawnedObject = Instantiate(placedInstrument, hitPose.position, hitPose.rotation);
+                placedInstrument.transform.localScale = new Vector3(2, 2, 2);
             }
             else
             {
@@ -83,6 +93,8 @@ public class PlaceOnPlane : MonoBehaviour
             }
             placementUpdate.Invoke();
         }
+
+        
     }
 
     public void DiableVisual()

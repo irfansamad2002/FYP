@@ -27,3 +27,4 @@ MonoBehaviour:
     the filling material, '
   InstrumentGrasp: 
   Instrumentation: 
+  dentalItem: {fileID: 919132149155446097, guid: eea512c6be4c25447bfee9f6b65c472a, type: 3}

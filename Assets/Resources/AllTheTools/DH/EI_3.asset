@@ -32,3 +32,4 @@ MonoBehaviour:
     in preparation for assessing the facial surface \r\n7. Make a series of walking
     strokes, moving in a forward direction toward the mesio-buccal line angle \r\n8.
     Tilt the probe beneath the mesial contact and assess."
+  dentalItem: {fileID: 919132149155446097, guid: eea512c6be4c25447bfee9f6b65c472a, type: 3}
