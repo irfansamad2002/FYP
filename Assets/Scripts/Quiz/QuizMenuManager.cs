@@ -82,6 +82,7 @@ public class QuizMenuManager : MonoBehaviour
 
     public void OnHomeClicked()
     {
+        ButtonReferenceManager.Instance.storedDTHButtonID = DTHEnum.NONE;
         sceneChanger.ChangeToMainScene();
         AudioPlayer.Instance.PlayAudioOneShot(0);
     }
