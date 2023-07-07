@@ -3218,7 +3218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlacedPrefab: {fileID: 1482577860062412404, guid: 601a530c093c3c940913c8892c0b1490, type: 3}
-  testPrefab: {fileID: 6550504163757681382, guid: a09ecfde5619a6f449436c58425d7dd4, type: 3}
+  placedInstrument: {fileID: 0}
   visualObject: {fileID: 1387979399}
 --- !u!1 &1579960985
 GameObject:
