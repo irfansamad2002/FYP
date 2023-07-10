@@ -6,6 +6,9 @@ using TMPro;
 
 public class QuizMenuManager : MonoBehaviour
 {
+    [Header("Header")]
+    [SerializeField] private GameObject safeArea;
+
     [Header("Top Parent")]
     [SerializeField] private GameObject TopParent;
     [SerializeField] private GameObject HomeButton;
@@ -41,6 +44,13 @@ public class QuizMenuManager : MonoBehaviour
     public TMP_Text ScoreText;
     public int qnNumber;
 
+    [Header("Background Images")]
+    public Sprite enterNameBG;
+    public Sprite qnBG;
+    public Sprite correctBG;
+    public Sprite wrongBG;
+    public Sprite scoreBG;
+
     private int latestButtonIndex;
     void Start()
     {
@@ -52,6 +62,7 @@ public class QuizMenuManager : MonoBehaviour
         CorrectWrongPage.SetActive(false);
         QuizOverMenu.SetActive(false);
         qnNumber = 1;
+        changeQuizBG(0);
     }
 
     public void OnBackClicked()
@@ -76,6 +87,7 @@ public class QuizMenuManager : MonoBehaviour
             BackButton.SetActive(true);
             EnterNamePage.SetActive(false);
             QuizMenu.SetActive(true);
+            changeQuizBG(1);
         }
         AudioPlayer.Instance.PlayAudioOneShot(0);
     }
@@ -109,10 +121,12 @@ public class QuizMenuManager : MonoBehaviour
             if (quizManager.CheckIfButtonIsCorrect(GetLatestButtonIndex()))
             {
                 CorrectWrongText.text = "Good Job!";
+                changeQuizBG(2);
             }
             else
             {
                 CorrectWrongText.text = "Try Again!";
+                changeQuizBG(3);
             }
         }
         else
@@ -122,14 +136,13 @@ public class QuizMenuManager : MonoBehaviour
         }
     }
 
-    
-
     public void OnNextQnClicked()
     {
         CorrectWrongPage.SetActive(false);
         TopParent.SetActive(true);
         QuizMenu.SetActive(true);
         AudioPlayer.Instance.PlayAudioOneShot(0);
+        changeQuizBG(1);
     }
 
     public void QuizOver()
@@ -140,6 +153,7 @@ public class QuizMenuManager : MonoBehaviour
         Debug.Log(quizManager.score + "/10");
         quizData.SaveScores();
         quizData.LoadData();
+        changeQuizBG(4);
     }
 
     #region when on score page
@@ -152,8 +166,27 @@ public class QuizMenuManager : MonoBehaviour
         AudioPlayer.Instance.PlayAudioOneShot(0);
     }
     #endregion
-    void Update()
+    public void changeQuizBG(int index)
     {
-        
+        if (index == 0)
+        {
+            safeArea.GetComponent<Image>().sprite = enterNameBG;
+        }
+        else if (index == 1)
+        {
+            safeArea.GetComponent<Image>().sprite = qnBG;
+        }
+        else if (index == 2)
+        {
+            safeArea.GetComponent<Image>().sprite = correctBG;
+        }
+        else if (index == 3)
+        {
+            safeArea.GetComponent<Image>().sprite = wrongBG;
+        }
+        else if (index == 4)
+        {
+            safeArea.GetComponent<Image>().sprite = scoreBG;
+        }
     }
 }
