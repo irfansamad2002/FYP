@@ -31,9 +31,10 @@ public class HighScoreTable : MonoBehaviour
             AddHighscoreEntry(PlayerPrefs.GetInt("Scores" + i), PlayerPrefs.GetString("Names" + i));
         }
 
+        #region test entries
         for (int i = 0; i < 50; i++)
         {
-            AddHighscoreEntry(9 + i, "man" + i.ToString() );
+            AddHighscoreEntry(9 + i, "man" + i.ToString());
         }
 
         AddHighscoreEntry(8, "guy10");
@@ -64,6 +65,7 @@ public class HighScoreTable : MonoBehaviour
         AddHighscoreEntry(1, "gu879");
         AddHighscoreEntry(1, "guy66");
         AddHighscoreEntry(1, "gu56765");
+        #endregion
 
         //Get the data
         string jsonString = PlayerPrefs.GetString(PLAYERPREFDATABASE);

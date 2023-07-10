@@ -33,6 +33,7 @@ public class ARMenuManager : MonoBehaviour
 
     public void OnHomeClicked()
     {
+        ButtonReferenceManager.Instance.storedDTHButtonID = DTHEnum.NONE;
         sceneChanger.ChangeToMainScene();
     }
 
