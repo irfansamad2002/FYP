@@ -68,7 +68,6 @@ public class PlaceOnPlane : MonoBehaviour
         }
         else if (ButtonReferenceManager.Instance.storedDTHButtonID == DTHEnum.DH)
         {
-            Debug.Log("Called DH Gameobject");
             placedInstrument = ButtonReferenceManager.Instance.dhTools[ButtonReferenceManager.Instance.storedIndex].dentalItem;
         }
 
