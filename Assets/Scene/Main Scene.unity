@@ -525,12 +525,12 @@ GameObject:
   - component: {fileID: 322352684}
   - component: {fileID: 322352683}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: DebugText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &322352683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2631,7 +2631,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 67.1
+  m_fontSize: 41
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
