@@ -31,6 +31,7 @@ public class ToolInfoController : MonoBehaviour
     {
         toolNameText.text = dentistTool.Name;
         toolDescText.text = dentistTool.Usage + "\n" + dentistTool.Instrumentation + "\n" + dentistTool.InstrumentGrasp;
+        toolImage.sprite = dentistTool.Icon;
         //Debug.Log("ToolInfo loaded with " + dentistTool.Name);
     }
 
