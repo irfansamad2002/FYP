@@ -14,10 +14,12 @@ public class GestureManager : MonoBehaviour
     private Vector2 beginTouchPos, endTouchPos;
     private float initialXPlacement;
     private bool inPosition;
+    private bool shownGestureGuide;
 
     private void Awake()
     {
-        BlockerGameObject.SetActive(true);
+        if(!shownGestureGuide)
+            BlockerGameObject.SetActive(true);
     }
 
     private void Start()
@@ -32,7 +34,11 @@ public class GestureManager : MonoBehaviour
         SucceedBack = false;
 
     }
-
+    public void HideBlocker()
+    {
+        BlockerGameObject.SetActive(false);
+        shownGestureGuide = true;
+    }
 
     // Update is called once per frame
     void Update()
