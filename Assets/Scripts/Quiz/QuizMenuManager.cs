@@ -19,6 +19,7 @@ public class QuizMenuManager : MonoBehaviour
 
     [Header("Quiz Menu")]
     [SerializeField] private GameObject QuizMenu;
+    [SerializeField] private TMP_Text timerText;
     [SerializeField] private Button Option1Button;
     [SerializeField] private Button Option2Button;
     [SerializeField] private Button Option3Button;
@@ -52,6 +53,8 @@ public class QuizMenuManager : MonoBehaviour
     public Sprite scoreBG;
 
     private int latestButtonIndex;
+    private float timeRemaining = 10;
+    private bool isTimerMoving = false;
     void Start()
     {
         TopParent.SetActive(true);
@@ -63,6 +66,42 @@ public class QuizMenuManager : MonoBehaviour
         QuizOverMenu.SetActive(false);
         qnNumber = 1;
         changeQuizBG(0);
+        
+    }
+
+    void Update()
+    {
+        timerText.text = "Time Remaining: " + timeRemaining.ToString("#.00");
+        if (isTimerMoving == true && timeRemaining > 0)
+        {
+            updateTimer();
+        }
+
+        if (timeRemaining < 0)
+        {
+            resetTimer();
+            quizManager.Wrong();
+        }
+    }
+
+    public void startTimer()
+    {
+        timeRemaining = 10;
+        isTimerMoving = true;
+        Debug.Log("Timer started");
+    }
+
+    public void resetTimer()
+    {
+        timeRemaining = 10;
+        isTimerMoving = false;
+        OnOptionClicked();
+        quizManager.QuestionNumber.text = "Question " + qnNumber.ToString();
+    }
+
+    public void updateTimer()
+    {
+        timeRemaining -= Time.deltaTime;
     }
 
     public void OnBackClicked()
@@ -88,6 +127,10 @@ public class QuizMenuManager : MonoBehaviour
             EnterNamePage.SetActive(false);
             QuizMenu.SetActive(true);
             changeQuizBG(1);
+
+            // start timer when player starts quiz
+            startTimer();
+            Debug.Log("Timer started");
         }
         AudioPlayer.Instance.PlayAudioOneShot(0);
     }
@@ -116,6 +159,8 @@ public class QuizMenuManager : MonoBehaviour
         // if on questions <= 9
         if (qnNumber < 10)
         {
+            isTimerMoving = false;
+            Debug.Log("Timer stopped");
             qnNumber += 1;
             CorrectWrongPage.SetActive(true);
         
@@ -144,6 +189,8 @@ public class QuizMenuManager : MonoBehaviour
         QuizMenu.SetActive(true);
         AudioPlayer.Instance.PlayAudioOneShot(0);
         changeQuizBG(1);
+        // start timer after next question is pressed
+        startTimer();
     }
 
     public void QuizOver()
@@ -155,6 +202,8 @@ public class QuizMenuManager : MonoBehaviour
         quizData.SaveScores();
         quizData.LoadData();
         changeQuizBG(4);
+        isTimerMoving = false;
+        Debug.Log("Timer stopped");
     }
 
     #region when on score page

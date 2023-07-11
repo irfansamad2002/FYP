@@ -92,7 +92,7 @@ public class QuizManager : MonoBehaviour
         if (QnA.Count > 5) // number of questions - 10, if 50 questions, input "> 40"
         {
             currentQn = Random.Range(0, QnA.Count);
-            QuestionNumber.text = quizMenuManager.qnNumber.ToString();
+            QuestionNumber.text = "Question " + quizMenuManager.qnNumber.ToString();
             QuestionText.text = QnA[currentQn].question;
             SetAnswers();
         }
