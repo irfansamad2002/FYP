@@ -28,6 +28,7 @@ public class QuizMenuManager : MonoBehaviour
     [Header("Correct/Wrong Page")]
     [SerializeField] private GameObject CorrectWrongPage;
     [SerializeField] private TMP_Text CorrectWrongText;
+    [SerializeField] private GameObject GJTAImage;
     [SerializeField] private Button NextQnButton;
 
     [Header("Quiz Over Menu")]
@@ -51,6 +52,10 @@ public class QuizMenuManager : MonoBehaviour
     public Sprite correctBG;
     public Sprite wrongBG;
     public Sprite scoreBG;
+
+    [Header("Good Job/Try Again Images")]
+    public Sprite goodJobImage;
+    public Sprite tryAgainImage;
 
     private int latestButtonIndex;
     private float timeRemaining = 10;
@@ -168,11 +173,13 @@ public class QuizMenuManager : MonoBehaviour
             {
                 CorrectWrongText.text = "Good Job!";
                 changeQuizBG(2);
+                GJTAImage.GetComponent<Image>().sprite = goodJobImage;
             }
             else
             {
                 CorrectWrongText.text = "Try Again!";
                 changeQuizBG(3);
+                GJTAImage.GetComponent<Image>().sprite = tryAgainImage;
             }
         }
         else
