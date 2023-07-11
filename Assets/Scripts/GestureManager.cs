@@ -7,12 +7,18 @@ public class GestureManager : MonoBehaviour
 {
     public TMP_Text TextObject;
     public BackController backController;
+    public GameObject BlockerGameObject;
    
     private bool SucceedBack;
     private Touch touch;
     private Vector2 beginTouchPos, endTouchPos;
     private float initialXPlacement;
     private bool inPosition;
+
+    private void Awake()
+    {
+        BlockerGameObject.SetActive(true);
+    }
 
     private void Start()
     {

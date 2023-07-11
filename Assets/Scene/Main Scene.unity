@@ -1359,6 +1359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TextObject: {fileID: 322352683}
   backController: {fileID: 1885148984}
+  BlockerGameObject: {fileID: 1010238958}
 --- !u!1 &637007320
 GameObject:
   m_ObjectHideFlags: 0
@@ -2134,7 +2135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1010238959
 RectTransform:
   m_ObjectHideFlags: 0
