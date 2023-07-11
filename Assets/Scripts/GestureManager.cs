@@ -6,9 +6,9 @@ using TMPro;
 public class GestureManager : MonoBehaviour
 {
     public TMP_Text TextObject;
-    public bool SucceedBack;
     public BackController backController;
    
+    private bool SucceedBack;
     private Touch touch;
     private Vector2 beginTouchPos, endTouchPos;
     private float initialXPlacement;
