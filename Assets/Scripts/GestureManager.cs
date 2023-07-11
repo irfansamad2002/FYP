@@ -6,13 +6,21 @@ using TMPro;
 public class GestureManager : MonoBehaviour
 {
     public TMP_Text TextObject;
-    public bool SucceedBack;
     public BackController backController;
+    public GameObject BlockerGameObject;
    
+    private bool SucceedBack;
     private Touch touch;
     private Vector2 beginTouchPos, endTouchPos;
     private float initialXPlacement;
     private bool inPosition;
+    private bool shownGestureGuide;
+
+    private void Awake()
+    {
+        if(!shownGestureGuide)
+            BlockerGameObject.SetActive(true);
+    }
 
     private void Start()
     {
@@ -26,7 +34,11 @@ public class GestureManager : MonoBehaviour
         SucceedBack = false;
 
     }
-
+    public void HideBlocker()
+    {
+        BlockerGameObject.SetActive(false);
+        shownGestureGuide = true;
+    }
 
     // Update is called once per frame
     void Update()
