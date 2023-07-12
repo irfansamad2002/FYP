@@ -41,6 +41,7 @@ public class QuizMenuManager : MonoBehaviour
     public QuizManager quizManager;
     public AnswerScript answerScript;
     public QuizData quizData;
+    public QuizTimer quizTimer;
 
     [Header("Others")]
     public TMP_Text ScoreText;
@@ -48,18 +49,17 @@ public class QuizMenuManager : MonoBehaviour
 
     [Header("Background Images")]
     public Sprite enterNameBG;
-    public Sprite qnBG;
+    public Sprite mainBG;
     public Sprite correctBG;
     public Sprite wrongBG;
-    public Sprite scoreBG;
 
     [Header("Good Job/Try Again Images")]
     public Sprite goodJobImage;
     public Sprite tryAgainImage;
 
     private int latestButtonIndex;
-    private float timeRemaining = 10;
-    private bool isTimerMoving = false;
+    //private float timeRemaining = 10;
+    //private bool isTimerMoving = false;
     void Start()
     {
         TopParent.SetActive(true);
@@ -71,43 +71,42 @@ public class QuizMenuManager : MonoBehaviour
         QuizOverMenu.SetActive(false);
         qnNumber = 1;
         changeQuizBG(0);
-        
     }
 
     void Update()
     {
-        timerText.text = "Time Remaining: " + timeRemaining.ToString("#.00");
-        if (isTimerMoving == true && timeRemaining > 0)
+        timerText.text = "Time Remaining: " + quizTimer.getTimeRemaining().ToString("#");
+        if (quizTimer.getIsTimerMoving() == true && quizTimer.getTimeRemaining() > 0)
         {
-            updateTimer();
+            quizTimer.updateTimer();
         }
 
-        if (timeRemaining < 0)
+        if (quizTimer.getTimeRemaining() < 0)
         {
-            resetTimer();
+            quizTimer.resetTimer();
             quizManager.Wrong();
         }
     }
 
-    public void startTimer()
-    {
-        timeRemaining = 10;
-        isTimerMoving = true;
-        Debug.Log("Timer started");
-    }
+    //public void startTimer()
+    //{
+    //    timeRemaining = 10;
+    //    isTimerMoving = true;
+    //    Debug.Log("Timer started");
+    //}
 
-    public void resetTimer()
-    {
-        timeRemaining = 10;
-        isTimerMoving = false;
-        OnOptionClicked();
-        quizManager.QuestionNumber.text = "Question " + qnNumber.ToString();
-    }
+    //public void resetTimer()
+    //{
+    //    timeRemaining = 10;
+    //    isTimerMoving = false;
+    //    OnOptionClicked();
+    //    quizManager.QuestionNumber.text = "Question " + qnNumber.ToString();
+    //}
 
-    public void updateTimer()
-    {
-        timeRemaining -= Time.deltaTime;
-    }
+    //public void updateTimer()
+    //{
+    //    timeRemaining -= Time.deltaTime;
+    //}
 
     public void OnBackClicked()
     {
@@ -134,7 +133,7 @@ public class QuizMenuManager : MonoBehaviour
             changeQuizBG(1);
 
             // start timer when player starts quiz
-            startTimer();
+            quizTimer.startTimer();
             Debug.Log("Timer started");
         }
         AudioPlayer.Instance.PlayAudioOneShot(0);
@@ -164,7 +163,7 @@ public class QuizMenuManager : MonoBehaviour
         // if on questions <= 9
         if (qnNumber < 10)
         {
-            isTimerMoving = false;
+            quizTimer.setIsTimerMoving(false);
             Debug.Log("Timer stopped");
             qnNumber += 1;
             CorrectWrongPage.SetActive(true);
@@ -197,7 +196,7 @@ public class QuizMenuManager : MonoBehaviour
         AudioPlayer.Instance.PlayAudioOneShot(0);
         changeQuizBG(1);
         // start timer after next question is pressed
-        startTimer();
+        quizTimer.startTimer();
     }
 
     public void QuizOver()
@@ -208,8 +207,8 @@ public class QuizMenuManager : MonoBehaviour
         Debug.Log(quizManager.score + "/10");
         quizData.SaveScores();
         quizData.LoadData();
-        changeQuizBG(4);
-        isTimerMoving = false;
+        changeQuizBG(1);
+        quizTimer.setIsTimerMoving(false);
         Debug.Log("Timer stopped");
     }
 
@@ -231,7 +230,7 @@ public class QuizMenuManager : MonoBehaviour
         }
         else if (index == 1)
         {
-            safeArea.GetComponent<Image>().sprite = qnBG;
+            safeArea.GetComponent<Image>().sprite = mainBG;
         }
         else if (index == 2)
         {
@@ -241,9 +240,9 @@ public class QuizMenuManager : MonoBehaviour
         {
             safeArea.GetComponent<Image>().sprite = wrongBG;
         }
-        else if (index == 4)
-        {
-            safeArea.GetComponent<Image>().sprite = scoreBG;
-        }
+        //else if (index == 4)
+        //{
+        //    safeArea.GetComponent<Image>().sprite = scoreBG;
+        //}
     }
 }
