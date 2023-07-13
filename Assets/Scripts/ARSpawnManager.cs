@@ -11,6 +11,7 @@ public class ARSpawnManager : MonoBehaviour
     private bool shownDragGuide;
     private bool shownPinchGuide;
     private bool shownTwistGuide;
+    private static bool shownGestureGuide = false;
 
     private void Awake()
     {
@@ -21,6 +22,11 @@ public class ARSpawnManager : MonoBehaviour
             twistTutorial.SetActive(false);
             BlockerGameObject.SetActive(true);
         }
+
+        if (!shownGestureGuide)
+            BlockerGameObject.SetActive(true);
+        else
+            BlockerGameObject.SetActive(false);
     }
 
     private void Update()
@@ -55,5 +61,6 @@ public class ARSpawnManager : MonoBehaviour
     {
         BlockerGameObject.SetActive(false);
         shownTwistGuide = true;
+        shownGestureGuide = true;
     }
 }
