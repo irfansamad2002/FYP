@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ARMenuManager : MonoBehaviour
+public class ARScanManager : MonoBehaviour
 {
 
     [Header("Top Parent")]
@@ -19,6 +19,7 @@ public class ARMenuManager : MonoBehaviour
     [SerializeField] private GameObject ToolInfoMenu;
     [SerializeField] private Button DemoVideoButton;
 
+    [Header("Scripts")]
     public SceneChanger sceneChanger;
 
     // Start is called before the first frame update
