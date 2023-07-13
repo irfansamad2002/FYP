@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5695479233413927944}
   - component: {fileID: 7652238905177335297}
   - component: {fileID: 8705371074918069521}
+  - component: {fileID: 8625944710474506548}
   m_Layer: 0
   m_Name: DT_MouthMirror
   m_TagString: Untagged
@@ -147,9 +148,30 @@ MonoBehaviour:
   Use:
     Filter: 0
     IgnoreStartedOverGui: 1
-    RequiredFingerCount: 0
+    RequiredFingerCount: 2
     RequiredMouseButtons: 0
     RequiredSelectable: {fileID: 0}
   axis: {x: 0, y: -1, z: 0}
+  space: 1
+  sensitivity: 1
+--- !u!114 &8625944710474506548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9142374047038850427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc7c91b26689a054d88448aba6dfe424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Use:
+    Filter: 0
+    IgnoreStartedOverGui: 1
+    RequiredFingerCount: 3
+    RequiredMouseButtons: 0
+    RequiredSelectable: {fileID: 0}
+  axis: {x: 0, y: 0, z: -1}
   space: 1
   sensitivity: 1

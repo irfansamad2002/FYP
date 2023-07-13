@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ARSpawnManager : MonoBehaviour
 {
+    public GameObject BlockerGameObject;
     public GameObject dragTutorial;
     public GameObject pinchTutorial;
     public GameObject twistTutorial;
-    public GameObject BlockerGameObject;
     private bool shownDragGuide;
     private bool shownPinchGuide;
     private bool shownTwistGuide;
