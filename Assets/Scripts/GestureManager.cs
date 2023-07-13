@@ -18,8 +18,12 @@ public class GestureManager : MonoBehaviour
 
     private void Awake()
     {
-        if(!shownGestureGuide)
+        if (!BlockerGameObject)
+            return;
+        if (!shownGestureGuide)
             BlockerGameObject.SetActive(true);
+        else
+            BlockerGameObject.SetActive(false); 
     }
 
     private void Start()
