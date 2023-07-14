@@ -46,7 +46,11 @@ public class MenuManager : MonoBehaviour
             ScanButton.SetActive(false);
         }
         AssessmentButton.SetActive(false);
-
+        if (ButtonReferenceManager.Instance.storedButtonID == ButtonENUM.TOOLSELECTION)//check if come from tool selection
+        {
+            OnDHorDTClicked();
+            ButtonReferenceManager.Instance.storedButtonID = ButtonENUM.MAINSCENE;
+        }
     }
 
     #region from main menu
