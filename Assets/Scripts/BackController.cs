@@ -32,7 +32,7 @@ public class BackController : MonoBehaviour
 
     private void changeBackToOldScene()
     {
-        ButtonReferenceManager.Instance.storedDTHButtonID = DTHEnum.NONE;
+        //ButtonReferenceManager.Instance.storedDTHButtonID = DTHEnum.NONE;
 
         SceneChanger.Instance.ChangeToMainScene();
     }
