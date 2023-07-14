@@ -39,8 +39,8 @@ public class ButtonReferenceManager : MonoBehaviour
             Instance = this;
         }
         DontDestroyOnLoad(this.gameObject);
-
         LoadToolsDatabases();
+
     }
 
     void LoadToolsDatabases()
