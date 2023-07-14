@@ -8,11 +8,17 @@ namespace Lean.Touch
 	[AddComponentMenu(LeanTouch.ComponentPathPrefix + "Twist Rotate Axis")]
 	public class LeanTwistRotateAxis : MonoBehaviour
 	{
+		[SerializeField] private Vector3 axis = Vector3.down;
 		/// <summary>The method used to find fingers to use with this component. See LeanFingerFilter documentation for more information.</summary>
 		public LeanFingerFilter Use = new LeanFingerFilter(true);
 
-		/// <summary>The axis of rotation.</summary>
-		public Vector3 Axis { set { axis = value; } get { return axis; } } [SerializeField] private Vector3 axis = Vector3.down;
+		public Vector3 Axis { set { axis = value; } get { return axis; } }
+		
+		public void ChangeAxis(Vector3 newAxis)
+        {
+			axis = newAxis;
+        }
+
 
 		/// <summary>Rotate locally or globally?</summary>
 		public Space Space { set { space = value; } get { return space; } } [SerializeField] private Space space = Space.Self;
