@@ -17,6 +17,8 @@ public class ToolInfoController : MonoBehaviour
     private void OnEnable()
     {
         //LoadContent(ButtonReferenceManager.Instance.dhTools[ButtonReferenceManager.Instance.storedIndex]);
+        if (!ButtonReferenceManager.Instance)
+            return;
         if (ButtonReferenceManager.Instance.storedDTHButtonID == DTHEnum.DH)
         {
             LoadContent(ButtonReferenceManager.Instance.dhTools[ButtonReferenceManager.Instance.storedIndex]);
