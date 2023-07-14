@@ -13,6 +13,8 @@ public class ARSpawnManager : MonoBehaviour
     private bool shownTwistGuide;
     private static bool shownGestureGuide = false;
 
+    Lean.Touch.LeanTwistRotateAxis leanTwistRotateAxis;
+
     private void Awake()
     {
         if (!shownDragGuide && !shownPinchGuide && !shownTwistGuide)
@@ -23,10 +25,12 @@ public class ARSpawnManager : MonoBehaviour
             BlockerGameObject.SetActive(true);
         }
 
-        if (!shownGestureGuide)
-            BlockerGameObject.SetActive(true);
-        else
-            BlockerGameObject.SetActive(false);
+        //if (!shownGestureGuide)
+        //    BlockerGameObject.SetActive(true);
+        //else
+        //    BlockerGameObject.SetActive(false);
+
+        //leanTwistRotateAxis.Axis.Set(-1, 0, 0);
     }
 
     private void Update()
@@ -61,6 +65,6 @@ public class ARSpawnManager : MonoBehaviour
     {
         BlockerGameObject.SetActive(false);
         shownTwistGuide = true;
-        shownGestureGuide = true;
+        //shownGestureGuide = true;
     }
 }

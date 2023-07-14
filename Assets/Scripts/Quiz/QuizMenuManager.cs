@@ -60,6 +60,7 @@ public class QuizMenuManager : MonoBehaviour
     private int latestButtonIndex;
     //private float timeRemaining = 10;
     //private bool isTimerMoving = false;
+
     void Start()
     {
         TopParent.SetActive(true);
@@ -88,26 +89,6 @@ public class QuizMenuManager : MonoBehaviour
         }
     }
 
-    //public void startTimer()
-    //{
-    //    timeRemaining = 10;
-    //    isTimerMoving = true;
-    //    Debug.Log("Timer started");
-    //}
-
-    //public void resetTimer()
-    //{
-    //    timeRemaining = 10;
-    //    isTimerMoving = false;
-    //    OnOptionClicked();
-    //    quizManager.QuestionNumber.text = "Question " + qnNumber.ToString();
-    //}
-
-    //public void updateTimer()
-    //{
-    //    timeRemaining -= Time.deltaTime;
-    //}
-
     public void OnBackClicked()
     {
         AudioPlayer.Instance.PlayAudioOneShot(0);
@@ -134,7 +115,7 @@ public class QuizMenuManager : MonoBehaviour
 
             // start timer when player starts quiz
             quizTimer.startTimer();
-            Debug.Log("Timer started");
+            //Debug.Log("Timer started");
         }
         AudioPlayer.Instance.PlayAudioOneShot(0);
     }
@@ -161,10 +142,10 @@ public class QuizMenuManager : MonoBehaviour
         QuizMenu.SetActive(false);
 
         // if on questions <= 9
-        if (qnNumber < 10)
+        if (qnNumber <= 10)
         {
             quizTimer.setIsTimerMoving(false);
-            Debug.Log("Timer stopped");
+            //Debug.Log("Timer stopped");
             qnNumber += 1;
             CorrectWrongPage.SetActive(true);
         
@@ -181,35 +162,55 @@ public class QuizMenuManager : MonoBehaviour
                 GJTAImage.GetComponent<Image>().sprite = tryAgainImage;
             }
         }
-        else
-        {
-            // if on question 10 
-            QuizOverMenu.SetActive(true);
-        }
+        //else if (qnNumber == 11)
+        //{
+        //    QuizOver();
+        //}
+        //else
+        //{
+        //    // if on question 10 
+        //    CorrectWrongPage.SetActive(true);
+        //    if (CorrectWrongPage.activeInHierarchy == true)
+        //    {
+        //        QuizOverMenu.SetActive(true);
+        //    }
+        //}
     }
 
     public void OnNextQnClicked()
     {
         CorrectWrongPage.SetActive(false);
         TopParent.SetActive(true);
-        QuizMenu.SetActive(true);
+        if (qnNumber <= 10)
+        {
+            QuizMenu.SetActive(true);
+            changeQuizBG(1);
+            // start timer after next question is pressed
+            quizTimer.startTimer();
+        }
+        else if (qnNumber == 11)
+        {
+            QuizOver();
+            QuizOverMenu.SetActive(true);
+
+            if (QuizOverMenu.activeInHierarchy == true)
+            {
+                changeQuizBG(1);
+            }
+        }
         AudioPlayer.Instance.PlayAudioOneShot(0);
-        changeQuizBG(1);
-        // start timer after next question is pressed
-        quizTimer.startTimer();
     }
 
     public void QuizOver()
     {
         QuizMenu.SetActive(false);
-        QuizOverMenu.SetActive(true);
         ScoreText.text = quizManager.score + "/10";
-        Debug.Log(quizManager.score + "/10");
         quizData.SaveScores();
         quizData.LoadData();
-        changeQuizBG(1);
+        //changeQuizBG(1);
         quizTimer.setIsTimerMoving(false);
-        Debug.Log("Timer stopped");
+        //Debug.Log(quizManager.score + "/10");
+        //Debug.Log("Timer stopped");
     }
 
     #region when on score page
