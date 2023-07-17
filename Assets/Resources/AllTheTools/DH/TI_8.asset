@@ -33,3 +33,4 @@ MonoBehaviour:
   Instrumentation: "1.  Begin at distal line angle, ends at mesial line angle\r\n2.
     Constantly maintain toe third of the cutting edge to tooth surface\r\n3. Maintain
     a neutral wrist position while utilizing wrist activation\r"
+  dentalItem: {fileID: 34721899381963265, guid: 15fd8bb6aa4c8b547bbf8dbc345e2219, type: 3}

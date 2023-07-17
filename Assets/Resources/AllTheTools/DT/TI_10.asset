@@ -21,3 +21,4 @@ MonoBehaviour:
   Usage: " To hold and place rubber dam clamps onto the tooth.\r"
   InstrumentGrasp: 
   Instrumentation: 
+  dentalItem: {fileID: 7926103414359551945, guid: 47652a64d7e762b4695a08700a690d2b, type: 3}

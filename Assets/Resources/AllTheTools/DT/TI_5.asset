@@ -24,3 +24,4 @@ MonoBehaviour:
     slab'
   InstrumentGrasp: 
   Instrumentation: 
+  dentalItem: {fileID: 5130605744053326888, guid: 810902d6abc841c47a6d42ae40205768, type: 3}

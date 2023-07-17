@@ -21,3 +21,4 @@ MonoBehaviour:
   Usage: Holds rubber dam in place
   InstrumentGrasp: 
   Instrumentation: 
+  dentalItem: {fileID: 5751283790382987795, guid: 8d675f0948c7ae049afcad86ac5ca091, type: 3}

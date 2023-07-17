@@ -17,3 +17,4 @@ MonoBehaviour:
   Usage: '- To insert or remove foreign objects  that do not belong in the mouth'
   InstrumentGrasp: 
   Instrumentation: 
+  dentalItem: {fileID: 7363406690156425660, guid: 2b93ea97733e1c241ba7c51d5c18cfa8, type: 3}

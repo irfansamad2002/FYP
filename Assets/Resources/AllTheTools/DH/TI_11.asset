@@ -25,3 +25,4 @@ MonoBehaviour:
   Instrumentation: "1. Begin at distal line angle.\r\n2. Adapt lower blade.\r\n3.
     Apply small vertical /or oblique strokes, \r\noverlapping.\r\n4. Functional shank
     \u201Cgoes up and over the \r\ntooth\u201D."
+  dentalItem: {fileID: 5697753356249980126, guid: 38e7b71e3aee0f74b9ad61c3ac148a00, type: 3}

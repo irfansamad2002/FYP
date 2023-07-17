@@ -44,3 +44,4 @@ MonoBehaviour:
     proper root planning strokes, which are lighter, longer and shaving strokes when
     debriding root surface\r\n10. Apply appropriate lateral pressure in a coronal
     direction\r\n11. Maintain a neutral wrist position while utilizing wrist activation"
+  dentalItem: {fileID: 2769261376357853920, guid: 7cd43abbabf8c06449e66db8f61d459f, type: 3}

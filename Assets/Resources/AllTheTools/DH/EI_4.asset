@@ -21,3 +21,4 @@ MonoBehaviour:
   Instrumentation: "1. Insert at furcation area \r\n2. Probe has 4 markings \r\n3.
     First silver marking is Grade I \r\n4. Second black marking is Grade II \r\n5.
     Third silver marking is Grade III \r\n6. Fourth black marking is Grade IV "
+  dentalItem: {fileID: 4890610964079711563, guid: 21a5ff21b5825514c895f3223b7f8c28, type: 3}

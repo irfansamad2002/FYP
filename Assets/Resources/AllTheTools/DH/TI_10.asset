@@ -25,3 +25,4 @@ MonoBehaviour:
     a neutral wrist position"
   Instrumentation: "1. Begin at distal line angle, cover facial/lingual \r\nand mesial
     surfaces.\r\n2. Apply small, oblique/vertical overlapping \r\nstrokes."
+  dentalItem: {fileID: 6454270763258874754, guid: 8169b5c2f14772048824f5718dc67c92, type: 3}

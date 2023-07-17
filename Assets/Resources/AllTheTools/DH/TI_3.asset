@@ -34,3 +34,4 @@ MonoBehaviour:
     strokes across the buccal/lingual surface until the mesio-buccal line angle\r\n7.
     When instrumenting interproximal surfaces, ensure that your instrumentation strokes
     extend past the midline of the tooth surface while maintaining proper angulation."
+  dentalItem: {fileID: 7195490078862822958, guid: 0840505e7cc1ab44f97c4c8533a06ac8, type: 3}

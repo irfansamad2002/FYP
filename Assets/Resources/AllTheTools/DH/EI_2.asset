@@ -19,4 +19,4 @@ MonoBehaviour:
   Usage: '- To trace and explore fissures'
   InstrumentGrasp: 1. Modified Pen Grasp
   Instrumentation: 1. Explore the whole tooth surface
-  dentalItem: {fileID: 919132149155446097, guid: f31b5fb6bfeee6249908f0f6d40d3cd3, type: 3}
+  dentalItem: {fileID: 2962219975840949431, guid: 820c85637f9ac944088e23b0efcf8cc1, type: 3}

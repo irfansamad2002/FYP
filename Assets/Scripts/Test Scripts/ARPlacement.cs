@@ -24,9 +24,6 @@ public class ARPlacement : MonoBehaviour
     private Pose PlacementPose;
     private ARRaycastManager aRRaycastManager;
     private bool placementPoseIsValid = true;
-    private bool xButtonPressed = false;
-    private bool yButtonPressed = false;
-    private bool zButtonPressed = false;
 
     private LeanTwistRotateAxis leanTwistRotateAxis;
     private LeanPinchScale leanPinchScale;
@@ -48,10 +45,6 @@ public class ARPlacement : MonoBehaviour
         
 
         // start with rotate first
-        //leanPinchScale.enabled = false;
-        //leanTwistRotateAxis.enabled = true;
-        //Debug.Log("leanPinchScale: " + leanPinchScale.enabled);
-        //Debug.Log("leanTwistRotateAxis: " + leanTwistRotateAxis.enabled);
         RSButton.SetActive(true);
         rotationButtons.SetActive(true);
     }
@@ -143,5 +136,9 @@ public class ARPlacement : MonoBehaviour
 
         leanTwistRotateAxis = spawnedObject.GetComponent<LeanTwistRotateAxis>();
         leanPinchScale = spawnedObject.GetComponent<LeanPinchScale>();
+
+        // start with rotate
+        leanPinchScale.enabled = false;
+        leanTwistRotateAxis.enabled = true;
     }
 }
