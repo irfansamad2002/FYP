@@ -16,7 +16,8 @@ MonoBehaviour:
 
     excavator'
   Icon: {fileID: 21300000, guid: 7ff01d72752d05443a62888d6d8e29ba, type: 3}
-  Usage: 
+  Usage: "Usage: Removes debris from the tooth\r\n\r\n\r\nNote: Used to remove caries
+    and\r\nscrape out pathological tissues \r\nbefore filling a cavity"
   InstrumentGrasp: 
   Instrumentation: 
   dentalItem: {fileID: 5821906473763451479, guid: 59cf77cbd442f8e408bde03704184926, type: 3}
