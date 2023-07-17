@@ -37,6 +37,8 @@ public class TopParentColor : MonoBehaviour
 
     public Color GetcurrentTopParentColor()
     {
+        if ((!ButtonReferenceManager.Instance))
+            return Color.white;
         switch (ButtonReferenceManager.Instance.storedDTHButtonID)
         {
             case DTHEnum.DT:
