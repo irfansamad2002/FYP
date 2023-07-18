@@ -97,6 +97,7 @@ public class QuizMenuManager : MonoBehaviour
     public void OnCancelClicked()
     {
         Debug.Log("Button id " + ButtonReferenceManager.Instance.storedButtonID);
+        ButtonReferenceManager.Instance.storedIndex = 0;
         //ButtonReferenceManager.Instance.storedDTHButtonID = DTHEnum.NONE;
         sceneChanger.ChangeToMainScene();
         //AudioPlayer.Instance.PlayAudioOneShot(0);
