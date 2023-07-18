@@ -11,7 +11,6 @@ public class ARSpawnManager : MonoBehaviour
     private bool shownDragGuide;
     private bool shownPinchGuide;
     private bool shownTwistGuide;
-    private static bool shownGestureGuide = false;
 
     Lean.Touch.LeanTwistRotateAxis leanTwistRotateAxis;
 
