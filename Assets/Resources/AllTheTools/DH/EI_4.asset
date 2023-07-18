@@ -16,9 +16,15 @@ MonoBehaviour:
 
     Probe'
   Icon: {fileID: 21300000, guid: 4898384753cb1c648b2e1fb4062ed1d8, type: 3}
-  Usage: '- To probe through furcations of multi-rooted teeth to determine its grade '
-  InstrumentGrasp: '- Modified pen grasp'
-  Instrumentation: "1. Insert at furcation area \r\n2. Probe has 4 markings \r\n3.
-    First silver marking is Grade I \r\n4. Second black marking is Grade II \r\n5.
-    Third silver marking is Grade III \r\n6. Fourth black marking is Grade IV "
+  Usage: '<b>Usage</b>
+
+    - To probe through furcations of multi-rooted teeth
+    to determine its grade <br>'
+  InstrumentGrasp: '<b>Instrument Grasp</b>
+
+    - Modified pen grasp<br>'
+  Instrumentation: "<b>Instrumentation</b>\n1. Insert at furcation area \r\n2. Probe
+    has 4 markings \r\n3. First silver marking is Grade I \r\n4. Second black marking
+    is Grade II \r\n5. Third silver marking is Grade III \r\n6. Fourth black marking
+    is Grade IV "
   dentalItem: {fileID: 4890610964079711563, guid: 21a5ff21b5825514c895f3223b7f8c28, type: 3}

@@ -18,13 +18,14 @@ MonoBehaviour:
 
     holder'
   Icon: {fileID: 21300000, guid: 4c2529dd685c61649888761780813e03, type: 3}
-  Usage: 'To hold matrix band for use in a restoration
+  Usage: '<b>Usage</b>
+
+    To hold matrix band for use in a restoration
 
 
-
-    Note: Used in Class
-    II restorations, compensating for the missing walls of the tooth and containing
-    the filling material, '
+    <b>Note:
+    </b>Used in Class II restorations, compensating for the missing walls of the
+    tooth and containing the filling material, '
   InstrumentGrasp: 
   Instrumentation: 
   dentalItem: {fileID: 7679666660008763990, guid: 72b768dbba72f1b46a6d29b922563e42, type: 3}
