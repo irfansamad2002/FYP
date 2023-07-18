@@ -8,7 +8,7 @@ public class AudioPlayer : MonoBehaviour
 
     [SerializeField] private List<AudioClip> audioClips = new List<AudioClip>();
 
-    AudioSource audioSrc;
+    public AudioSource audioSrc;
 
     private void Awake()
     {

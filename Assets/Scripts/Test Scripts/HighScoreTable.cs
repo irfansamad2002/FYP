@@ -32,39 +32,39 @@ public class HighScoreTable : MonoBehaviour
         }
 
         #region test entries
-        for (int i = 0; i < 50; i++)
-        {
-            AddHighscoreEntry(9 + i, "man" + i.ToString());
-        }
+        //for (int i = 0; i < 50; i++)
+        //{
+        //    AddHighscoreEntry(9 + i, "man" + i.ToString());
+        //}
 
-        AddHighscoreEntry(8, "guy10");
-        AddHighscoreEntry(9, "guy100");
-        AddHighscoreEntry(7, "guy19");
-        AddHighscoreEntry(6, "guy18");
-        AddHighscoreEntry(0, "guy17");
-        AddHighscoreEntry(5, "guy16");
-        AddHighscoreEntry(4, "guy13");
-        AddHighscoreEntry(3, "guy15");
-        AddHighscoreEntry(2, "guy12");
-        AddHighscoreEntry(1, "guy1");
-        AddHighscoreEntry(1, "guy2");
-        AddHighscoreEntry(1, "guy3");
-        AddHighscoreEntry(1, "guy4");
-        AddHighscoreEntry(1, "guy5");
-        AddHighscoreEntry(1, "guy6");
-        AddHighscoreEntry(1, "guy7");
-        AddHighscoreEntry(1, "guy8");
-        AddHighscoreEntry(1, "guy20");
-        AddHighscoreEntry(1, "guy11");
-        AddHighscoreEntry(1, "guy20");
-        AddHighscoreEntry(1, "guy21");
-        AddHighscoreEntry(1, "guy22");
-        AddHighscoreEntry(1, "guy23");
-        AddHighscoreEntry(1, "gu24");
-        AddHighscoreEntry(1, "guy57");
-        AddHighscoreEntry(1, "gu879");
-        AddHighscoreEntry(1, "guy66");
-        AddHighscoreEntry(1, "gu56765");
+        //AddHighscoreEntry(8, "guy10");
+        //AddHighscoreEntry(9, "guy100");
+        //AddHighscoreEntry(7, "guy19");
+        //AddHighscoreEntry(6, "guy18");
+        //AddHighscoreEntry(0, "guy17");
+        //AddHighscoreEntry(5, "guy16");
+        //AddHighscoreEntry(4, "guy13");
+        //AddHighscoreEntry(3, "guy15");
+        //AddHighscoreEntry(2, "guy12");
+        //AddHighscoreEntry(1, "guy1");
+        //AddHighscoreEntry(1, "guy2");
+        //AddHighscoreEntry(1, "guy3");
+        //AddHighscoreEntry(1, "guy4");
+        //AddHighscoreEntry(1, "guy5");
+        //AddHighscoreEntry(1, "guy6");
+        //AddHighscoreEntry(1, "guy7");
+        //AddHighscoreEntry(1, "guy8");
+        //AddHighscoreEntry(1, "guy20");
+        //AddHighscoreEntry(1, "guy11");
+        //AddHighscoreEntry(1, "guy20");
+        //AddHighscoreEntry(1, "guy21");
+        //AddHighscoreEntry(1, "guy22");
+        //AddHighscoreEntry(1, "guy23");
+        //AddHighscoreEntry(1, "gu24");
+        //AddHighscoreEntry(1, "guy57");
+        //AddHighscoreEntry(1, "gu879");
+        //AddHighscoreEntry(1, "guy66");
+        //AddHighscoreEntry(1, "gu56765");
         #endregion
 
         //Get the data

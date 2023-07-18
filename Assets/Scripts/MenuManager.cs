@@ -29,11 +29,15 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject ToolInfoMenu;
     //[SerializeField] private Button DemoVideoButton;
 
-    public SceneChanger sceneChanger;
+    [Header("Settings")]
+    [SerializeField] private GameObject SettingsMenu;
+
 
     [Header("Toogle On if want to start from Menu")]
     [SerializeField] private bool startFromMenu;
 
+    public SceneChanger sceneChanger;
+    public SettingsManager settingsManager;
     void Start()
     {
         if (startFromMenu)
@@ -44,6 +48,7 @@ public class MenuManager : MonoBehaviour
             ToolSelectionMenu.SetActive(false);
             ToolInfoMenu.SetActive(false);
             ScanButton.SetActive(false);
+            SettingsMenu.SetActive(false);
         }
         AssessmentButton.SetActive(false);
         if (ButtonReferenceManager.Instance.storedButtonID == ButtonENUM.TOOLSELECTION || ButtonReferenceManager.Instance.storedButtonID == ButtonENUM.TOOLINFO)//check if come from tool selection
@@ -101,6 +106,15 @@ public class MenuManager : MonoBehaviour
     {
         sceneChanger.ChangeToScoreScene();
         AudioPlayer.Instance.PlayAudioOneShot(0);
+    }
+
+    public void OnSettingsClicked()
+    {
+        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
+        MainMenu.SetActive(false);
+        SettingsMenu.SetActive(true);
+        BackButton.SetActive(true);
+        HomeButton.SetActive(false);
     }
     #endregion
 
@@ -167,5 +181,21 @@ public class MenuManager : MonoBehaviour
         ToolSelectionMenu.SetActive(false);
         ToolInfoMenu.SetActive(false);
         AssessmentButton.SetActive(false);
+    }
+
+    public void OnBackClickedFromSettings()
+    {
+        //if (SettingsMenu.activeSelf)
+        //{
+        //    SettingsMenu.SetActive(false);
+        //    MainMenu.SetActive(true);
+        //    settingsManager.SaveVolume();
+        //    Debug.Log("Saved volume");
+        //}
+
+        SettingsMenu.SetActive(false);
+        MainMenu.SetActive(true);
+        settingsManager.SaveVolume();
+        Debug.Log("Saved volume");
     }
 }
