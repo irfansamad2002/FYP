@@ -52,11 +52,16 @@ public class MenuManager : MonoBehaviour
             if (ButtonReferenceManager.Instance.storedButtonID == ButtonENUM.TOOLINFO)
             {
                 OnToolClicked();
+                ButtonReferenceManager.Instance.storedButtonID = ButtonENUM.TOOLSELECTION;
             }
-            ButtonReferenceManager.Instance.storedButtonID = ButtonENUM.MAINSCENE;
-            Debug.Log("show the tool info wth the index of  " + ButtonReferenceManager.Instance.storedIndex);
+            else
+            {
+                ButtonReferenceManager.Instance.storedButtonID = ButtonENUM.MAINSCENE;
+                Debug.Log("show the tool info wth the index of  " + ButtonReferenceManager.Instance.storedIndex);
 
-            
+            }
+
+
         }
        
        
