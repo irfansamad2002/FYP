@@ -1302,6 +1302,7 @@ GameObject:
   - component: {fileID: 4881843518485000401}
   - component: {fileID: 1416503332}
   - component: {fileID: 1416503333}
+  - component: {fileID: 1830688126}
   m_Layer: 5
   m_Name: AR Spawn Button
   m_TagString: Untagged
@@ -1423,6 +1424,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1830688126}
+        m_TargetAssemblyTypeName: ARSpawnBtnClick, Assembly-CSharp
+        m_MethodName: PressSpawnButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1416503332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1447,5 +1460,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ac56625a33399a41b6fa88a127d1b7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonID: 0
+  buttonID: 3
   dthButtonID: 0
+--- !u!114 &1830688126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8393285893104245598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e50d8c5f33762bb4ab1c8fe8dce9420f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
