@@ -47,12 +47,19 @@ public class SettingsManager : MonoBehaviour
     // on reset data button pressed
     public void OnResetLeaderboardPressed()
     {
-        for (int i = -1; i < 100; i++)
+        //PlayerPrefs.DeleteKey("Scores");
+        //PlayerPrefs.DeleteKey("Names");
+        if (PlayerPrefs.GetInt("doNotShowAgainChecked") != 0)
         {
-            PlayerPrefs.DeleteKey("Scores" + i);
-            PlayerPrefs.DeleteKey("Names" + i);
+            PlayerPrefs.DeleteAll();
+            PlayerPrefs.SetInt("doNotShowAgainChecked", 1);
         }
-            Debug.Log("Reset Leaderboard");
+        else
+        {
+            PlayerPrefs.DeleteAll();
+            PlayerPrefs.SetInt("doNotShowAgainChecked", 0);
+        }
+        Debug.Log("Reset Leaderboard");
         AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
     }
 
