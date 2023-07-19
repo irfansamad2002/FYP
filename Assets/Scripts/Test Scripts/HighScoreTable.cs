@@ -26,7 +26,7 @@ public class HighScoreTable : MonoBehaviour
         //}
 
         // add score after each quiz attempt
-        for (int i = 0; i < 10; i++)
+        for (int i = -1; i < 100; i++)
         {
             AddHighscoreEntry(PlayerPrefs.GetInt("Scores" + i), PlayerPrefs.GetString("Names" + i));
         }

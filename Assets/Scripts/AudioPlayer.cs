@@ -21,12 +21,14 @@ public class AudioPlayer : MonoBehaviour
             Instance = this;
         }
         DontDestroyOnLoad(this.gameObject);
+        audioSrc = GetComponent<AudioSource>();
+
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        audioSrc = GetComponent<AudioSource>();
+        //audioSrc = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
