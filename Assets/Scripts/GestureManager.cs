@@ -10,15 +10,15 @@ public class GestureManager : MonoBehaviour
     public BackController backController;
     public GameObject BlockerGameObject;
     public GameObject MainScene;
-
     public Toggle toggle;
     public bool constantlyShowBlocker;
+    public bool inPosition;
+
 
     private bool SucceedBack;
     private Touch touch;
     private Vector2 beginTouchPos, endTouchPos;
     private float initialXPlacement;
-    private bool inPosition;
     private static bool shownGestureGuide = false;
     private bool playerPrefdoNotShowAgainChecked;
 
