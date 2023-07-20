@@ -16,14 +16,17 @@ MonoBehaviour:
 
     15/16'
   Icon: {fileID: 21300000, guid: 090bd2295dc7d4243992121495320034, type: 3}
-  Usage: "Posterior teeth: facial, mesial and lingual surfaces on premolars and molars\r"
-  InstrumentGrasp: "1. Position the thumb and index finger \r\nopposite one another
-    on the handle, No \r\ntouching or overlap\r\n2. Rest pad of middle finger lightly
-    on side of \r\ninstrument shank, touches ring finger\r\n3. Position the thumb,
-    index and middle \r\nfinger properly without hyperextension of joints\r\n4. Maintain
-    a neutral wrist position"
-  Instrumentation: "1. Begin at distal line angle, cover facial/\r\nlingual and mesial
-    surfaces.\r\n2. Ensure the lower shank is parallel to the tooth\r\n3. Constantly
-    maintain toe third of the cutting edge to tooth surface\r\n4. Apply small, oblique/vertical
-    overlapping \r\nstrokes."
-  dentalItem: {fileID: 3501075885271148873, guid: 41742258c7f218f47b00ae4bc2009fe1, type: 3}
+  Usage: '<b>Usage</b>
+
+    Posterior teeth: facial, mesial and lingual surfaces
+    on premolars and molars<br>'
+  InstrumentGrasp: "<b>Instrument Grasp</b>\r\n1. Position the thumb and index finger
+    \r\nopposite one another on the handle, No \r\ntouching or overlap\r\n2. Rest
+    pad of middle finger lightly on side of \r\ninstrument shank, touches ring finger\r\n3.
+    Position the thumb, index and middle \r\nfinger properly without hyperextension
+    of joints\r\n4. Maintain a neutral wrist position<br>"
+  Instrumentation: "<b>Instrumentation</b>\n1. Begin at distal line angle, cover
+    facial/\r\nlingual and mesial surfaces.\r\n2. Ensure the lower shank is parallel
+    to the tooth\r\n3. Constantly maintain toe third of the cutting edge to tooth
+    surface\r\n4. Apply small, oblique/vertical overlapping \r\nstrokes."
+  dentalItem: {fileID: 0}

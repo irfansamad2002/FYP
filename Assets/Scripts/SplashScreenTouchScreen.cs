@@ -15,7 +15,7 @@ public class SplashScreenTouchScreen : MonoBehaviour
 
     private void OnEnable()
     {
-        StartCoroutine(FadeInLogo(.5f));
+        StartCoroutine(FadeInLogo(.75f));//higher float = faster load
 
     }
 

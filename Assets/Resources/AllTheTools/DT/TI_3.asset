@@ -16,8 +16,10 @@ MonoBehaviour:
 
     burnisher'
   Icon: {fileID: 21300000, guid: 668db05d6f268f64596a42b20dc413c0, type: 3}
-  Usage: 'To pack restorative material into cavity and contour, smooth, or polish
-    the restoration
+  Usage: '<b>Usage</b>
+
+    To pack restorative material into cavity and contour,
+    smooth, or polish the restoration
 
 '
   InstrumentGrasp: 

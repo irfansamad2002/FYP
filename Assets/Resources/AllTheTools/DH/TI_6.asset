@@ -16,32 +16,37 @@ MonoBehaviour:
 
     3/4'
   Icon: {fileID: 21300000, guid: 3cce9fad5aa70ff4688f7fa7cde91ff8, type: 3}
-  Usage: 'Anterior teeth: all tooth surfaces
+  Usage: '<b>Usage</b>
 
-    (remove light-moderate calculus
-    in deep pockets)'
-  InstrumentGrasp: '1. Position the thumb and index finger opposite one another on
-    the handle, No touching or overlap
+    Anterior teeth: all tooth surfaces
 
-    2. Rest pad of middle finger lightly
-    on side of instrument shank, touches ring finger
+    (remove light-moderate
+    calculus in deep pockets)<br>'
+  InstrumentGrasp: '<b>Instrument Grasp</b>
 
-    3. Position the thumb,
-    index and middle finger properly without hyperextension of joints
+    1. Position the thumb and index
+    finger opposite one another on the handle, No touching or overlap
 
-    4. Maintain
-    a neutral wrist position'
-  Instrumentation: "1. Hold ring finger straight to support weight of hand and instruments\r\n2.
-    Establish and apply suitable finger rest for the treatment area\r\n3. Select
-    and use correct working end for tooth surface (s) to be instrumented\r\n4. Position
-    the working end to begin instrumentation at the appropriate line angles\r\n5.
-    Establish and maintain correct face to tooth surface angulation for insertion
-    at 0-40\xB0 for insertion; and scaling at between 45-80\xB0 \r\n6. Maintain correct
-    adaptation as instrument strokes progress around the tooth surface, pivot and
-    roll instrument as needed\r\n7. Constantly maintain toe third of the cutting
-    edge to tooth surface\r\n8. Use short controlled calculus removal strokes in
-    a coronal direction to remove to remove deposits from tooth surface\r\n9. Demonstrate
-    proper root planning strokes, which are lighter, longer and shaving strokes when
-    debriding root surface\r\n10. Apply appropriate lateral pressure in a coronal
-    direction\r\n11. Maintain a neutral wrist position while utilizing wrist activation"
-  dentalItem: {fileID: 5125285496078943784, guid: 28ced217c8c94d5498e972b93e60cf45, type: 3}
+    2. Rest
+    pad of middle finger lightly on side of instrument shank, touches ring finger
+
+    3.
+    Position the thumb, index and middle finger properly without hyperextension of
+    joints
+
+    4. Maintain a neutral wrist position<br>'
+  Instrumentation: "<b>Instrumentation</b>\n1. Hold ring finger straight to support
+    weight of hand and instruments\r\n2. Establish and apply suitable finger rest
+    for the treatment area\r\n3. Select and use correct working end for tooth surface
+    (s) to be instrumented\r\n4. Position the working end to begin instrumentation
+    at the appropriate line angles\r\n5. Establish and maintain correct face to tooth
+    surface angulation for insertion at 0-40\xB0 for insertion; and scaling at between
+    45-80\xB0 \r\n6. Maintain correct adaptation as instrument strokes progress around
+    the tooth surface, pivot and roll instrument as needed\r\n7. Constantly maintain
+    toe third of the cutting edge to tooth surface\r\n8. Use short controlled calculus
+    removal strokes in a coronal direction to remove to remove deposits from tooth
+    surface\r\n9. Demonstrate proper root planning strokes, which are lighter, longer
+    and shaving strokes when debriding root surface\r\n10. Apply appropriate lateral
+    pressure in a coronal direction\r\n11. Maintain a neutral wrist position while
+    utilizing wrist activation"
+  dentalItem: {fileID: 0}

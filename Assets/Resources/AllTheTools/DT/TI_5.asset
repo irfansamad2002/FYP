@@ -16,12 +16,13 @@ MonoBehaviour:
 
     stainless steel'
   Icon: {fileID: 21300000, guid: 32a4e2644ad3f5744a6dd3d04cb662b7, type: 3}
-  Usage: 'Mix dental materials such as IRM
+  Usage: '<b>Usage</b>
+
+    Mix dental materials such as IRM
 
 
-
-    Note: To mix materials on a glass
-    slab'
+    <b>Note: </b>To
+    mix materials on a glass slab'
   InstrumentGrasp: 
   Instrumentation: 
   dentalItem: {fileID: 5130605744053326888, guid: 810902d6abc841c47a6d42ae40205768, type: 3}

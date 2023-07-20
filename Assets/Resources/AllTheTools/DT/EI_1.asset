@@ -16,11 +16,14 @@ MonoBehaviour:
 
     Mirror'
   Icon: {fileID: 21300000, guid: 0457b0cf29aabfa4aa4dfc1e74a2a3b0, type: 3}
-  Usage: '- Indirect Vision - Retraction of Tongue - Indirect Illumination - Transillumination'
-  InstrumentGrasp: "1. Position the thumb and index finger  opposite one another
-    on the handle,  No touching or overlap \n2. Rest pad of middle finger lightly
-    on  side of instrument shank, touches ring  finger \n3. Position the thumb, index
-    and middle  finger properly without hyperextension  of joints \n4. Maintain a
-    neutral wrist position"
+  Usage: '<b>Usage</b>
+
+    - Indirect Vision - Retraction of Tongue - Indirect
+    Illumination - Transillumination<br>'
+  InstrumentGrasp: "<b>Instrument Grasp</b>\r\n1. Position the thumb and index finger 
+    opposite one another on the handle,  No touching or overlap \n2. Rest pad of
+    middle finger lightly on  side of instrument shank, touches ring  finger \n3.
+    Position the thumb, index and middle  finger properly without hyperextension 
+    of joints \n4. Maintain a neutral wrist position"
   Instrumentation: 
   dentalItem: {fileID: 9142374047038850427, guid: cd2d4163aab674c4f8c7b012ec3c4e96, type: 3}

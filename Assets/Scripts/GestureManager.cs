@@ -9,14 +9,16 @@ public class GestureManager : MonoBehaviour
     public TMP_Text TextObject;
     public BackController backController;
     public GameObject BlockerGameObject;
+    public GameObject MainScene;
     public Toggle toggle;
     public bool constantlyShowBlocker;
+    public bool inPosition;
+
 
     private bool SucceedBack;
     private Touch touch;
     private Vector2 beginTouchPos, endTouchPos;
     private float initialXPlacement;
-    private bool inPosition;
     private static bool shownGestureGuide = false;
     private bool playerPrefdoNotShowAgainChecked;
 
@@ -66,7 +68,10 @@ public class GestureManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (MainScene.activeInHierarchy)
+        {
+            return;
+        }
         // oni 1 finger on the screen
         if (Input.touchCount == 1)
         {

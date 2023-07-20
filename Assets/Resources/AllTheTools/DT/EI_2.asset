@@ -16,7 +16,13 @@ MonoBehaviour:
 
     Probe'
   Icon: {fileID: 21300000, guid: da8ed4ee063e72744b946aabc2f42e87, type: 3}
-  Usage: '- To trace and explore fissures'
-  InstrumentGrasp: 1. Modified Pen Grasp
-  Instrumentation: 1. Explore the whole tooth surface
+  Usage: '<b>Usage</b>
+
+    - To trace and explore fissures<br>'
+  InstrumentGrasp: '<b>Instrument Grasp</b>
+
+    1. Modified Pen Grasp<br>'
+  Instrumentation: '<b>Instrumentation</b>
+
+    1. Explore the whole tooth surface'
   dentalItem: {fileID: 2962219975840949431, guid: 820c85637f9ac944088e23b0efcf8cc1, type: 3}

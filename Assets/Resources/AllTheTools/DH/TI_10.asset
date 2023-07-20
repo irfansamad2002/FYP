@@ -16,13 +16,14 @@ MonoBehaviour:
 
     11/12'
   Icon: {fileID: 21300000, guid: 68c503f3295945044a76f1604f8831ab, type: 3}
-  Usage: "Anterior teeth: mesial and distal surfaces\r\nPosterior teeth: mesial surfaces
-    only\r\nPosterior teeth: facial, lingual, and mesial \r\nsurfaces"
-  InstrumentGrasp: "1. Position the thumb and index finger opposite \r\none another
-    on the handle, No touching or overlap\r\n2. Rest pad of middle finger lightly
-    on side of \r\ninstrument shank, touches ring finger\r\n3. Position the thumb,
-    index and middle \r\nfinger properly without hyperextension of joints\r\n4. Maintain
-    a neutral wrist position"
-  Instrumentation: "1. Begin at distal line angle, cover facial/lingual \r\nand mesial
-    surfaces.\r\n2. Apply small, oblique/vertical overlapping \r\nstrokes."
+  Usage: "<b>Usage</b>\r\nAnterior teeth: mesial and distal surfaces\r\nPosterior
+    teeth: mesial surfaces only\r\nPosterior teeth: facial, lingual, and mesial \r\nsurfaces<br>"
+  InstrumentGrasp: "<b>Instrument Grasp</b>\r\n1. Position the thumb and index finger
+    opposite \r\none another on the handle, No touching or overlap\r\n2. Rest pad
+    of middle finger lightly on side of \r\ninstrument shank, touches ring finger\r\n3.
+    Position the thumb, index and middle \r\nfinger properly without hyperextension
+    of joints\r\n4. Maintain a neutral wrist position<br>"
+  Instrumentation: "<b>Instrumentation</b>\n1. Begin at distal line angle, cover
+    facial/lingual \r\nand mesial surfaces.\r\n2. Apply small, oblique/vertical overlapping
+    \r\nstrokes."
   dentalItem: {fileID: 6454270763258874754, guid: 8169b5c2f14772048824f5718dc67c92, type: 3}
