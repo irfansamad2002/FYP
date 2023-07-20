@@ -800,6 +800,8 @@ GameObject:
   - component: {fileID: 5155209159077958602}
   - component: {fileID: 5155209159077958601}
   - component: {fileID: 5155209159077958600}
+  - component: {fileID: 981787608}
+  - component: {fileID: 981787607}
   m_Layer: 5
   m_Name: Scan Button
   m_TagString: Untagged
@@ -921,6 +923,44 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 981787607}
+        m_TargetAssemblyTypeName: ToolSelectionBtn, Assembly-CSharp
+        m_MethodName: SetButtonID
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &981787608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5155209159077958606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ac56625a33399a41b6fa88a127d1b7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonID: 1
+  dthButtonID: 2
+--- !u!114 &981787607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5155209159077958606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abcaa215f4d112a43ae81b0835cbda4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5155209159533615838
 GameObject:
   m_ObjectHideFlags: 0
