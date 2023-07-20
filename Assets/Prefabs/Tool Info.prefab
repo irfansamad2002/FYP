@@ -112,7 +112,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 107.5, y: -50}
+  m_AnchoredPosition: {x: 103.6895, y: -50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3226723550350525696
@@ -246,7 +246,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 25, y: 0}
-  m_SizeDelta: {x: -35, y: -228.02089}
+  m_SizeDelta: {x: -35, y: -244.26973}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &3226723550430773410
 CanvasRenderer:
@@ -399,8 +399,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 240, y: -430}
-  m_SizeDelta: {x: 440, y: 480}
+  m_AnchoredPosition: {x: 232.379, y: -446.39777}
+  m_SizeDelta: {x: 424.758, y: 499.67734}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3226723550532108661
 MonoBehaviour:
@@ -686,8 +686,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 220, y: -29.184557}
-  m_SizeDelta: {x: 430, y: 58.369114}
+  m_AnchoredPosition: {x: 212.379, y: -30.898811}
+  m_SizeDelta: {x: 414.758, y: 61.797623}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3226723550767820883
 CanvasRenderer:
@@ -1018,8 +1018,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 240, y: -90}
-  m_SizeDelta: {x: 440, y: 180}
+  m_AnchoredPosition: {x: 232.379, y: -93.27956}
+  m_SizeDelta: {x: 424.758, y: 186.55911}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3226723551664457803
 CanvasRenderer:
@@ -1119,8 +1119,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 220, y: -216.68456}
-  m_SizeDelta: {x: 430, y: 276.6309}
+  m_AnchoredPosition: {x: 212.379, y: -228.23749}
+  m_SizeDelta: {x: 414.758, y: 292.87973}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3226723551740741519
 CanvasRenderer:
@@ -1259,8 +1259,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 220, y: -425}
-  m_SizeDelta: {x: 430, y: 100}
+  m_AnchoredPosition: {x: 212.379, y: -444.67737}
+  m_SizeDelta: {x: 414.758, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4817787294615267402
 MonoBehaviour:
@@ -1328,7 +1328,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 322.5, y: -50}
+  m_AnchoredPosition: {x: 311.06848, y: -50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2734162457357828559
@@ -1425,7 +1425,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4820548842089947565}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ARSpawnBtnClick, Assembly-CSharp
         m_MethodName: PressSpawnButton
         m_Mode: 1
