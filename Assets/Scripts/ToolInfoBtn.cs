@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ARSpawnBtnClick : MonoBehaviour
+public class ToolInfoBtn : MonoBehaviour
 {
     ButtonID buttonID;
 
@@ -19,7 +19,7 @@ public class ARSpawnBtnClick : MonoBehaviour
         
     }
 
-    public void PressSpawnButton()
+    public void SetButtonID()
     {
         ButtonReferenceManager.Instance.storedButtonID = buttonID.buttonID;
     }
