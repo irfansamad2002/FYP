@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 'Rubber
 
-    dam
+    Dam
 
-    frame'
+    Frame'
   Icon: {fileID: 21300000, guid: fd14efb4fc890ec4db2b50c383643936, type: 3}
   Usage: '<b>Usage</b>
 

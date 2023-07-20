@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 'Spoon
 
-    excavator'
+    Excavator'
   Icon: {fileID: 21300000, guid: 7ff01d72752d05443a62888d6d8e29ba, type: 3}
   Usage: "<b>Usage</b>\r\nRemoves debris from the tooth\r\n\r\r\n<b>Note: </b>Used
     to remove caries and\r\nscrape out pathological tissues \r\nbefore filling a

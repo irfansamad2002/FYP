@@ -181,6 +181,7 @@ public class MenuManager : MonoBehaviour
         ToolSelectionMenu.SetActive(false);
         ToolInfoMenu.SetActive(false);
         AssessmentButton.SetActive(false);
+        SettingsMenu.SetActive(false);
     }
 
     public void OnBackClickedFromSettings()

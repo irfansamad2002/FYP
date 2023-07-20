@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 'Rubber
 
-    dam
+    Dam
 
-    forceps'
+    Forceps'
   Icon: {fileID: 21300000, guid: 666a4083f75994942baa9e59138e74af, type: 3}
   Usage: " <b>Usage</b>\r\nTo hold and place rubber dam clamps onto the tooth.\r"
   InstrumentGrasp: 

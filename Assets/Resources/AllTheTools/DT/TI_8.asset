@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 'Plastic
 
-    spatula'
+    Spatula'
   Icon: {fileID: 21300000, guid: d1260ed4b584f3249959a5ba73322893, type: 3}
   Usage: '<b>Usage</b>
 
