@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 'Articulating
 
-    paper
+    Paper
 
-    holder'
+    Holder'
   Icon: {fileID: 21300000, guid: d369bac83dd2e3a40ab439a9450973db, type: 3}
   Usage: '<b>Usage</b>
 

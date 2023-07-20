@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 'Plastic
 
-    instrument'
+    Instrument'
   Icon: {fileID: 21300000, guid: efcf7be90c3befb4ebfecf18a56eb1ca, type: 3}
   Usage: '<b>Usage</b>
 
