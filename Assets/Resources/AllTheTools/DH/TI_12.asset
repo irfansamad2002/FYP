@@ -26,3 +26,4 @@ MonoBehaviour:
     surfaces.\r\n2. Ensure the lower shank is parallel to the tooth\r\n3. Constantly
     maintain toe third of the cutting edge to tooth surface\r\n4. Apply small, oblique/vertical
     overlapping \r\nstrokes."
+  dentalItem: {fileID: 3501075885271148873, guid: 41742258c7f218f47b00ae4bc2009fe1, type: 3}

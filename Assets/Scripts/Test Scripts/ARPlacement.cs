@@ -10,7 +10,6 @@ public class ARPlacement : MonoBehaviour
 {
     public GameObject placedInstrument;
     public GameObject placementIndicator;
-    public GameObject testGO;
 
     [Header("Rotate/Scale Button")]
     [SerializeField] private GameObject RSButton;
