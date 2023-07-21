@@ -24,8 +24,7 @@ public class SceneChanger : MonoBehaviour
     }
     public void ChangeToSpawnScene()
     {
-        //SceneManager.LoadScene("AR Spawn Scene");
-        SceneManager.LoadScene("MarcusARTest");
+        SceneManager.LoadScene("AR Spawn Scene");
     }
     public void ChangeToVideoScene()
     {
