@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scene/Demo Videos.unity
     guid: 336eb0dc2f87a2448906192dcf5a4bfa
   - enabled: 1
-    path: Assets/Scene/Assessment Scene.unity
+    path: Assets/Scene/Quiz Scene.unity
     guid: 0e975ca794bc5f545a12213dacdce344
   - enabled: 1
     path: Assets/Scene/Leaderboard.unity
