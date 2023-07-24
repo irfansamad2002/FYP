@@ -57,6 +57,10 @@ public class MoveThings : MonoBehaviour
 
 
         }
+        else if (Input.touchCount == 0)
+        {
+            CheckWhichPanelActive().GetComponent<RectTransform>().anchoredPosition = new Vector2(0f, CheckWhichPanelActive().GetComponent<RectTransform>().anchoredPosition.y);
+        }
       
     }
 
