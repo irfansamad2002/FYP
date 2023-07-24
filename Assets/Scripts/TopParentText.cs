@@ -24,6 +24,8 @@ public class TopParentText : MonoBehaviour
 
     private void Update()
     {
+        if (!ButtonReferenceManager.Instance)
+            return;
         switch (ButtonReferenceManager.Instance.storedDTHButtonID)
         {
             case DTHEnum.DT:
