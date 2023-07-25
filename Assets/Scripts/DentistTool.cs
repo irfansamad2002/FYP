@@ -17,8 +17,8 @@ public class DentistTool : ScriptableObject
     public string InstrumentGrasp;
     [TextArea]
     public string Instrumentation;
-
+    [Header("Tool Prefab")]
     public GameObject dentalItem;
-
+    [Header("Tool Video")]
     public VideoClip videoClip;
 }

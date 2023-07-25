@@ -10,6 +10,7 @@ using TMPro;
 public class VideoController : MonoBehaviour
 {
     [SerializeField]private VideoPlayer videoPlayer;
+    [SerializeField]private TMP_Text toolNameText;
     private Texture vidTex;
     //private Image progressBar;
 
@@ -22,10 +23,12 @@ public class VideoController : MonoBehaviour
     {
         if (ButtonReferenceManager.Instance.storedDTHButtonID == DTHEnum.DT)
         {
+            toolNameText.text = ButtonReferenceManager.Instance.dtTools[ButtonReferenceManager.Instance.storedIndex].Name;
             videoPlayer.clip = ButtonReferenceManager.Instance.dtTools[ButtonReferenceManager.Instance.storedIndex].videoClip;
         }
         else if (ButtonReferenceManager.Instance.storedDTHButtonID == DTHEnum.DH)
         {
+            toolNameText.text = ButtonReferenceManager.Instance.dhTools[ButtonReferenceManager.Instance.storedIndex].Name;
             videoPlayer.clip = ButtonReferenceManager.Instance.dhTools[ButtonReferenceManager.Instance.storedIndex].videoClip;
         }
 
