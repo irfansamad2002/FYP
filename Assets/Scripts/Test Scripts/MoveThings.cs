@@ -19,7 +19,7 @@ public class MoveThings : MonoBehaviour
     {
         gestureManager = GetComponent<GestureManager>();
     }
-
+    //test
     // Update is called once per frame
     void Update()
     {
