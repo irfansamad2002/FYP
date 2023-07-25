@@ -34,6 +34,7 @@ public class ARScanManager : MonoBehaviour
 
     public void OnHomeClicked()
     {
+        ButtonReferenceManager.Instance.storedButtonID = ButtonENUM.MAINSCENE;
         ButtonReferenceManager.Instance.storedDTHButtonID = DTHEnum.NONE;
         sceneChanger.ChangeToMainScene();
     }
