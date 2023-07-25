@@ -9,6 +9,7 @@ public class MenuManager : MonoBehaviour
     [Header("Top Parent")]
     [SerializeField] private GameObject HomeButton;
     [SerializeField] private GameObject BackButton;
+    [SerializeField] private GameObject Logo;
 
     [Header("Main Menu")]
     [SerializeField] private GameObject MainMenu;
@@ -42,6 +43,7 @@ public class MenuManager : MonoBehaviour
     {
         if (startFromMenu)
         {
+            Logo.SetActive(true);
             HomeButton.SetActive(false);
             BackButton.SetActive(false);
             MainMenu.SetActive(true);
@@ -65,11 +67,7 @@ public class MenuManager : MonoBehaviour
                 Debug.Log("show the tool info wth the index of  " + ButtonReferenceManager.Instance.storedIndex);
 
             }
-
-
         }
-       
-       
     }
 
     #region from main menu
@@ -78,6 +76,7 @@ public class MenuManager : MonoBehaviour
     public void OnDHorDTClicked()
     {
         AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
+        Logo.SetActive(false);
         MainMenu.SetActive(false);
         ToolSelectionMenu.SetActive(true);
         BackButton.SetActive(true);
@@ -111,6 +110,7 @@ public class MenuManager : MonoBehaviour
     public void OnSettingsClicked()
     {
         AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
+        Logo.SetActive(false);
         MainMenu.SetActive(false);
         SettingsMenu.SetActive(true);
         BackButton.SetActive(true);
@@ -175,6 +175,7 @@ public class MenuManager : MonoBehaviour
     {
         ButtonReferenceManager.Instance.storedDTHButtonID = DTHEnum.NONE;
         AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
+        Logo.SetActive(true);
         HomeButton.SetActive(false);
         BackButton.SetActive(false);
         MainMenu.SetActive(true);
@@ -195,6 +196,7 @@ public class MenuManager : MonoBehaviour
         //}
 
         SettingsMenu.SetActive(false);
+        Logo.SetActive(true);
         MainMenu.SetActive(true);
         settingsManager.SaveVolume();
         Debug.Log("Saved volume");

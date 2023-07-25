@@ -1821,6 +1821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HomeButton: {fileID: 1440270518}
   BackButton: {fileID: 1885148978}
+  Logo: {fileID: 1316957504}
   MainMenu: {fileID: 1535992276}
   DentalTherapyButton: {fileID: 1749364140}
   DentalHealthButton: {fileID: 1287317848}
@@ -4006,7 +4007,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1196298589
 RectTransform:
   m_ObjectHideFlags: 0
