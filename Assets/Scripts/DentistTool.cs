@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Video;
 [CreateAssetMenu(fileName = "New DentistTool", menuName = "DentistTools")]
 public class DentistTool : ScriptableObject
 {
@@ -18,4 +19,6 @@ public class DentistTool : ScriptableObject
     public string Instrumentation;
 
     public GameObject dentalItem;
+
+    public VideoClip videoClip;
 }

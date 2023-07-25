@@ -7,7 +7,7 @@ using UnityEngine.Sprites;
 using UnityEngine.UI;
 using TMPro;
 
-public class VideoController : MonoBehaviour/*, IDragHandler, IPointerDownHandler*/
+public class VideoController : MonoBehaviour
 {
     [SerializeField]private VideoPlayer videoPlayer;
     private Texture vidTex;
@@ -20,20 +20,17 @@ public class VideoController : MonoBehaviour/*, IDragHandler, IPointerDownHandle
     public TMP_Text videoTimeText;
     private void Start()
     {
+        if (ButtonReferenceManager.Instance.storedDTHButtonID == DTHEnum.DT)
+        {
+            videoPlayer.clip = ButtonReferenceManager.Instance.dtTools[ButtonReferenceManager.Instance.storedIndex].videoClip;
+        }
+        else if (ButtonReferenceManager.Instance.storedDTHButtonID == DTHEnum.DH)
+        {
+            videoPlayer.clip = ButtonReferenceManager.Instance.dhTools[ButtonReferenceManager.Instance.storedIndex].videoClip;
+        }
+
         videoPlayer.Play();
         playPauseButton.image.sprite = pauseSprite;
-        //Debug.Log("video player prepared: " + videoPlayer.isPrepared);
-        videoPlayer.GetComponent<VideoPlayer>();
-
-        
-        //if (videoPlayer.isPrepared == true)
-        //{
-        //    vidTex = videoPlayer.texture;
-        //    Debug.Log("Vidtex = texture");
-        //}
-
-        //float videoWidth = vidTex.width;
-        //float videoHeight = vidTex.height;
     }
 
     private void Update()
