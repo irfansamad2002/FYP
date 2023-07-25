@@ -38,3 +38,4 @@ MonoBehaviour:
     to tooth surface\r\n3. Maintain a neutral wrist position while utilizing wrist
     activation\r"
   dentalItem: {fileID: 34721899381963265, guid: 15fd8bb6aa4c8b547bbf8dbc345e2219, type: 3}
+  videoClip: {fileID: 32900000, guid: 05a926cba1b045d4d87c26c625438948, type: 3}
