@@ -17,11 +17,11 @@ public class ARPlacement : MonoBehaviour
 
     [Header("Rotation Buttons")]
     [SerializeField] private GameObject rotationButtons;
-    //[SerializeField] private TMP_Text rotationButtonText;
 
     [Header("Text Info")]
     [SerializeField] private TMP_Text RSText;
     [SerializeField] private TMP_Text XYZText;
+    [SerializeField] private TMP_Text toolNameText;
 
     private GameObject spawnedObject;
 
@@ -32,22 +32,17 @@ public class ARPlacement : MonoBehaviour
     private LeanTwistRotateAxis leanTwistRotateAxis;
     private LeanPinchScale leanPinchScale;
 
-    
-
-    //private int xyzIndex = 0;
-    //private bool xAxis;
-    //private bool yAxis;
-    //private bool zAxis;
-
     void Start()
     {
         if (ButtonReferenceManager.Instance.storedDTHButtonID == DTHEnum.DT)
         {
             placedInstrument = ButtonReferenceManager.Instance.dtTools[ButtonReferenceManager.Instance.storedIndex].dentalItem;
+            toolNameText.text = ButtonReferenceManager.Instance.dtTools[ButtonReferenceManager.Instance.storedIndex].Name;
         }
         else if (ButtonReferenceManager.Instance.storedDTHButtonID == DTHEnum.DH)
         {
             placedInstrument = ButtonReferenceManager.Instance.dhTools[ButtonReferenceManager.Instance.storedIndex].dentalItem;
+            toolNameText.text = ButtonReferenceManager.Instance.dhTools[ButtonReferenceManager.Instance.storedIndex].Name;
         }
 
         aRRaycastManager = FindObjectOfType<ARRaycastManager>();
@@ -58,9 +53,6 @@ public class ARPlacement : MonoBehaviour
         // start with rotate first
         RSButton.SetActive(true);
         rotationButtons.SetActive(true);
-
-        // start on y axis
-        //xyzIndex = 0; // 0 for y; 1 for z; 2 for x
     }
 
 
@@ -73,7 +65,6 @@ public class ARPlacement : MonoBehaviour
             ARPlaceObject();
         }
 
-        //placedInstrument.GetComponent<LeanTwistRotateAxis>().Axis.Set(-1, 0, 0);
         UpdatePlacementPose();
         UpdatePlacementIndicator();
         if(leanPinchScale)
@@ -81,14 +72,12 @@ public class ARPlacement : MonoBehaviour
             if (leanPinchScale.enabled == true)
             {
                 rotationButtons.SetActive(false);
-                //RSButtonText.text = "Rotate";
                 RSText.text = "Scale";
                 XYZText.enabled = false;
             }
             else
             {
                 rotationButtons.SetActive(true);
-                //RSButtonText.text = "Scale";
                 RSText.text = "Rotate";
                 XYZText.enabled = true;
 
@@ -105,37 +94,6 @@ public class ARPlacement : MonoBehaviour
         Debug.Log("leanTwistRotateAxis: " + leanTwistRotateAxis.enabled);
     }
     #region rotation button functions
-    //public void OnRotationButtonPressed()
-    //{
-    //    xyzIndex += 1;
-
-    //    if (xyzIndex > 2)
-    //    {
-    //        xyzIndex = 0;
-    //    }
-
-    //    if (xyzIndex == 0)
-    //    {
-    //        // y axis
-    //        spawnedObject.GetComponent<LeanTwistRotateAxis>().ChangeAxis(new Vector3(0f, -1f, 0f));
-    //        Debug.Log(spawnedObject.GetComponent<LeanTwistRotateAxis>().Axis);
-    //        rotationButtonText.text = "Z";
-    //    }
-    //    else if (xyzIndex == 1)
-    //    {
-    //        // z axis
-    //        spawnedObject.GetComponent<LeanTwistRotateAxis>().ChangeAxis(new Vector3(0f, 0f, 1f));
-    //        Debug.Log(spawnedObject.GetComponent<LeanTwistRotateAxis>().Axis);
-    //        rotationButtonText.text = "X";
-    //    }
-    //    else if (xyzIndex == 2)
-    //    {
-    //        // x axis
-    //        spawnedObject.GetComponent<LeanTwistRotateAxis>().ChangeAxis(new Vector3(-1f, 0f, 0f));
-    //        Debug.Log(spawnedObject.GetComponent<LeanTwistRotateAxis>().Axis);
-    //        rotationButtonText.text = "Y";
-    //    }
-    //}
     public void OnXButtonPressed()
     {
         spawnedObject.GetComponent<LeanTwistRotateAxis>().ChangeAxis(new Vector3(-1f, 0f, 0f));
