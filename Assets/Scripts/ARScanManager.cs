@@ -2,65 +2,74 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ARScanManager : MonoBehaviour
 {
+    [SerializeField] GameObject infoGameObject;
+    [SerializeField] GameObject videoGameObject;
 
-    [Header("Top Parent")]
-    [SerializeField] private GameObject TopParent;
-    [SerializeField] private GameObject HomeButton;
-    [SerializeField] private GameObject BackButton;
+    [Header("This is for tool info")]
+    [SerializeField] GameObject toolInfoGameObject;
+    [SerializeField] Image toolInfoImage;
+    [SerializeField] TMP_Text toolInfoName;
+    [SerializeField] TMP_Text toolInfoContent;
 
-    [Header("Tool Menu")]
-    [SerializeField] private GameObject ToolMenu;
-    [SerializeField] private Button ToolInfoButton;
 
-    [Header("Tool Info Page")]
-    [SerializeField] private GameObject ToolInfoMenu;
-    [SerializeField] private Button DemoVideoButton;
 
-    [Header("Scripts")]
-    public SceneChanger sceneChanger;
 
-    // Start is called before the first frame update
-    void Start()
+    private Button infoButton;
+    private Button videoButton;
+    private DentistTool dentistTool;
+
+
+    private void Start()
     {
-        //TopParent.SetActive(true);
-        //HomeButton.SetActive(false);
-        //BackButton.SetActive(true);
-        //ToolMenu.SetActive(false);
-        //ToolInfoMenu.SetActive(true);
+        infoButton = infoGameObject.GetComponent<Button>();
+        videoButton = videoGameObject.GetComponent<Button>();
+        toolInfoGameObject.SetActive(false);        
     }
 
-    public void OnHomeClicked()
+    public void HideButtons()
     {
-        ButtonReferenceManager.Instance.storedDTHButtonID = DTHEnum.NONE;
-        sceneChanger.ChangeToMainScene();
+        infoGameObject.SetActive(false);
+        videoGameObject.SetActive(false);
     }
 
-    public void OnToolFound()
+
+    //after scan
+    //show button
+    public void ShowButtons()
     {
-        ToolMenu.SetActive(true);
+        infoGameObject.SetActive(true);
+        videoGameObject.SetActive(true);
     }
-    
-    public void OnToolInfoClicked()
+    //get tool info
+    public void GetToolInfo(ModelTargetToolInfo modelTargetToolInfo)
     {
-        ToolMenu.SetActive(false);
-        ToolInfoMenu.SetActive(true);
-        HomeButton.SetActive(true);
+        this.dentistTool = modelTargetToolInfo.dentistTool;
     }
 
-    public void OnDemoVideoClicked()
+
+    //if info btn
+    //show info base on dentistTool
+    public void ShowInfo()
     {
-        ToolInfoMenu.SetActive(false);
-        HomeButton.SetActive(false);
-        // change scene to demo video scene
-        sceneChanger.ChangeToVideoScene();
+        toolInfoGameObject.SetActive(true);
+
+        toolInfoImage.sprite = dentistTool.Icon;
+        toolInfoName.text = dentistTool.Name;
+        toolInfoContent.text = dentistTool.Usage + "\n" + dentistTool.InstrumentGrasp + "\n" + dentistTool.Instrumentation;
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+
+
+    //if video btn
+    //go to video scene
+
+
+
+
 }

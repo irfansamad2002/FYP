@@ -53,8 +53,22 @@ public class MenuManager : MonoBehaviour
             SettingsMenu.SetActive(false);
         }
         AssessmentButton.SetActive(false);
-        if (ButtonReferenceManager.Instance.storedButtonID == ButtonENUM.TOOLSELECTION || ButtonReferenceManager.Instance.storedButtonID == ButtonENUM.TOOLINFO)//check if come from tool selection
+        if (ButtonReferenceManager.Instance.storedButtonID == ButtonENUM.MAINSCENE)
         {
+            Debug.Log("Suppose to g back home");
+            HomeButton.SetActive(false);
+            BackButton.SetActive(false);
+            MainMenu.SetActive(true);
+            ToolSelectionMenu.SetActive(false);
+            ToolInfoMenu.SetActive(false);
+            ScanButton.SetActive(false);
+            SettingsMenu.SetActive(false);
+            AssessmentButton.SetActive(false);
+        }
+
+        else if (ButtonReferenceManager.Instance.storedButtonID == ButtonENUM.TOOLSELECTION || ButtonReferenceManager.Instance.storedButtonID == ButtonENUM.TOOLINFO)//check if come from tool selection
+        {
+            Debug.Log("come from tool selection");
             OnDHorDTClicked();
             if (ButtonReferenceManager.Instance.storedButtonID == ButtonENUM.TOOLINFO)
             {

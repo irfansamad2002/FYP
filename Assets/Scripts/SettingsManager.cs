@@ -34,7 +34,7 @@ public class SettingsManager : MonoBehaviour
         volumeValue = volumeSlider.value;
         PlayerPrefs.SetFloat("VolumeValue", volumeValue);
         LoadVolume();
-        Debug.Log("saved volume: " + PlayerPrefs.GetFloat("VolumeValue"));
+        //Debug.Log("saved volume: " + PlayerPrefs.GetFloat("VolumeValue"));
     }
 
     public void LoadVolume()

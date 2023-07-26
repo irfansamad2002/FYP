@@ -120,6 +120,6 @@ public class GestureManager : MonoBehaviour
     public void SetdoNotShowAgainChecked()
     { 
         PlayerPrefs.SetInt("doNotShowAgainChecked", (toggle.isOn ? 1 : 0));
-        Debug.Log("doNotShowAgainChecked " + (PlayerPrefs.GetInt("doNotShowAgainChecked") != 0));
+        //Debug.Log("doNotShowAgainChecked " + (PlayerPrefs.GetInt("doNotShowAgainChecked") != 0));
     }
 }

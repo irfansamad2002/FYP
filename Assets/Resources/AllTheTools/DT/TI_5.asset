@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bcf0bd622ceeb24e981caf0f2c0e411, type: 3}
   m_Name: TI_5
   m_EditorClassIdentifier: 
-  Name: 'Spatula,
+  Name: 'Spatula &
 
     Stainless Steel'
   Icon: {fileID: 21300000, guid: 32a4e2644ad3f5744a6dd3d04cb662b7, type: 3}
