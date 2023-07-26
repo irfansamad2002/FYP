@@ -14,6 +14,8 @@ public class ARSpawnManager : MonoBehaviour
 
     Lean.Touch.LeanTwistRotateAxis leanTwistRotateAxis;
 
+    [Header("Scripts")]
+    public SceneChanger sceneChanger;
     private void Awake()
     {
         if (!shownDragGuide && !shownPinchGuide && !shownTwistGuide)
@@ -65,5 +67,12 @@ public class ARSpawnManager : MonoBehaviour
         BlockerGameObject.SetActive(false);
         shownTwistGuide = true;
         //shownGestureGuide = true;
+    }
+
+    public void OnHomeClicked()
+    {
+        ButtonReferenceManager.Instance.storedDTHButtonID = DTHEnum.NONE;
+        ButtonReferenceManager.Instance.storedButtonID = ButtonENUM.MAINSCENE;
+        sceneChanger.ChangeToMainScene();
     }
 }

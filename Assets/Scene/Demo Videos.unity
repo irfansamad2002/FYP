@@ -158,6 +158,7 @@ MonoBehaviour:
   startSprite: {fileID: 21300000, guid: 85929c5068bfe1e438d8e401f997e564, type: 3}
   pauseSprite: {fileID: 21300000, guid: 64e8e53c5b8386340a8accec2818daf7, type: 3}
   videoTimeText: {fileID: 1083458131}
+  sceneChanger: {fileID: 188843560}
 --- !u!4 &44104289
 Transform:
   m_ObjectHideFlags: 0
@@ -172,6 +173,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &188843559
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 188843561}
+  - component: {fileID: 188843560}
+  m_Layer: 0
+  m_Name: SceneChanger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &188843560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188843559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f713dcc29a7264eb02090b2f3a25ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &188843561
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188843559}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 637.29474, y: 688.2975, z: 141.29639}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &204316254
 GameObject:
@@ -787,8 +832,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+      - m_Target: {fileID: 44104288}
+        m_TargetAssemblyTypeName: VideoController, Assembly-CSharp
         m_MethodName: OnHomeClicked
         m_Mode: 1
         m_Arguments:

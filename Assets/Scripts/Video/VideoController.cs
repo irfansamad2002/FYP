@@ -19,6 +19,9 @@ public class VideoController : MonoBehaviour
     public Sprite pauseSprite;
 
     public TMP_Text videoTimeText;
+
+    [Header("Scripts")]
+    public SceneChanger sceneChanger;
     private void Start()
     {
         if (ButtonReferenceManager.Instance.storedDTHButtonID == DTHEnum.DT)
@@ -70,5 +73,12 @@ public class VideoController : MonoBehaviour
             videoPlayer.Pause();
             playPauseButton.image.sprite = startSprite;
         }
+    }
+
+    public void OnHomeClicked()
+    {
+        ButtonReferenceManager.Instance.storedDTHButtonID = DTHEnum.NONE;
+        ButtonReferenceManager.Instance.storedButtonID = ButtonENUM.MAINSCENE;
+        sceneChanger.ChangeToMainScene();
     }
 }
