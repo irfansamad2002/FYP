@@ -68,7 +68,7 @@ public class QuizMenuManager : MonoBehaviour
         TopParent.SetActive(true);
         EnterNamePage.SetActive(true);
         HomeButton.SetActive(false);
-        BackButton.SetActive(false);
+        BackButton.SetActive(true);
         QuizMenu.SetActive(false);
         CorrectWrongPage.SetActive(false);
         QuizOverMenu.SetActive(false);
