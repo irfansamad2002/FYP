@@ -2476,8 +2476,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tool Name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 99550733b6be5ef49bb396042a93f2e9, type: 2}
-  m_sharedMaterial: {fileID: 6697685966070018254, guid: 99550733b6be5ef49bb396042a93f2e9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1bdeff890fef0bd42990b8b47b196e9f, type: 2}
+  m_sharedMaterial: {fileID: -1961145015194662436, guid: 1bdeff890fef0bd42990b8b47b196e9f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3119,8 +3119,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 99550733b6be5ef49bb396042a93f2e9, type: 2}
-  m_sharedMaterial: {fileID: 6697685966070018254, guid: 99550733b6be5ef49bb396042a93f2e9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1bdeff890fef0bd42990b8b47b196e9f, type: 2}
+  m_sharedMaterial: {fileID: -1961145015194662436, guid: 1bdeff890fef0bd42990b8b47b196e9f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3647,8 +3647,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Scale/Rotate
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 99550733b6be5ef49bb396042a93f2e9, type: 2}
-  m_sharedMaterial: {fileID: 6697685966070018254, guid: 99550733b6be5ef49bb396042a93f2e9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1bdeff890fef0bd42990b8b47b196e9f, type: 2}
+  m_sharedMaterial: {fileID: -1961145015194662436, guid: 1bdeff890fef0bd42990b8b47b196e9f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3771,8 +3771,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 523693077}
-  - {fileID: 624651158}
   - {fileID: 972096570}
+  - {fileID: 624651158}
   m_Father: {fileID: 714314375}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
