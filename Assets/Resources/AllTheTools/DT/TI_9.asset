@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: 'Rubber
 
     Dam Frame'
-  Icon: {fileID: 21300000, guid: fd14efb4fc890ec4db2b50c383643936, type: 3}
+  Icon: {fileID: 21300000, guid: c8d50ca280d87d54484e4703e611e8a7, type: 3}
   Usage: '<b>Usage</b>
 
     Holds rubber dam in place'

@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: 'Anterior
 
     Sickle Scaler'
-  Icon: {fileID: 21300000, guid: bad463e561955dc4b9b9cf21e0478bc5, type: 3}
+  Icon: {fileID: 21300000, guid: ccdc07fcb5744bc4cb7c8fc4cd107c69, type: 3}
   Usage: '<b>Usage</b>
 
     Supragingival. For anterior <br>'

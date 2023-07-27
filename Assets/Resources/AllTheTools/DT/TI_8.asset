@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: 'Plastic
 
     Spatula'
-  Icon: {fileID: 21300000, guid: d1260ed4b584f3249959a5ba73322893, type: 3}
+  Icon: {fileID: 21300000, guid: 987c965034c29044eb7072f7898205b5, type: 3}
   Usage: '<b>Usage</b>
 
     Mix dental materials such as Dycal and Vitrebond
@@ -26,3 +26,4 @@ MonoBehaviour:
   InstrumentGrasp: 
   Instrumentation: 
   dentalItem: {fileID: 7861543288224134397, guid: 8eee598c290cf9b4ab2c344555de4d19, type: 3}
+  videoClip: {fileID: 0}

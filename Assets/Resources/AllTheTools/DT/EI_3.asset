@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: 'Periodontal
 
     Probe'
-  Icon: {fileID: 21300000, guid: 6575f062e301ab84199c94d44dffbbcf, type: 3}
+  Icon: {fileID: 21300000, guid: 0d2f0fca8d6a36349ae043b3e8a2b957, type: 3}
   Usage: '<b>Usage</b>
 
     - To Evaluate the health of the periodontal tissues<br>'

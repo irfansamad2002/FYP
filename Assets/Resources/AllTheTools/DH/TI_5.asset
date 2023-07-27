@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: 'Gracey
 
     1/2'
-  Icon: {fileID: 21300000, guid: 02239b0e69ce8ad41bfead15cc8666d3, type: 3}
+  Icon: {fileID: 21300000, guid: 7f846f8c7073b0f4fa18be8f74ad9345, type: 3}
   Usage: '<b>Usage</b>
 
     Anterior teeth: all tooth surfaces
@@ -50,3 +50,4 @@ MonoBehaviour:
     pressure in a coronal direction\r\n11. Maintain a neutral wrist position while
     utilizing wrist activation"
   dentalItem: {fileID: 2769261376357853920, guid: 7cd43abbabf8c06449e66db8f61d459f, type: 3}
+  videoClip: {fileID: 0}

@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: 'Gracey
 
     17/18'
-  Icon: {fileID: 21300000, guid: 3d9f34aa12c5efa4099321d32c1a9bdc, type: 3}
+  Icon: {fileID: 21300000, guid: 04192534e2f995c4b80eb1fa4604537b, type: 3}
   Usage: '<b>Usage</b>
 
     Posterior teeth: Distal surfaces of the molar only (good
@@ -31,3 +31,4 @@ MonoBehaviour:
     correct face-to-tooth surface angulation for insertion at 0\xB0 and start scaling
     between 70-80\xB0 "
   dentalItem: {fileID: 5775655181856688166, guid: 9ed9d115453ab7f40b1df894953d61a4, type: 3}
+  videoClip: {fileID: 0}

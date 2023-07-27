@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: 'Plastic
 
     Instrument'
-  Icon: {fileID: 21300000, guid: efcf7be90c3befb4ebfecf18a56eb1ca, type: 3}
+  Icon: {fileID: 21300000, guid: 9039ed7fb569bac489e8bb3bfe9fd78a, type: 3}
   Usage: '<b>Usage</b>
 
     Placement instruments, are designed for placing and contouring

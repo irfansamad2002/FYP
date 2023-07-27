@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: 'Mouth
 
     Mirror'
-  Icon: {fileID: 21300000, guid: 9813ef6274ff36c4a8bd1c76f233d687, type: 3}
+  Icon: {fileID: 21300000, guid: 89a5f01465b42024794d8e74fbc59f3b, type: 3}
   Usage: '<b>Usage</b>
 
     - Indirect Vision - Retraction of Tongue - Indirect Illumination
@@ -27,3 +27,4 @@ MonoBehaviour:
     of joints \r\n4. Maintain a neutral wrist position<br>"
   Instrumentation: 
   dentalItem: {fileID: 919132149155446097, guid: 702c239d2721686439112bcfad051736, type: 3}
+  videoClip: {fileID: 0}
