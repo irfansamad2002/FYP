@@ -18,8 +18,8 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: 4898384753cb1c648b2e1fb4062ed1d8, type: 3}
   Usage: '<b>Usage</b>
 
-    - To probe through furcations of multi-rooted teeth
-    to determine its grade <br>'
+    - To probe through furcations of multi-rooted teeth to
+    determine its grade <br>'
   InstrumentGrasp: '<b>Instrument Grasp</b>
 
     - Modified pen grasp<br>'
@@ -27,4 +27,5 @@ MonoBehaviour:
     has 4 markings \r\n3. First silver marking is Grade I \r\n4. Second black marking
     is Grade II \r\n5. Third silver marking is Grade III \r\n6. Fourth black marking
     is Grade IV "
-  dentalItem: {fileID: 4890610964079711563, guid: 21a5ff21b5825514c895f3223b7f8c28, type: 3}
+  dentalItem: {fileID: 8041788844131020893, guid: 47325c5bc953d0047828a02d0978cd14, type: 3}
+  videoClip: {fileID: 0}

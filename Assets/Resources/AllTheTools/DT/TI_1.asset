@@ -21,4 +21,5 @@ MonoBehaviour:
     cavity"
   InstrumentGrasp: 
   Instrumentation: 
-  dentalItem: {fileID: 5821906473763451479, guid: 59cf77cbd442f8e408bde03704184926, type: 3}
+  dentalItem: {fileID: 6062271178406773002, guid: 59cf77cbd442f8e408bde03704184926, type: 3}
+  videoClip: {fileID: 0}

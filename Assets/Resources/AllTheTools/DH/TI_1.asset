@@ -14,9 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 'Anterior
 
-    Sickle
-
-    Scaler'
+    Sickle Scaler'
   Icon: {fileID: 21300000, guid: bad463e561955dc4b9b9cf21e0478bc5, type: 3}
   Usage: '<b>Usage</b>
 

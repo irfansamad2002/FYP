@@ -25,4 +25,5 @@ MonoBehaviour:
   Instrumentation: '<b>Instrumentation</b>
 
     1. Explore the whole tooth surface'
-  dentalItem: {fileID: 2962219975840949431, guid: 820c85637f9ac944088e23b0efcf8cc1, type: 3}
+  dentalItem: {fileID: 6684456969167205722, guid: 820c85637f9ac944088e23b0efcf8cc1, type: 3}
+  videoClip: {fileID: 0}
