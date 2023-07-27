@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: 'Amalgam
 
     Carver, Tharp'
-  Icon: {fileID: 21300000, guid: 4a47b672da9b7ff4a92d938658eccb20, type: 3}
+  Icon: {fileID: 21300000, guid: c59de320aad83204593afc7a00553b90, type: 3}
   Usage: '<b>Usage</b>
 
     For carving anatomical features, smoothing surfaces and
@@ -23,3 +23,4 @@ MonoBehaviour:
   InstrumentGrasp: 
   Instrumentation: 
   dentalItem: {fileID: 227513516223377440, guid: d931f3bb8881bae4b98f629fc6999aca, type: 3}
+  videoClip: {fileID: 0}

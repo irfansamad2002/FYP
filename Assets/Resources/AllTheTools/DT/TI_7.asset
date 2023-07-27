@@ -14,13 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 'Articulating
 
-    Paper
-
-    Holder'
-  Icon: {fileID: 21300000, guid: d369bac83dd2e3a40ab439a9450973db, type: 3}
+    Paper Holder'
+  Icon: {fileID: 21300000, guid: b3d9d3ae48fdaa941983451c386bdf9e, type: 3}
   Usage: '<b>Usage</b>
 
     To hold articulating marking paper  '
   InstrumentGrasp: 
   Instrumentation: 
   dentalItem: {fileID: 7247525142385303725, guid: 24dbad678588cf6439c7832860deae22, type: 3}
+  videoClip: {fileID: 0}

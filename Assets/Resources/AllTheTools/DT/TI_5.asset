@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: 'Spatula &
 
     Stainless Steel'
-  Icon: {fileID: 21300000, guid: 32a4e2644ad3f5744a6dd3d04cb662b7, type: 3}
+  Icon: {fileID: 21300000, guid: 2b44a2422bb527844af74fca4dbbd2e7, type: 3}
   Usage: '<b>Usage</b>
 
     Mix dental materials such as IRM
@@ -25,4 +25,5 @@ MonoBehaviour:
     mix materials on a glass slab'
   InstrumentGrasp: 
   Instrumentation: 
-  dentalItem: {fileID: 5130605744053326888, guid: 810902d6abc841c47a6d42ae40205768, type: 3}
+  dentalItem: {fileID: 615513432483457095, guid: 810902d6abc841c47a6d42ae40205768, type: 3}
+  videoClip: {fileID: 0}

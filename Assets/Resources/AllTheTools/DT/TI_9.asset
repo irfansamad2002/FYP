@@ -14,13 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 'Rubber
 
-    Dam
-
-    Frame'
-  Icon: {fileID: 21300000, guid: fd14efb4fc890ec4db2b50c383643936, type: 3}
+    Dam Frame'
+  Icon: {fileID: 21300000, guid: c8d50ca280d87d54484e4703e611e8a7, type: 3}
   Usage: '<b>Usage</b>
 
     Holds rubber dam in place'
   InstrumentGrasp: 
   Instrumentation: 
-  dentalItem: {fileID: 5751283790382987795, guid: 8d675f0948c7ae049afcad86ac5ca091, type: 3}
+  dentalItem: {fileID: 1531473780636094785, guid: 8d675f0948c7ae049afcad86ac5ca091, type: 3}
+  videoClip: {fileID: 0}

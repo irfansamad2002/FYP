@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: 'Periodontal
 
     Probe'
-  Icon: {fileID: 21300000, guid: ec70b06e4c5f6654d9531c05cf7e2eea, type: 3}
+  Icon: {fileID: 21300000, guid: 8eed08a082a06c54497e3b31c5940876, type: 3}
   Usage: '<b>Usage</b>
 
     - To Evaluate the health of the periodontal tissues<br>'
@@ -34,5 +34,5 @@ MonoBehaviour:
     the disto-buccal line angle in preparation for assessing the facial surface \r\n7.
     Make a series of walking strokes, moving in a forward direction toward the mesio-buccal
     line angle \r\n8. Tilt the probe beneath the mesial contact and assess."
-  dentalItem: {fileID: 7358122923391460456, guid: fe1c8b66653f77445a3e1624a746d1ae, type: 3}
+  dentalItem: {fileID: 6513512177097346399, guid: fe1c8b66653f77445a3e1624a746d1ae, type: 3}
   videoClip: {fileID: 32900000, guid: cd203d5d980a6044fac90307f8d75a4d, type: 3}

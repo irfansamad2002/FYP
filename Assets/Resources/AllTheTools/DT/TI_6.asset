@@ -14,10 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 'Tofflemire
 
-    Matrix
-
-    Holder'
-  Icon: {fileID: 21300000, guid: 4c2529dd685c61649888761780813e03, type: 3}
+    Matrix Holder'
+  Icon: {fileID: 21300000, guid: 963b5c0e5aae3214fbdb25fac2c7bb44, type: 3}
   Usage: '<b>Usage</b>
 
     To hold matrix band for use in a restoration
@@ -28,4 +26,5 @@ MonoBehaviour:
     tooth and containing the filling material, '
   InstrumentGrasp: 
   Instrumentation: 
-  dentalItem: {fileID: 7679666660008763990, guid: 72b768dbba72f1b46a6d29b922563e42, type: 3}
+  dentalItem: {fileID: 4575897608365353353, guid: 72b768dbba72f1b46a6d29b922563e42, type: 3}
+  videoClip: {fileID: 0}

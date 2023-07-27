@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: 'Gracey
 
     11/12'
-  Icon: {fileID: 21300000, guid: 68c503f3295945044a76f1604f8831ab, type: 3}
+  Icon: {fileID: 21300000, guid: 28f84e8d5faed414ab30b3de3fa015ba, type: 3}
   Usage: "<b>Usage</b>\r\nAnterior teeth: mesial and distal surfaces\r\nPosterior
     teeth: mesial surfaces only\r\nPosterior teeth: facial, lingual, and mesial \r\nsurfaces<br>"
   InstrumentGrasp: "<b>Instrument Grasp</b>\r\n1. Position the thumb and index finger
