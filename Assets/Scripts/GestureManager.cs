@@ -8,10 +8,8 @@ public class GestureManager : MonoBehaviour
 {
     public TMP_Text TextObject;
     public BackController backController;
-    public GameObject BlockerGameObject;
     public GameObject MainScene;
-    public Toggle toggle;
-    public bool constantlyShowBlocker;
+    //public bool constantlyShowBlocker;
     public bool inPosition;
 
 
@@ -19,35 +17,9 @@ public class GestureManager : MonoBehaviour
     private Touch touch;
     private Vector2 beginTouchPos, endTouchPos;
     private float initialXPlacement;
-    private static bool shownGestureGuide = false;
-    private bool playerPrefdoNotShowAgainChecked;
 
 
 
-    private void Awake()
-    {
-        playerPrefdoNotShowAgainChecked = (PlayerPrefs.GetInt("doNotShowAgainChecked") != 0);
-        if (!BlockerGameObject)
-            return;
-        if (!shownGestureGuide)
-            BlockerGameObject.SetActive(true);
-        else
-        {
-            BlockerGameObject.SetActive(false);
-            return;
-        }
-
-        
-
-        if(!playerPrefdoNotShowAgainChecked)//the user checked the do not show again
-            BlockerGameObject.SetActive(true);
-        else
-            BlockerGameObject.SetActive(false);
-
-        Debug.Log("playperPrefBool " + playerPrefdoNotShowAgainChecked);
-        if (constantlyShowBlocker)
-            BlockerGameObject.SetActive(true);
-    }
 
     private void Start()
     {
@@ -59,11 +31,7 @@ public class GestureManager : MonoBehaviour
         inPosition = false;
         SucceedBack = false;
     }
-    public void HideBlocker()
-    {
-        shownGestureGuide = true;
-        BlockerGameObject.SetActive(false);
-    }
+   
 
     // Update is called once per frame
     void Update()
@@ -117,9 +85,5 @@ public class GestureManager : MonoBehaviour
         }
     }
 
-    public void SetdoNotShowAgainChecked()
-    { 
-        PlayerPrefs.SetInt("doNotShowAgainChecked", (toggle.isOn ? 1 : 0));
-        //Debug.Log("doNotShowAgainChecked " + (PlayerPrefs.GetInt("doNotShowAgainChecked") != 0));
-    }
+    
 }
