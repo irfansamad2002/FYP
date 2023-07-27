@@ -55,11 +55,13 @@ public class VideoController : MonoBehaviour
     public void OnSkipBackward()
     {
         videoPlayer.time -= 5f;
+        AudioPlayer.Instance.PlayAudioOneShot(0);
     }
 
     public void OnSkipForward()
     {
         videoPlayer.time += 5f;
+        AudioPlayer.Instance.PlayAudioOneShot(0);
     }
     public void OnStartPausePressed()
     {
@@ -73,6 +75,7 @@ public class VideoController : MonoBehaviour
             videoPlayer.Pause();
             playPauseButton.image.sprite = startSprite;
         }
+        AudioPlayer.Instance.PlayAudioOneShot(0);
     }
 
     public void OnHomeClicked()
@@ -80,5 +83,6 @@ public class VideoController : MonoBehaviour
         ButtonReferenceManager.Instance.storedDTHButtonID = DTHEnum.NONE;
         ButtonReferenceManager.Instance.storedButtonID = ButtonENUM.MAINSCENE;
         sceneChanger.ChangeToMainScene();
+        AudioPlayer.Instance.PlayAudioOneShot(0);
     }
 }

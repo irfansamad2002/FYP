@@ -19,6 +19,7 @@ public class QuizMenuManager : MonoBehaviour
 
     [Header("Quiz Menu")]
     [SerializeField] private GameObject QuizMenu;
+    [SerializeField] private GameObject questionText;
     [SerializeField] private TMP_Text timerText;
     [SerializeField] private Button Option1Button;
     [SerializeField] private Button Option2Button;
@@ -60,8 +61,6 @@ public class QuizMenuManager : MonoBehaviour
     public Sprite nextQnWrong;
 
     private int latestButtonIndex;
-    //private float timeRemaining = 10;
-    //private bool isTimerMoving = false;
 
     void Start()
     {
@@ -72,6 +71,7 @@ public class QuizMenuManager : MonoBehaviour
         QuizMenu.SetActive(false);
         CorrectWrongPage.SetActive(false);
         QuizOverMenu.SetActive(false);
+        questionText.SetActive(false);
         qnNumber = 1;
         changeQuizBG(0);
     }
@@ -115,11 +115,11 @@ public class QuizMenuManager : MonoBehaviour
             BackButton.SetActive(true);
             EnterNamePage.SetActive(false);
             QuizMenu.SetActive(true);
+            questionText.SetActive(true);
             changeQuizBG(1);
 
             // start timer when player starts quiz
             quizTimer.startTimer();
-            //Debug.Log("Timer started");
         }
         AudioPlayer.Instance.PlayAudioOneShot(0);
     }
@@ -211,6 +211,7 @@ public class QuizMenuManager : MonoBehaviour
     {
         BackButton.SetActive(false);
         QuizMenu.SetActive(false);
+        questionText.SetActive(false);
         ScoreText.text = quizManager.score + "/10";
         quizData.SaveScores();
         quizData.LoadData();
