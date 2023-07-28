@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using Lean.Touch;
@@ -14,9 +15,18 @@ public class ARPlacement : MonoBehaviour
     [Header("Rotate/Scale Button")]
     [SerializeField] private GameObject RSButton;
     [SerializeField] private TMP_Text RSButtonText;
+    [SerializeField] private Sprite rotateSprite;
+    [SerializeField] private Sprite scaleSprite;
 
     [Header("Rotation Buttons")]
     [SerializeField] private GameObject rotationButtons;
+    [SerializeField] private GameObject rotateXButton;
+    [SerializeField] private GameObject rotateYButton;
+    [SerializeField] private GameObject rotateZButton;
+
+    [Header("Button Colours")]
+    [SerializeField] private Color defaultColor;
+    [SerializeField] private Color selectedColor;
 
     [Header("Text Info")]
     [SerializeField] private TMP_Text RSText;
@@ -53,6 +63,8 @@ public class ARPlacement : MonoBehaviour
         // start with rotate first
         RSButton.SetActive(true);
         rotationButtons.SetActive(true);
+
+        //defaultColor = GetComponent<Image>().color;
     }
 
 
@@ -74,12 +86,14 @@ public class ARPlacement : MonoBehaviour
                 rotationButtons.SetActive(false);
                 RSText.text = "Scale";
                 XYZText.enabled = false;
+                RSButton.GetComponent<Image>().sprite = scaleSprite;
             }
             else
             {
                 rotationButtons.SetActive(true);
                 RSText.text = "Rotate";
                 XYZText.enabled = true;
+                RSButton.GetComponent<Image>().sprite = rotateSprite;
 
             }
         }
@@ -100,6 +114,9 @@ public class ARPlacement : MonoBehaviour
     {
         spawnedObject.GetComponent<LeanTwistRotateAxis>().ChangeAxis(new Vector3(-1f, 0f, 0f));
         XYZText.text = "Current axis: X";
+        //rotateXButton.GetComponent<Image>().color = selectedColor;
+        //rotateYButton.GetComponent<Image>().color = defaultColor;
+        //rotateZButton.GetComponent<Image>().color = defaultColor;
         AudioPlayer.Instance.PlayAudioOneShot(0);
         //Debug.Log(spawnedObject.GetComponent<LeanTwistRotateAxis>().Axis);
     }
@@ -107,6 +124,9 @@ public class ARPlacement : MonoBehaviour
     {
         spawnedObject.GetComponent<LeanTwistRotateAxis>().ChangeAxis(new Vector3(0f, -1f, 0f));
         XYZText.text = "Current axis: Y";
+        //rotateXButton.GetComponent<Image>().color = defaultColor;
+        //rotateYButton.GetComponent<Image>().color = selectedColor;
+        //rotateZButton.GetComponent<Image>().color = defaultColor;
         AudioPlayer.Instance.PlayAudioOneShot(0);
         //Debug.Log(spawnedObject.GetComponent<LeanTwistRotateAxis>().Axis);
     }
@@ -114,6 +134,9 @@ public class ARPlacement : MonoBehaviour
     {
         spawnedObject.GetComponent<LeanTwistRotateAxis>().ChangeAxis(new Vector3(0f, 0f, 1f));
         XYZText.text = "Current axis: Z";
+        //rotateXButton.GetComponent<Image>().color = defaultColor;
+        //rotateYButton.GetComponent<Image>().color = defaultColor;
+        //rotateZButton.GetComponent<Image>().color = selectedColor;
         AudioPlayer.Instance.PlayAudioOneShot(0);
         //Debug.Log(spawnedObject.GetComponent<LeanTwistRotateAxis>().Axis);
     }

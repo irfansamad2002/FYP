@@ -573,7 +573,14 @@ MonoBehaviour:
   placementIndicator: {fileID: 1494535010}
   RSButton: {fileID: 699803407}
   RSButtonText: {fileID: 548955745}
+  rotateSprite: {fileID: 21300000, guid: 6772d1a374535134a95d8a24e0075115, type: 3}
+  scaleSprite: {fileID: 21300000, guid: 6772d1a374535134a95d8a24e0075115, type: 3}
   rotationButtons: {fileID: 1013531933}
+  rotateXButton: {fileID: 1305806052}
+  rotateYButton: {fileID: 1529709654}
+  rotateZButton: {fileID: 1876278385}
+  defaultColor: {r: 1, g: 1, b: 1, a: 1}
+  selectedColor: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 1}
   RSText: {fileID: 1412681794}
   XYZText: {fileID: 1207979553}
   toolNameText: {fileID: 972096568}

@@ -24,7 +24,7 @@ public class MenuManager : MonoBehaviour
     [Header("Tool Selection")]
     [SerializeField] private GameObject ToolSelectionMenu;
     [SerializeField] private GameObject AssessmentButton;
-    [SerializeField] private GameObject ScanButton; // only for DT page
+    //[SerializeField] private GameObject ScanButton; // only for DT page
 
     [Header("Tool Info")]
     [SerializeField] private GameObject ToolInfoMenu;
@@ -49,7 +49,7 @@ public class MenuManager : MonoBehaviour
             MainMenu.SetActive(true);
             ToolSelectionMenu.SetActive(false);
             ToolInfoMenu.SetActive(false);
-            ScanButton.SetActive(false);
+            //ScanButton.SetActive(false);
             SettingsMenu.SetActive(false);
         }
         AssessmentButton.SetActive(false);
@@ -61,7 +61,7 @@ public class MenuManager : MonoBehaviour
             MainMenu.SetActive(true);
             ToolSelectionMenu.SetActive(false);
             ToolInfoMenu.SetActive(false);
-            ScanButton.SetActive(false);
+            //ScanButton.SetActive(false);
             SettingsMenu.SetActive(false);
             AssessmentButton.SetActive(false);
         }
@@ -97,15 +97,15 @@ public class MenuManager : MonoBehaviour
         HomeButton.SetActive(false);
         AssessmentButton.SetActive(true);
 
-        // scan only for DT page
-        if (ButtonReferenceManager.Instance.storedDTHButtonID == DTHEnum.DT)
-        {
-            ScanButton.SetActive(true);
-        }
-        else if (ButtonReferenceManager.Instance.storedDTHButtonID == DTHEnum.DH)
-        {
-            ScanButton.SetActive(false);
-        }
+        //// scan only for DT page
+        //if (ButtonReferenceManager.Instance.storedDTHButtonID == DTHEnum.DT)
+        //{
+        //    //ScanButton.SetActive(true);
+        //}
+        //else if (ButtonReferenceManager.Instance.storedDTHButtonID == DTHEnum.DH)
+        //{
+        //    ScanButton.SetActive(false);
+        //}
     }   
 
     //  from main menu to ar scene
