@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MainMenuShowTeachGesture : MonoBehaviour
+public class ARSpawnShowTeachGesture : MonoBehaviour
 {
     public GameObject BlockerGameObject;
     public Toggle toggle;
 
 
-    private static bool shownMainMenuGestureGuide = false;
+    private static bool shownARSpawnGestureGuide = false;
     //private bool playerPrefdoNotShowAgainChecked;
     private void Awake()
     {
@@ -17,7 +17,7 @@ public class MainMenuShowTeachGesture : MonoBehaviour
 
         if (BlockerGameObject)
         {
-            if (!shownMainMenuGestureGuide)
+            if (!shownARSpawnGestureGuide)
                 BlockerGameObject.SetActive(true);
             else
             {
@@ -25,21 +25,17 @@ public class MainMenuShowTeachGesture : MonoBehaviour
             }
         }
        
-
-
-
-       
     }
 
     public void SetdoNotShowAgainChecked()
     {
-        shownMainMenuGestureGuide = toggle.isOn;
+        shownARSpawnGestureGuide = toggle.isOn;
 
     }
 
     public void HideBlocker()
     {
-        shownMainMenuGestureGuide = true;
+        shownARSpawnGestureGuide = true;
         BlockerGameObject.SetActive(false);
     }
 
