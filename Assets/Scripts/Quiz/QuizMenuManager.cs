@@ -34,6 +34,7 @@ public class QuizMenuManager : MonoBehaviour
 
     [Header("Quiz Over Menu")]
     [SerializeField] private GameObject QuizOverMenu;
+    [SerializeField] private GameObject QuizOverBacking;
     [SerializeField] private Button QuizToHomeButton;
     [SerializeField] private Button TryAgainButton;
     
@@ -71,6 +72,7 @@ public class QuizMenuManager : MonoBehaviour
         QuizMenu.SetActive(false);
         CorrectWrongPage.SetActive(false);
         QuizOverMenu.SetActive(false);
+        QuizOverBacking.SetActive(false);
         questionText.SetActive(false);
         qnNumber = 1;
         changeQuizBG(0);
@@ -198,6 +200,7 @@ public class QuizMenuManager : MonoBehaviour
         {
             QuizOver();
             QuizOverMenu.SetActive(true);
+            QuizOverBacking.SetActive(true);
 
             if (QuizOverMenu.activeInHierarchy == true)
             {
@@ -209,12 +212,14 @@ public class QuizMenuManager : MonoBehaviour
 
     public void QuizOver()
     {
+        
         BackButton.SetActive(false);
         QuizMenu.SetActive(false);
         questionText.SetActive(false);
         ScoreText.text = quizManager.score + "/10";
         quizData.SaveScores();
         quizData.LoadData();
+
         //changeQuizBG(1);
         quizTimer.setIsTimerMoving(false);
         //Debug.Log(quizManager.score + "/10");
@@ -227,6 +232,7 @@ public class QuizMenuManager : MonoBehaviour
         TopParent.SetActive(true);
         QuizMenu.SetActive(true);
         QuizOverMenu.SetActive(false);
+        QuizOverBacking.SetActive(false);
         quizManager.Retry();
         AudioPlayer.Instance.PlayAudioOneShot(0);
     }
