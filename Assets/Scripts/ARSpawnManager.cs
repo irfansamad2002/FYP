@@ -74,5 +74,6 @@ public class ARSpawnManager : MonoBehaviour
         ButtonReferenceManager.Instance.storedDTHButtonID = DTHEnum.NONE;
         ButtonReferenceManager.Instance.storedButtonID = ButtonENUM.MAINSCENE;
         sceneChanger.ChangeToMainScene();
+        AudioPlayer.Instance.PlayAudioOneShot(0);
     }
 }

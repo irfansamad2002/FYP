@@ -29,10 +29,10 @@ public class TopParentText : MonoBehaviour
         switch (ButtonReferenceManager.Instance.storedDTHButtonID)
         {
             case DTHEnum.DT:
-                topParentText.text = "Dental Therapy";
+                topParentText.text = "Dental<br>Therapy";
                 break;
             case DTHEnum.DH:
-                topParentText.text = "Dental Hygiene";
+                topParentText.text = "Dental<br>Hygiene";
                 break;
             case DTHEnum.NONE:
                 topParentText.text = " ";

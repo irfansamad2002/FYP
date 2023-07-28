@@ -89,27 +89,32 @@ public class ARPlacement : MonoBehaviour
     {
         leanPinchScale.enabled = !leanPinchScale.enabled;
         leanTwistRotateAxis.enabled = !leanTwistRotateAxis.enabled;
+        AudioPlayer.Instance.PlayAudioOneShot(0);
 
         Debug.Log("leanPinchScale: " + leanPinchScale.enabled);
         Debug.Log("leanTwistRotateAxis: " + leanTwistRotateAxis.enabled);
+
     }
     #region rotation button functions
     public void OnXButtonPressed()
     {
         spawnedObject.GetComponent<LeanTwistRotateAxis>().ChangeAxis(new Vector3(-1f, 0f, 0f));
         XYZText.text = "Current axis: X";
+        AudioPlayer.Instance.PlayAudioOneShot(0);
         //Debug.Log(spawnedObject.GetComponent<LeanTwistRotateAxis>().Axis);
     }
     public void OnYButtonPressed()
     {
         spawnedObject.GetComponent<LeanTwistRotateAxis>().ChangeAxis(new Vector3(0f, -1f, 0f));
         XYZText.text = "Current axis: Y";
+        AudioPlayer.Instance.PlayAudioOneShot(0);
         //Debug.Log(spawnedObject.GetComponent<LeanTwistRotateAxis>().Axis);
     }
     public void OnZButtonPressed()
     {
         spawnedObject.GetComponent<LeanTwistRotateAxis>().ChangeAxis(new Vector3(0f, 0f, 1f));
         XYZText.text = "Current axis: Z";
+        AudioPlayer.Instance.PlayAudioOneShot(0);
         //Debug.Log(spawnedObject.GetComponent<LeanTwistRotateAxis>().Axis);
     }
     #endregion
