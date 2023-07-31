@@ -33,6 +33,8 @@ public class MenuManager : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private GameObject SettingsMenu;
 
+    [Header("Credits")]
+    [SerializeField] private GameObject CreditsMenu;
 
     [Header("Toogle On if want to start from Menu")]
     [SerializeField] private bool startFromMenu;
@@ -51,6 +53,7 @@ public class MenuManager : MonoBehaviour
             ToolInfoMenu.SetActive(false);
             //ScanButton.SetActive(false);
             SettingsMenu.SetActive(false);
+            CreditsMenu.SetActive(false);
         }
         AssessmentButton.SetActive(false);
         if (ButtonReferenceManager.Instance.storedButtonID == ButtonENUM.MAINSCENE)
@@ -63,6 +66,7 @@ public class MenuManager : MonoBehaviour
             ToolInfoMenu.SetActive(false);
             //ScanButton.SetActive(false);
             SettingsMenu.SetActive(false);
+            CreditsMenu.SetActive(false);
             AssessmentButton.SetActive(false);
         }
 
@@ -89,6 +93,10 @@ public class MenuManager : MonoBehaviour
     // or DH button from main menu
     public void OnDHorDTClicked()
     {
+        //if (ButtonReferenceManager.Instance.storedButtonID != ButtonENUM.TOOLSELECTION || ButtonReferenceManager.Instance.storedButtonID != ButtonENUM.TOOLINFO)
+        //{
+        //    AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
+        //}
         AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         Logo.SetActive(false);
         MainMenu.SetActive(false);
@@ -197,22 +205,25 @@ public class MenuManager : MonoBehaviour
         ToolInfoMenu.SetActive(false);
         AssessmentButton.SetActive(false);
         SettingsMenu.SetActive(false);
+        CreditsMenu.SetActive(false);
     }
 
-    public void OnBackClickedFromSettings()
+    public void OnCreditsClicked()
     {
-        //if (SettingsMenu.activeSelf)
-        //{
-        //    SettingsMenu.SetActive(false);
-        //    MainMenu.SetActive(true);
-        //    settingsManager.SaveVolume();
-        //    Debug.Log("Saved volume");
-        //}
-
+        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         SettingsMenu.SetActive(false);
-        Logo.SetActive(true);
-        MainMenu.SetActive(true);
-        settingsManager.SaveVolume();
-        Debug.Log("Saved volume");
+        CreditsMenu.SetActive(true);
+        BackButton.SetActive(true);
+        HomeButton.SetActive(true);
+    }
+
+    public void FromCreditsToSettings()
+    {
+        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
+        SettingsMenu.SetActive(true);
+        CreditsMenu.SetActive(false);
+        BackButton.SetActive(true);
+        HomeButton.SetActive(false);
+        ButtonReferenceManager.Instance.storedButtonID = ButtonENUM.MAINSCENE;
     }
 }

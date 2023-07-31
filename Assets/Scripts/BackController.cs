@@ -67,6 +67,9 @@ public class BackController : MonoBehaviour
                 //Debug.Log("go back to DEMOVID");
                 SceneChanger.Instance.ChangeToVideoScene();
                 break;
+            case ButtonENUM.SETTINGS:
+                menuManager.FromCreditsToSettings();
+                break;
         }
     }
 
@@ -81,8 +84,6 @@ public class BackController : MonoBehaviour
             return false;
         }
     }
-
-
 }
 
 
