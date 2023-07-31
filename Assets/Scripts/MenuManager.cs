@@ -89,7 +89,7 @@ public class MenuManager : MonoBehaviour
     // or DH button from main menu
     public void OnDHorDTClicked()
     {
-        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
+        //AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         Logo.SetActive(false);
         MainMenu.SetActive(false);
         ToolSelectionMenu.SetActive(true);
@@ -111,19 +111,19 @@ public class MenuManager : MonoBehaviour
     //  from main menu to ar scene
     public void OnScanClicked()
     {
-        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
+        //AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         sceneChanger.ChangeToScanScene();
     }
 
     public void OnScoresClicked()
     {
         sceneChanger.ChangeToScoreScene();
-        AudioPlayer.Instance.PlayAudioOneShot(0);
+        //AudioPlayer.Instance.PlayAudioOneShot(0);
     }
 
     public void OnSettingsClicked()
     {
-        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
+        //AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         Logo.SetActive(false);
         MainMenu.SetActive(false);
         SettingsMenu.SetActive(true);
@@ -144,7 +144,7 @@ public class MenuManager : MonoBehaviour
     //  from tool selection to tool info
     public void OnToolClicked()
     {
-        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
+        //AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         ToolSelectionMenu.SetActive(false);
         ToolInfoMenu.SetActive(true);
         BackButton.SetActive(true);
@@ -165,7 +165,7 @@ public class MenuManager : MonoBehaviour
     //  from tool info to tool selection
     public void FromInfoToSelection()
     {
-        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
+        //AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         ToolSelectionMenu.SetActive(true);
         ToolInfoMenu.SetActive(false);
         BackButton.SetActive(true);
@@ -188,7 +188,7 @@ public class MenuManager : MonoBehaviour
     public void OnHomeClicked()
     {
         ButtonReferenceManager.Instance.storedDTHButtonID = DTHEnum.NONE;
-        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
+        //AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         Logo.SetActive(true);
         HomeButton.SetActive(false);
         BackButton.SetActive(false);

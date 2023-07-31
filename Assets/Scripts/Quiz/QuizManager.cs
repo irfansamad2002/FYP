@@ -44,7 +44,7 @@ public class QuizManager : MonoBehaviour
         score += 1;
         QnA.RemoveAt(currentQn);
         GenerateQn();
-        AudioPlayer.Instance.PlayAudioOneShot(3);
+        AudioPlayer.Instance.PlayAudioOneShot(1);
     }
 
     public void Wrong()
@@ -52,7 +52,7 @@ public class QuizManager : MonoBehaviour
         // wrong answer
         QnA.RemoveAt(currentQn);
         GenerateQn();
-        AudioPlayer.Instance.PlayAudioOneShot(4);
+        AudioPlayer.Instance.PlayAudioOneShot(2);
     }
 
     void SetAnswers()

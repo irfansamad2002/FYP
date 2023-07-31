@@ -29,7 +29,7 @@ public class VideoProgressBar : MonoBehaviour, IDragHandler, IPointerDownHandler
     public void OnPointerDown(PointerEventData eventData)
     {
         TrySkip(eventData);
-        AudioPlayer.Instance.PlayAudioOneShot(0);
+        //AudioPlayer.Instance.PlayAudioOneShot(0);
     }
 
     private void TrySkip(PointerEventData eventData)

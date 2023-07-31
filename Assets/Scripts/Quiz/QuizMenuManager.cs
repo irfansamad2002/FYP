@@ -95,7 +95,7 @@ public class QuizMenuManager : MonoBehaviour
 
     public void OnBackClicked()
     {
-        AudioPlayer.Instance.PlayAudioOneShot(0);
+        //AudioPlayer.Instance.PlayAudioOneShot(0);
     }
 
     public void OnCancelClicked()
@@ -123,14 +123,14 @@ public class QuizMenuManager : MonoBehaviour
             // start timer when player starts quiz
             quizTimer.startTimer();
         }
-        AudioPlayer.Instance.PlayAudioOneShot(0);
+        //AudioPlayer.Instance.PlayAudioOneShot(0);
     }
 
     public void OnHomeClicked()
     {
         ButtonReferenceManager.Instance.storedDTHButtonID = DTHEnum.NONE;
         sceneChanger.ChangeToMainScene();
-        AudioPlayer.Instance.PlayAudioOneShot(0);
+        //AudioPlayer.Instance.PlayAudioOneShot(0);
     }
 
     public void SetLatestButtonIndex(int index)
@@ -207,7 +207,7 @@ public class QuizMenuManager : MonoBehaviour
                 changeQuizBG(1);
             }
         }
-        AudioPlayer.Instance.PlayAudioOneShot(0);
+        //AudioPlayer.Instance.PlayAudioOneShot(0);
     }
 
     public void QuizOver()
@@ -234,7 +234,7 @@ public class QuizMenuManager : MonoBehaviour
         QuizOverMenu.SetActive(false);
         QuizOverBacking.SetActive(false);
         quizManager.Retry();
-        AudioPlayer.Instance.PlayAudioOneShot(0);
+        //AudioPlayer.Instance.PlayAudioOneShot(0);
     }
     #endregion
     public void changeQuizBG(int index)
