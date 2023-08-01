@@ -636,10 +636,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 134883170}
-        m_TargetAssemblyTypeName: MainMenuDTDH, Assembly-CSharp
-        m_MethodName: ClickedDTorDH
-        m_Mode: 1
+      - m_Target: {fileID: 134883173}
+        m_TargetAssemblyTypeName: ButtonClickAudio, Assembly-CSharp
+        m_MethodName: ButtonClickSound
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -648,10 +648,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 134883173}
-        m_TargetAssemblyTypeName: ButtonClickAudio, Assembly-CSharp
-        m_MethodName: ButtonClickSound
-        m_Mode: 3
+      - m_Target: {fileID: 134883170}
+        m_TargetAssemblyTypeName: MainMenuDTDH, Assembly-CSharp
+        m_MethodName: ClickedDTorDH
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3283,6 +3283,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 878054915}
+        m_TargetAssemblyTypeName: ButtonClickAudio, Assembly-CSharp
+        m_MethodName: ButtonClickSound
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 878054913}
         m_TargetAssemblyTypeName: MainMenuScoreboard, Assembly-CSharp
         m_MethodName: ClickedScoreboard
@@ -4261,6 +4273,7 @@ GameObject:
   - component: {fileID: 1366532299}
   - component: {fileID: 1366532293}
   - component: {fileID: 1366532300}
+  - component: {fileID: 1366532301}
   m_Layer: 5
   m_Name: DT Button
   m_TagString: Untagged
@@ -4347,6 +4360,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1366532301}
+        m_TargetAssemblyTypeName: ButtonClickAudio, Assembly-CSharp
+        m_MethodName: ButtonClickSound
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1366532300}
         m_TargetAssemblyTypeName: MainMenuDTDH, Assembly-CSharp
         m_MethodName: ClickedDTorDH
@@ -4444,6 +4469,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playAnimationClick: {fileID: 1366532299}
   buttonID: {fileID: 1366532293}
+--- !u!114 &1366532301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366532291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf6709f858acfee498ed2f6dd26f6dfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1373073249
 GameObject:
   m_ObjectHideFlags: 0
@@ -5039,7 +5076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 5879a954a07f7c941991ea1752ac50fc, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -6542,7 +6579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 5879a954a07f7c941991ea1752ac50fc, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
