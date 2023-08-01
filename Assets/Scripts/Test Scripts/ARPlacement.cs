@@ -63,8 +63,6 @@ public class ARPlacement : MonoBehaviour
         // start with rotate first
         RSButton.SetActive(true);
         rotationButtons.SetActive(true);
-
-        //defaultColor = GetComponent<Image>().color;
     }
 
 
@@ -114,30 +112,30 @@ public class ARPlacement : MonoBehaviour
     {
         spawnedObject.GetComponent<LeanTwistRotateAxis>().ChangeAxis(new Vector3(-1f, 0f, 0f));
         XYZText.text = "Current axis: X";
-        //rotateXButton.GetComponent<Image>().color = selectedColor;
-        //rotateYButton.GetComponent<Image>().color = defaultColor;
-        //rotateZButton.GetComponent<Image>().color = defaultColor;
-        //AudioPlayer.Instance.PlayAudioOneShot(0);
+        rotateXButton.GetComponent<Image>().color = selectedColor;
+        selectedColor.a = 255f;
+        rotateYButton.GetComponent<Image>().color = defaultColor;
+        rotateZButton.GetComponent<Image>().color = defaultColor;
         //Debug.Log(spawnedObject.GetComponent<LeanTwistRotateAxis>().Axis);
     }
     public void OnYButtonPressed()
     {
         spawnedObject.GetComponent<LeanTwistRotateAxis>().ChangeAxis(new Vector3(0f, -1f, 0f));
         XYZText.text = "Current axis: Y";
-        //rotateXButton.GetComponent<Image>().color = defaultColor;
-        //rotateYButton.GetComponent<Image>().color = selectedColor;
-        //rotateZButton.GetComponent<Image>().color = defaultColor;
-        //AudioPlayer.Instance.PlayAudioOneShot(0);
+        rotateXButton.GetComponent<Image>().color = defaultColor;
+        rotateYButton.GetComponent<Image>().color = selectedColor;
+        selectedColor.a = 255f;
+        rotateZButton.GetComponent<Image>().color = defaultColor;
         //Debug.Log(spawnedObject.GetComponent<LeanTwistRotateAxis>().Axis);
     }
     public void OnZButtonPressed()
     {
         spawnedObject.GetComponent<LeanTwistRotateAxis>().ChangeAxis(new Vector3(0f, 0f, 1f));
         XYZText.text = "Current axis: Z";
-        //rotateXButton.GetComponent<Image>().color = defaultColor;
-        //rotateYButton.GetComponent<Image>().color = defaultColor;
-        //rotateZButton.GetComponent<Image>().color = selectedColor;
-        //AudioPlayer.Instance.PlayAudioOneShot(0);
+        rotateXButton.GetComponent<Image>().color = defaultColor;
+        rotateYButton.GetComponent<Image>().color = defaultColor;
+        rotateZButton.GetComponent<Image>().color = selectedColor;
+        selectedColor.a = 255f;
         //Debug.Log(spawnedObject.GetComponent<LeanTwistRotateAxis>().Axis);
     }
     #endregion
