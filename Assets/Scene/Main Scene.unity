@@ -815,7 +815,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: CREDITS
+  m_text: SETTINGS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1bdeff890fef0bd42990b8b47b196e9f, type: 2}
   m_sharedMaterial: {fileID: -1961145015194662436, guid: 1bdeff890fef0bd42990b8b47b196e9f, type: 2}
@@ -2802,69 +2802,7 @@ MonoBehaviour:
 
     Mr Izan Lim
 
-    Mr Soren
-
-
-    <style="Title">Other
-    shit here idk</style>
-
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing
-    elit. Morbi vitae malesuada massa. Mauris convallis id lorem at feugiat. Duis
-    dapibus libero eget malesuada lobortis. Pellentesque ac tincidunt ipsum. Sed
-    varius odio faucibus maximus interdum. Sed et placerat purus, sed euismod lectus.
-    Integer venenatis facilisis mauris quis elementum. Vestibulum eleifend quis nulla
-    non aliquam. Proin mattis mi vitae nunc rhoncus, sit amet porta sem vehicula.
-    Quisque ornare, turpis id aliquam hendrerit, nunc mi aliquam orci, eget ultrices
-    tellus dui at diam. Cras sit amet sodales nulla, at ultrices dui. Curabitur auctor
-    justo eu posuere ultrices. Phasellus eros sapien, interdum id risus quis, aliquam
-    ornare arcu.
-
-
-
-    Etiam dictum magna erat, eu maximus leo commodo sed. Morbi
-    eget tortor ligula. Pellentesque at pharetra mi, at viverra mauris. Morbi sed
-    lorem a quam auctor tempus. Aenean porttitor, dolor vel ornare eleifend, eros
-    arcu luctus nunc, at mattis dolor tellus sed massa. Vestibulum auctor arcu sit
-    amet lacus elementum tristique. Integer porttitor fringilla elit, non volutpat
-    dui. Morbi semper mi ac metus ornare, nec tincidunt dolor porta. Fusce lobortis
-    elit lorem, ac feugiat elit fermentum ut. Nullam aliquam magna sit amet massa
-    rutrum suscipit. Maecenas fermentum, massa ornare pulvinar consectetur, massa
-    sem scelerisque eros, sed consequat nisi diam at mauris. Fusce tempor augue sit
-    amet eros interdum, ac pharetra arcu feugiat. Etiam dictum fermentum leo, a malesuada
-    ex congue in. Vestibulum at erat dictum, dictum mi nec, pharetra leo.
-
-
-
-    Nunc
-    non ex sed tortor hendrerit feugiat sit amet in ligula. Sed lacinia purus scelerisque
-    elit vehicula cursus. Duis sed dolor tempor, mollis justo nec, sodales diam.
-    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-    turpis egestas. Morbi magna augue, faucibus nec commodo sed, fermentum sed sapien.
-    Donec id nibh lacus. Integer a imperdiet risus. Nam molestie leo non nunc congue,
-    sit amet pellentesque eros ultricies. Ut tristique, augue at ullamcorper iaculis,
-    justo magna hendrerit erat, tincidunt lobortis nulla justo quis nulla. Aliquam
-    erat volutpat. Aenean ut urna quis nulla ultrices faucibus. Aenean at ipsum vel
-    lacus iaculis laoreet. Morbi varius sem metus, in accumsan arcu cursus non. Phasellus
-    egestas enim dolor.
-
-
-
-    Nam gravida elementum laoreet. Fusce venenatis in
-    turpis id dignissim. Curabitur vehicula turpis et enim luctus, eu pulvinar erat
-    bibendum. Morbi fringilla massa et iaculis finibus. Sed sit amet velit eros.
-    In hac habitasse platea dictumst. Fusce lorem lorem, iaculis non nibh eget, vulputate
-    imperdiet tortor. Praesent scelerisque tristique arcu et pulvinar.
-
-
-
-    Phasellus
-    tempor ac eros ac interdum. Nulla facilisi. Donec tincidunt dictum neque eu dapibus.
-    Etiam imperdiet tortor arcu, nec pulvinar dui aliquam non. Morbi tortor nulla,
-    sollicitudin at eros efficitur, ornare ullamcorper magna. Class aptent taciti
-    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce
-    diam ligula, interdum vel sem ut, fermentum venenatis nisi. Suspendisse elit
-    dolor, gravida nec hendrerit ac, semper nec eros.'
+    Mr Soren'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1bdeff890fef0bd42990b8b47b196e9f, type: 2}
   m_sharedMaterial: {fileID: -1961145015194662436, guid: 1bdeff890fef0bd42990b8b47b196e9f, type: 2}
@@ -5645,7 +5583,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SETTINGS
+  m_text: CREDITS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1bdeff890fef0bd42990b8b47b196e9f, type: 2}
   m_sharedMaterial: {fileID: -1961145015194662436, guid: 1bdeff890fef0bd42990b8b47b196e9f, type: 2}
