@@ -11,7 +11,7 @@ public class SettingsManager : MonoBehaviour
     [SerializeField] private TMP_Text volumeText = null;
     private float volumeValue;
 
-    [Header("Scripts")]
+    [HideInInspector]
     public GameObject audioPlayer;
     AudioPlayer audioPlay;
     //AudioSource audioSrc;
