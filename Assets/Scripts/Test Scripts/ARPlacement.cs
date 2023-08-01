@@ -103,7 +103,7 @@ public class ARPlacement : MonoBehaviour
     {
         leanPinchScale.enabled = !leanPinchScale.enabled;
         leanTwistRotateAxis.enabled = !leanTwistRotateAxis.enabled;
-        AudioPlayer.Instance.PlayAudioOneShot(0);
+        //AudioPlayer.Instance.PlayAudioOneShot(0);
 
         Debug.Log("leanPinchScale: " + leanPinchScale.enabled);
         Debug.Log("leanTwistRotateAxis: " + leanTwistRotateAxis.enabled);
@@ -117,7 +117,7 @@ public class ARPlacement : MonoBehaviour
         //rotateXButton.GetComponent<Image>().color = selectedColor;
         //rotateYButton.GetComponent<Image>().color = defaultColor;
         //rotateZButton.GetComponent<Image>().color = defaultColor;
-        AudioPlayer.Instance.PlayAudioOneShot(0);
+        //AudioPlayer.Instance.PlayAudioOneShot(0);
         //Debug.Log(spawnedObject.GetComponent<LeanTwistRotateAxis>().Axis);
     }
     public void OnYButtonPressed()
@@ -127,7 +127,7 @@ public class ARPlacement : MonoBehaviour
         //rotateXButton.GetComponent<Image>().color = defaultColor;
         //rotateYButton.GetComponent<Image>().color = selectedColor;
         //rotateZButton.GetComponent<Image>().color = defaultColor;
-        AudioPlayer.Instance.PlayAudioOneShot(0);
+        //AudioPlayer.Instance.PlayAudioOneShot(0);
         //Debug.Log(spawnedObject.GetComponent<LeanTwistRotateAxis>().Axis);
     }
     public void OnZButtonPressed()
@@ -137,7 +137,7 @@ public class ARPlacement : MonoBehaviour
         //rotateXButton.GetComponent<Image>().color = defaultColor;
         //rotateYButton.GetComponent<Image>().color = defaultColor;
         //rotateZButton.GetComponent<Image>().color = selectedColor;
-        AudioPlayer.Instance.PlayAudioOneShot(0);
+        //AudioPlayer.Instance.PlayAudioOneShot(0);
         //Debug.Log(spawnedObject.GetComponent<LeanTwistRotateAxis>().Axis);
     }
     #endregion

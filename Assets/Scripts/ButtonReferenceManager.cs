@@ -10,7 +10,8 @@ public enum ButtonENUM
     ARBIT,
     TOOLINFO,
     ASSESSMENT,
-    DEMOVID
+    DEMOVID,
+    SETTINGS
 }
 
 public enum DTHEnum

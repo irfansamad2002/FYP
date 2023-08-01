@@ -33,6 +33,8 @@ public class MenuManager : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private GameObject SettingsMenu;
 
+    [Header("Credits")]
+    [SerializeField] private GameObject CreditsMenu;
 
     [Header("Toogle On if want to start from Menu")]
     [SerializeField] private bool startFromMenu;
@@ -51,6 +53,7 @@ public class MenuManager : MonoBehaviour
             ToolInfoMenu.SetActive(false);
             //ScanButton.SetActive(false);
             SettingsMenu.SetActive(false);
+            CreditsMenu.SetActive(false);
         }
         AssessmentButton.SetActive(false);
         if (ButtonReferenceManager.Instance.storedButtonID == ButtonENUM.MAINSCENE)
@@ -63,6 +66,7 @@ public class MenuManager : MonoBehaviour
             ToolInfoMenu.SetActive(false);
             //ScanButton.SetActive(false);
             SettingsMenu.SetActive(false);
+            CreditsMenu.SetActive(false);
             AssessmentButton.SetActive(false);
         }
 
@@ -89,7 +93,7 @@ public class MenuManager : MonoBehaviour
     // or DH button from main menu
     public void OnDHorDTClicked()
     {
-        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
+        //AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         Logo.SetActive(false);
         MainMenu.SetActive(false);
         ToolSelectionMenu.SetActive(true);
@@ -111,19 +115,19 @@ public class MenuManager : MonoBehaviour
     //  from main menu to ar scene
     public void OnScanClicked()
     {
-        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
+        //AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         sceneChanger.ChangeToScanScene();
     }
 
     public void OnScoresClicked()
     {
         sceneChanger.ChangeToScoreScene();
-        AudioPlayer.Instance.PlayAudioOneShot(0);
+        //AudioPlayer.Instance.PlayAudioOneShot(0);
     }
 
     public void OnSettingsClicked()
     {
-        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
+        //AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         Logo.SetActive(false);
         MainMenu.SetActive(false);
         SettingsMenu.SetActive(true);
@@ -144,7 +148,7 @@ public class MenuManager : MonoBehaviour
     //  from tool selection to tool info
     public void OnToolClicked()
     {
-        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
+        //AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         ToolSelectionMenu.SetActive(false);
         ToolInfoMenu.SetActive(true);
         BackButton.SetActive(true);
@@ -165,7 +169,7 @@ public class MenuManager : MonoBehaviour
     //  from tool info to tool selection
     public void FromInfoToSelection()
     {
-        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
+        //AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         ToolSelectionMenu.SetActive(true);
         ToolInfoMenu.SetActive(false);
         BackButton.SetActive(true);
@@ -188,7 +192,7 @@ public class MenuManager : MonoBehaviour
     public void OnHomeClicked()
     {
         ButtonReferenceManager.Instance.storedDTHButtonID = DTHEnum.NONE;
-        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
+        //AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         Logo.SetActive(true);
         HomeButton.SetActive(false);
         BackButton.SetActive(false);
@@ -197,22 +201,25 @@ public class MenuManager : MonoBehaviour
         ToolInfoMenu.SetActive(false);
         AssessmentButton.SetActive(false);
         SettingsMenu.SetActive(false);
+        CreditsMenu.SetActive(false);
     }
 
-    public void OnBackClickedFromSettings()
+    public void OnCreditsClicked()
     {
-        //if (SettingsMenu.activeSelf)
-        //{
-        //    SettingsMenu.SetActive(false);
-        //    MainMenu.SetActive(true);
-        //    settingsManager.SaveVolume();
-        //    Debug.Log("Saved volume");
-        //}
-
+        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         SettingsMenu.SetActive(false);
-        Logo.SetActive(true);
-        MainMenu.SetActive(true);
-        settingsManager.SaveVolume();
-        Debug.Log("Saved volume");
+        CreditsMenu.SetActive(true);
+        BackButton.SetActive(true);
+        HomeButton.SetActive(true);
+    }
+
+    public void FromCreditsToSettings()
+    {
+        AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
+        SettingsMenu.SetActive(true);
+        CreditsMenu.SetActive(false);
+        BackButton.SetActive(true);
+        HomeButton.SetActive(false);
+        ButtonReferenceManager.Instance.storedButtonID = ButtonENUM.MAINSCENE;
     }
 }

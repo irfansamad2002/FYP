@@ -1140,6 +1140,7 @@ GameObject:
   - component: {fileID: 625679412}
   - component: {fileID: 625679411}
   - component: {fileID: 625679414}
+  - component: {fileID: 625679415}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -1223,6 +1224,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 625679415}
+        m_TargetAssemblyTypeName: ButtonClickAudio, Assembly-CSharp
+        m_MethodName: ButtonClickSound
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &625679412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1274,6 +1287,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManager: {fileID: 0}
+--- !u!114 &625679415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625679409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf6709f858acfee498ed2f6dd26f6dfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &646054567
 GameObject:
   m_ObjectHideFlags: 0
@@ -2117,7 +2142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.70490646, b: 1, a: 1}
+  m_Color: {r: 0.17254902, g: 0.65882355, b: 0.7372549, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2431,10 +2456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TextObject: {fileID: 1494438022}
   backController: {fileID: 625679414}
-  BlockerGameObject: {fileID: 0}
   MainScene: {fileID: 0}
-  toggle: {fileID: 0}
-  constantlyShowBlocker: 0
   inPosition: 0
 --- !u!224 &2059041083
 RectTransform:

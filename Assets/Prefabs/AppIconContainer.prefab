@@ -244,6 +244,7 @@ GameObject:
   - component: {fileID: 75864836645673938}
   - component: {fileID: 5230022716346496414}
   - component: {fileID: 4711142749343764401}
+  - component: {fileID: 2503036789015539310}
   m_Layer: 5
   m_Name: AppIconContainer
   m_TagString: Untagged
@@ -356,4 +357,28 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2503036789015539310}
+        m_TargetAssemblyTypeName: ButtonClickAudio, Assembly-CSharp
+        m_MethodName: ButtonClickSound
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2503036789015539310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9167593494924898894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf6709f858acfee498ed2f6dd26f6dfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
