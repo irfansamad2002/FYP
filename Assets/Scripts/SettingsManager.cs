@@ -47,8 +47,7 @@ public class SettingsManager : MonoBehaviour
     // on reset data button pressed
     public void OnResetLeaderboardPressed()
     {
-        //PlayerPrefs.DeleteKey("Scores");
-        //PlayerPrefs.DeleteKey("Names");
+        LoadVolume();
         if (PlayerPrefs.GetInt("doNotShowAgainChecked") != 0)
         {
             PlayerPrefs.DeleteAll();
@@ -59,14 +58,7 @@ public class SettingsManager : MonoBehaviour
             PlayerPrefs.DeleteAll();
             PlayerPrefs.SetInt("doNotShowAgainChecked", 0);
         }
+        SaveVolume();
         Debug.Log("Reset Leaderboard");
-        //AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
-    }
-
-    public void OnResetDoNotShowAgainPressed()
-    {
-        PlayerPrefs.DeleteKey("doNotShowAgainChecked");
-        Debug.Log("Reset DoNotShowAgain");
-        //AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
     }
 }
