@@ -9,6 +9,11 @@ public class TopParentColor : MonoBehaviour
     public Color DTColor;
     public Color DHColor;
 
+    [Header("Settings and Credits")]
+    [SerializeField] private GameObject settingsPage;
+    [SerializeField] private GameObject creditsPage;
+    public Color SettingsCreditsColor;
+
     void Awake()
     {
         defaultColor = GetComponent<Image>().color;
@@ -16,7 +21,6 @@ public class TopParentColor : MonoBehaviour
 
     private void Update()
     {
-
         switch (ButtonReferenceManager.Instance.storedDTHButtonID)
         {
             case DTHEnum.DT:
@@ -32,6 +36,15 @@ public class TopParentColor : MonoBehaviour
                 break;
             default:
                 break;
+        }
+
+        if (settingsPage.activeInHierarchy == true || creditsPage.activeInHierarchy == true)
+        {
+            GetComponent<Image>().color = SettingsCreditsColor;
+        }
+        else
+        {
+            GetComponent<Image>().color = defaultColor;
         }
     }
 

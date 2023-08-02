@@ -3716,6 +3716,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DTColor: {r: 0.92941177, g: 0.5568628, b: 0, a: 1}
   DHColor: {r: 0.02745098, g: 0.20392157, b: 0.36862746, a: 1}
+  settingsPage: {fileID: 1905107925}
+  creditsPage: {fileID: 1879095351}
+  SettingsCreditsColor: {r: 0.17254902, g: 0.65882355, b: 0.7372549, a: 1}
 --- !u!114 &1196298593
 MonoBehaviour:
   m_ObjectHideFlags: 0
