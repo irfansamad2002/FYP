@@ -93,11 +93,6 @@ public class QuizMenuManager : MonoBehaviour
         }
     }
 
-    public void OnBackClicked()
-    {
-        //AudioPlayer.Instance.PlayAudioOneShot(0);
-    }
-
     public void OnCancelClicked()
     {
         Debug.Log("Button id " + ButtonReferenceManager.Instance.storedButtonID);
