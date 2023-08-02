@@ -10,6 +10,7 @@ public class SettingsManager : MonoBehaviour
     [SerializeField] private Slider volumeSlider = null;
     [SerializeField] private TMP_Text volumeText = null;
     private float volumeValue;
+    private float startVolumeValue;
 
     [HideInInspector]
     public GameObject audioPlayer;
@@ -18,6 +19,8 @@ public class SettingsManager : MonoBehaviour
 
     private void Start()
     {
+        PlayerPrefs.SetFloat("VolumeValue", 1.0f);
+        Debug.Log("volume value start: " + volumeValue);
         audioPlayer = GameObject.FindGameObjectWithTag("AudioPlayerTag");
         audioPlay = audioPlayer.GetComponent<AudioPlayer>();
         LoadVolume();
@@ -42,8 +45,9 @@ public class SettingsManager : MonoBehaviour
         volumeValue = PlayerPrefs.GetFloat("VolumeValue");
         volumeSlider.value = volumeValue;
         audioPlay.audioSrc.volume = volumeValue;
+        Debug.Log("volume value loaded: " + volumeValue);
     }
-    
+
     // on reset data button pressed
     public void OnResetLeaderboardPressed()
     {
