@@ -17,22 +17,6 @@ public class HighScoreTable : MonoBehaviour
         //Turn off the template
         entrytemplate.gameObject.SetActive(false);
 
-        //if (PlayerPrefs.GetString("Names") != "")
-        //{
-        //    for (int i = 0; i < 10; i++)
-        //    {
-        //        AddHighscoreEntry(PlayerPrefs.GetInt("Scores" + i), PlayerPrefs.GetString("Names" + i));
-        //    }
-        //}
-
-        //// add score after each quiz attempt
-        //for (int i = 0; i < 100; i++)
-        //{
-        //    AddHighscoreEntry(PlayerPrefs.GetInt("Scores" + i), PlayerPrefs.GetString("Names" + i));
-        //}
-
-
-        //Debug.Log("PlayerPref: " + PlayerPrefs.GetString(PLAYERPREFDATABASE));
         #region test entries
         //for (int i = 0; i < 50; i++)
         //{
