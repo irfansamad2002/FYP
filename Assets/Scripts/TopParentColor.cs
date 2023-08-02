@@ -38,14 +38,19 @@ public class TopParentColor : MonoBehaviour
                 break;
         }
 
-        if (settingsPage.activeInHierarchy == true || creditsPage.activeInHierarchy == true)
+        if (ButtonReferenceManager.Instance.storedDTHButtonID == DTHEnum.NONE)
         {
-            GetComponent<Image>().color = SettingsCreditsColor;
+            if (settingsPage.activeInHierarchy == true || creditsPage.activeInHierarchy == true)
+            {
+                GetComponent<Image>().color = SettingsCreditsColor;
+            }
+            else
+            {
+                GetComponent<Image>().color = defaultColor;
+            }
         }
-        else
-        {
-            GetComponent<Image>().color = defaultColor;
-        }
+        
+        
     }
 
     public Color GetcurrentTopParentColor()
