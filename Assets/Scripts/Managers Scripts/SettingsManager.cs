@@ -10,14 +10,17 @@ public class SettingsManager : MonoBehaviour
     [SerializeField] private Slider volumeSlider = null;
     [SerializeField] private TMP_Text volumeText = null;
     private float volumeValue;
+    private float startVolumeValue;
 
-    [Header("Scripts")]
+    [HideInInspector]
     public GameObject audioPlayer;
     AudioPlayer audioPlay;
     //AudioSource audioSrc;
 
     private void Start()
     {
+        PlayerPrefs.SetFloat("VolumeValue", 1.0f);
+        Debug.Log("volume value start: " + volumeValue);
         audioPlayer = GameObject.FindGameObjectWithTag("AudioPlayerTag");
         audioPlay = audioPlayer.GetComponent<AudioPlayer>();
         LoadVolume();
@@ -42,13 +45,13 @@ public class SettingsManager : MonoBehaviour
         volumeValue = PlayerPrefs.GetFloat("VolumeValue");
         volumeSlider.value = volumeValue;
         audioPlay.audioSrc.volume = volumeValue;
+        Debug.Log("volume value loaded: " + volumeValue);
     }
-    
+
     // on reset data button pressed
     public void OnResetLeaderboardPressed()
     {
-        //PlayerPrefs.DeleteKey("Scores");
-        //PlayerPrefs.DeleteKey("Names");
+        LoadVolume();
         if (PlayerPrefs.GetInt("doNotShowAgainChecked") != 0)
         {
             PlayerPrefs.DeleteAll();
@@ -59,14 +62,7 @@ public class SettingsManager : MonoBehaviour
             PlayerPrefs.DeleteAll();
             PlayerPrefs.SetInt("doNotShowAgainChecked", 0);
         }
+        SaveVolume();
         Debug.Log("Reset Leaderboard");
-        //AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
-    }
-
-    public void OnResetDoNotShowAgainPressed()
-    {
-        PlayerPrefs.DeleteKey("doNotShowAgainChecked");
-        Debug.Log("Reset DoNotShowAgain");
-        //AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
     }
 }

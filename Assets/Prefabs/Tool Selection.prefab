@@ -801,7 +801,6 @@ GameObject:
   - component: {fileID: 5155209159533615837}
   - component: {fileID: 5155209159533615836}
   - component: {fileID: 8431804121128935569}
-  - component: {fileID: 533198542069369227}
   m_Layer: 5
   m_Name: Assessment Button
   m_TagString: Untagged
@@ -923,9 +922,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 533198542069369227}
-        m_TargetAssemblyTypeName: ToolSelectionBtn, Assembly-CSharp
-        m_MethodName: SetButtonID
+      - m_Target: {fileID: 8431804121128935569}
+        m_TargetAssemblyTypeName: ButtonID, Assembly-CSharp
+        m_MethodName: AssignBackButtonID
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -949,18 +948,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonID: 1
   dthButtonID: 2
---- !u!114 &533198542069369227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5155209159533615838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abcaa215f4d112a43ae81b0835cbda4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5155209159700655713
 GameObject:
   m_ObjectHideFlags: 0
