@@ -29,8 +29,6 @@ public class ARPlacement : MonoBehaviour
     [SerializeField] private Color selectedColor;
 
     [Header("Text Info")]
-    [SerializeField] private TMP_Text RSText;
-    [SerializeField] private TMP_Text XYZText;
     [SerializeField] private TMP_Text toolNameText;
 
     private GameObject spawnedObject;
@@ -82,15 +80,11 @@ public class ARPlacement : MonoBehaviour
             if (leanPinchScale.enabled == true)
             {
                 rotationButtons.SetActive(false);
-                RSText.text = "Scale";
-                XYZText.enabled = false;
                 RSButton.GetComponent<Image>().sprite = scaleSprite;
             }
             else
             {
                 rotationButtons.SetActive(true);
-                RSText.text = "Rotate";
-                XYZText.enabled = true;
                 RSButton.GetComponent<Image>().sprite = rotateSprite;
 
             }
@@ -111,7 +105,6 @@ public class ARPlacement : MonoBehaviour
     public void OnXButtonPressed()
     {
         spawnedObject.GetComponent<LeanTwistRotateAxis>().ChangeAxis(new Vector3(-1f, 0f, 0f));
-        XYZText.text = "Current axis: X";
         rotateXButton.GetComponent<Image>().color = selectedColor;
         selectedColor.a = 255f;
         rotateYButton.GetComponent<Image>().color = defaultColor;
@@ -121,7 +114,6 @@ public class ARPlacement : MonoBehaviour
     public void OnYButtonPressed()
     {
         spawnedObject.GetComponent<LeanTwistRotateAxis>().ChangeAxis(new Vector3(0f, -1f, 0f));
-        XYZText.text = "Current axis: Y";
         rotateXButton.GetComponent<Image>().color = defaultColor;
         rotateYButton.GetComponent<Image>().color = selectedColor;
         selectedColor.a = 255f;
@@ -131,7 +123,6 @@ public class ARPlacement : MonoBehaviour
     public void OnZButtonPressed()
     {
         spawnedObject.GetComponent<LeanTwistRotateAxis>().ChangeAxis(new Vector3(0f, 0f, 1f));
-        XYZText.text = "Current axis: Z";
         rotateXButton.GetComponent<Image>().color = defaultColor;
         rotateYButton.GetComponent<Image>().color = defaultColor;
         rotateZButton.GetComponent<Image>().color = selectedColor;
