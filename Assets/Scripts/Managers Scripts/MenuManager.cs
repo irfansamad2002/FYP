@@ -122,12 +122,10 @@ public class MenuManager : MonoBehaviour
     public void OnScoresClicked()
     {
         sceneChanger.ChangeToScoreScene();
-        //AudioPlayer.Instance.PlayAudioOneShot(0);
     }
 
     public void OnSettingsClicked()
     {
-        //AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         Logo.SetActive(false);
         MainMenu.SetActive(false);
         SettingsMenu.SetActive(true);
@@ -215,6 +213,7 @@ public class MenuManager : MonoBehaviour
 
     public void FromCreditsToSettings()
     {
+        ButtonReferenceManager.Instance.storedDTHButtonID = DTHEnum.NONE;
         AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         SettingsMenu.SetActive(true);
         CreditsMenu.SetActive(false);
