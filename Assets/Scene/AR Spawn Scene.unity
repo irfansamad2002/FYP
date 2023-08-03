@@ -581,8 +581,6 @@ MonoBehaviour:
   rotateZButton: {fileID: 1876278385}
   defaultColor: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 1}
   selectedColor: {r: 1, g: 1, b: 1, a: 1}
-  RSText: {fileID: 0}
-  XYZText: {fileID: 0}
   toolNameText: {fileID: 972096568}
 --- !u!4 &165956547
 Transform:
@@ -3118,7 +3116,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1069397585
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3446,7 +3444,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dc65afbee25e1824ba09ad61af4e69d4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b6671d2c28ba7b74898a32586eb9bbe9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4258,7 +4256,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f075cee4510bd344e912aa88ad82d7af, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7ff784f6a0664f54ab5b7d99acf2a0be, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4765,7 +4763,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c7809588e8af2f447b6b2d3113104ab7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7a4ee41c60f72b94ea6c084616ae726f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
