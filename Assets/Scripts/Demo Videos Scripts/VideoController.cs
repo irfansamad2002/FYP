@@ -20,10 +20,13 @@ public class VideoController : MonoBehaviour
 
     public TMP_Text videoTimeText;
 
+    public GameObject placeHolder;
+
     [Header("Scripts")]
     public SceneChanger sceneChanger;
     private void Start()
     {
+        placeHolder.SetActive(false);
         if (ButtonReferenceManager.Instance.storedDTHButtonID == DTHEnum.DT)
         {
             toolNameText.text = ButtonReferenceManager.Instance.dtTools[ButtonReferenceManager.Instance.storedIndex].Name;
@@ -33,6 +36,15 @@ public class VideoController : MonoBehaviour
         {
             toolNameText.text = ButtonReferenceManager.Instance.dhTools[ButtonReferenceManager.Instance.storedIndex].Name;
             videoPlayer.clip = ButtonReferenceManager.Instance.dhTools[ButtonReferenceManager.Instance.storedIndex].videoClip;
+        }
+
+        if (videoPlayer.clip == null)
+        {
+            placeHolder.SetActive(true);
+        }
+        else
+        {
+            placeHolder.SetActive(false);
         }
 
         videoPlayer.Play();
