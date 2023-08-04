@@ -3731,7 +3731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545e2f4e65a66594c9a8641d71f8721e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DTColor: {r: 0.92941177, g: 0.5568628, b: 0, a: 1}
+  DTColor: {r: 0.8, g: 0.33333334, b: 0, a: 1}
   DHColor: {r: 0.02745098, g: 0.20392157, b: 0.36862746, a: 1}
   settingsPage: {fileID: 1905107925}
   creditsPage: {fileID: 1879095351}
@@ -4228,7 +4228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.92941177, g: 0.5568628, b: 0, a: 1}
+  m_Color: {r: 0.8, g: 0.33333334, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
