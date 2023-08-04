@@ -244,6 +244,7 @@ public class HighScoreTable : MonoBehaviour
 
     public void OnHomeClicked()
     {
+        ButtonReferenceManager.Instance.storedDTHButtonID = DTHEnum.NONE;
         sceneChanger.ChangeToMainScene();
     }
 }

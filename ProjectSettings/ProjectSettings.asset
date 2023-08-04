@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: ARDent_Prototype
+  companyName: NYP
+  productName: ARdent
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.27450982, g: 0.27450982, b: 0.27450982, a: 1}
@@ -203,6 +203,8 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -221,7 +223,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.DefaultCompany.ARDent_Prototype
+    Android: com.NYP.ARdent
   buildNumber:
     Standalone: 0
     iPhone: 0
@@ -340,7 +342,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 0}
+      m_Icon: {fileID: 2800000, guid: a53d0e10e05caa74d9f84e42f0a36c24, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
