@@ -6,21 +6,21 @@ using TMPro;
 
 public class SettingsManager : MonoBehaviour
 {
+    public static SettingsManager Instance { get; private set; }
+
     [Header("Volume Slider")]
     [SerializeField] private Slider volumeSlider = null;
     [SerializeField] private TMP_Text volumeText = null;
-    private float volumeValue;
-    private float startVolumeValue;
+    private static float volumeValue = 1.0f;
 
     [HideInInspector]
     public GameObject audioPlayer;
     AudioPlayer audioPlay;
-    //AudioSource audioSrc;
 
     private void Start()
     {
-        PlayerPrefs.SetFloat("VolumeValue", 1.0f);
-        Debug.Log("volume value start: " + volumeValue);
+        // start at full volume
+        PlayerPrefs.SetFloat("VolumeValue", volumeValue);
         audioPlayer = GameObject.FindGameObjectWithTag("AudioPlayerTag");
         audioPlay = audioPlayer.GetComponent<AudioPlayer>();
         LoadVolume();
@@ -29,7 +29,6 @@ public class SettingsManager : MonoBehaviour
     public void VolumeSlider(float volume)
     {
         volumeText.text = volume.ToString("0.0");
-        //AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
     }
 
     public void SaveVolume()
@@ -37,7 +36,7 @@ public class SettingsManager : MonoBehaviour
         volumeValue = volumeSlider.value;
         PlayerPrefs.SetFloat("VolumeValue", volumeValue);
         LoadVolume();
-        //Debug.Log("saved volume: " + PlayerPrefs.GetFloat("VolumeValue"));
+        Debug.Log("saved volume: " + PlayerPrefs.GetFloat("VolumeValue"));
     }
 
     public void LoadVolume()

@@ -16,19 +16,12 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private Button DentalTherapyButton;
     [SerializeField] private Button DentalHealthButton;
 
-    //[Header("Selection Screen")]
-    //[SerializeField] private GameObject MainMenu;
-    //[SerializeField] private Button ToolsButton;
-    //[SerializeField] private Button AssessmentButton;
-
     [Header("Tool Selection")]
     [SerializeField] private GameObject ToolSelectionMenu;
     [SerializeField] private GameObject AssessmentButton;
-    //[SerializeField] private GameObject ScanButton; // only for DT page
 
     [Header("Tool Info")]
     [SerializeField] private GameObject ToolInfoMenu;
-    //[SerializeField] private Button DemoVideoButton;
 
     [Header("Settings")]
     [SerializeField] private GameObject SettingsMenu;
@@ -182,7 +175,6 @@ public class MenuManager : MonoBehaviour
     public void OnDemoVidClicked()
     {
         AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
-        //ToolInfoMenu.SetActive(false);
         sceneChanger.ChangeToVideoScene();
     }
 
@@ -190,7 +182,6 @@ public class MenuManager : MonoBehaviour
     public void OnHomeClicked()
     {
         ButtonReferenceManager.Instance.storedDTHButtonID = DTHEnum.NONE;
-        //AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         Logo.SetActive(true);
         HomeButton.SetActive(false);
         BackButton.SetActive(false);
