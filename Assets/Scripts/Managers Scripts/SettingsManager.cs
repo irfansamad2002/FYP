@@ -36,7 +36,7 @@ public class SettingsManager : MonoBehaviour
         volumeValue = volumeSlider.value;
         PlayerPrefs.SetFloat("VolumeValue", volumeValue);
         LoadVolume();
-        Debug.Log("saved volume: " + PlayerPrefs.GetFloat("VolumeValue"));
+        //Debug.Log("saved volume: " + PlayerPrefs.GetFloat("VolumeValue"));
     }
 
     public void LoadVolume()
@@ -44,7 +44,7 @@ public class SettingsManager : MonoBehaviour
         volumeValue = PlayerPrefs.GetFloat("VolumeValue");
         volumeSlider.value = volumeValue;
         audioPlay.audioSrc.volume = volumeValue;
-        Debug.Log("volume value loaded: " + volumeValue);
+        //Debug.Log("volume value loaded: " + volumeValue);
     }
 
     // on reset data button pressed

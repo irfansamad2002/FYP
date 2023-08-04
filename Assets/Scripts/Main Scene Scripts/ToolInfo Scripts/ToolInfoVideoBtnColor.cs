@@ -11,6 +11,8 @@ public class ToolInfoVideoBtnColor : MonoBehaviour
 
     private void OnEnable()
     {
+        if (!ButtonReferenceManager.Instance)
+            return;
          if (ButtonReferenceManager.Instance.storedDTHButtonID == DTHEnum.DH)
          {
             GetComponent<Image>().sprite = dhVideo;

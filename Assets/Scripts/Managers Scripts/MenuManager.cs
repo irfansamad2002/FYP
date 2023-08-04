@@ -51,7 +51,7 @@ public class MenuManager : MonoBehaviour
         AssessmentButton.SetActive(false);
         if (ButtonReferenceManager.Instance.storedButtonID == ButtonENUM.MAINSCENE)
         {
-            Debug.Log("Suppose to g back home");
+            //Debug.Log("Suppose to g back home");
             HomeButton.SetActive(false);
             BackButton.SetActive(false);
             MainMenu.SetActive(true);
