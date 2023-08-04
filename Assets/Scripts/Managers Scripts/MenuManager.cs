@@ -13,8 +13,8 @@ public class MenuManager : MonoBehaviour
 
     [Header("Main Menu")]
     [SerializeField] private GameObject MainMenu;
-    [SerializeField] private Button DentalTherapyButton;
-    [SerializeField] private Button DentalHealthButton;
+    //[SerializeField] private Button DentalTherapyButton;
+    //[SerializeField] private Button DentalHealthButton;
 
     [Header("Tool Selection")]
     [SerializeField] private GameObject ToolSelectionMenu;
