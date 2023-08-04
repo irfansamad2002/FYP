@@ -63,6 +63,16 @@ public class GestureManager : MonoBehaviour
                     break;
             }
         }
+        else
+        {
+            endTouchPos = touch.position;
+            if (inPosition && endTouchPos.x > Screen.width * 0.4f)
+            {
+                TextObject.text = "back";
+                SucceedBack = true;
+            }
+            inPosition = false;
+        }
 
         if (SucceedBack)
         {
