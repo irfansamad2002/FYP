@@ -11,30 +11,30 @@ public class ARExplorationSceneChanger : MonoBehaviour
     }
     public void GoToExploration()
     {
-        SceneManager.LoadScene("AR Exploration");
+        SceneManager.LoadScene("Scene/AR Exploration (for next batch)/AR Exploration");
     }
     public void GoToImageScan()
     {
-        SceneManager.LoadScene("AR ImageScan");
+        SceneManager.LoadScene("Scene/AR Exploration (for next batch)/AR ImageScan");
     }
     public void GoToMultiDiffImg()
     {
-        SceneManager.LoadScene("AR MultDifferentImage");
+        SceneManager.LoadScene("Scene/AR Exploration (for next batch)/AR MultDifferentImage");
     }
     public void GoToSameimageDiffColor()
     {
-        SceneManager.LoadScene("AR SameimageDiffColor");
+        SceneManager.LoadScene("Scene/AR Exploration (for next batch)/AR SameimageDiffColor");
     }
     public void GoToTextRecognition()
     {
-        SceneManager.LoadScene("AR TextRecognition");
+        SceneManager.LoadScene("Scene/AR Exploration (for next batch)/AR TextRecognition");
     }
     public void GoToModelTargetRecognition()
     {
-        SceneManager.LoadScene("AR ModelTargetRecognition");
+        SceneManager.LoadScene("Scene/AR Exploration (for next batch)/AR ModelTargetRecognition");
     }
     public void GoToModelSpawn()
     {
-        SceneManager.LoadScene("AR ModelSpawn");
+        SceneManager.LoadScene("Scene/AR Exploration (for next batch)/AR ModelSpawn");
     }
 }

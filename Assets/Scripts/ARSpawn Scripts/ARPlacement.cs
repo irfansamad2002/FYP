@@ -95,7 +95,6 @@ public class ARPlacement : MonoBehaviour
     {
         leanPinchScale.enabled = !leanPinchScale.enabled;
         leanTwistRotateAxis.enabled = !leanTwistRotateAxis.enabled;
-        //AudioPlayer.Instance.PlayAudioOneShot(0);
 
         Debug.Log("leanPinchScale: " + leanPinchScale.enabled);
         Debug.Log("leanTwistRotateAxis: " + leanTwistRotateAxis.enabled);

@@ -61,6 +61,9 @@ public class QuizMenuManager : MonoBehaviour
     public Sprite nextQnRight;
     public Sprite nextQnWrong;
 
+    public Color topParentColor;
+
+
     private int latestButtonIndex;
 
     void Start()
@@ -76,6 +79,8 @@ public class QuizMenuManager : MonoBehaviour
         questionText.SetActive(false);
         qnNumber = 1;
         changeQuizBG(0);
+        topParentColor.a = 255f;
+        TopParent.GetComponent<Image>().color = topParentColor;
     }
 
     void Update()
@@ -90,6 +95,17 @@ public class QuizMenuManager : MonoBehaviour
         {
             quizTimer.resetTimer();
             quizManager.Wrong();
+        }
+
+        if (EnterNamePage.activeInHierarchy == true || QuizMenu.activeInHierarchy == true)
+        {
+            topParentColor.a = 255f;
+            TopParent.GetComponent<Image>().color = topParentColor;
+        }
+        else
+        {
+            topParentColor.a = 0f;
+            TopParent.GetComponent<Image>().color = topParentColor;
         }
     }
 
