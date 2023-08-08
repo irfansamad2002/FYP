@@ -8,36 +8,49 @@ using TMPro;
 
 public class SplashScreenTouchScreen : MonoBehaviour
 {
-    [SerializeField] GameObject NYPlogoImage;
-    [SerializeField] GameObject logoImage;
-    [SerializeField] GameObject tapScreenText;
+    [SerializeField] GameObject NypLogoGameObject;
+    [SerializeField] GameObject LogoGameObject;
+    [SerializeField] GameObject TapScreenTextGameObject;
 
     bool ableToTapScreen = false;
 
+    private Color nypLogoColor;
+    private Color logoColor;
+    private Color textColor;
+
+    private Image nypLogoImage;
+    private Image logoImage;
+    private TMP_Text tapScreenTMP;
     private void OnEnable()
     {
         StartCoroutine(FadeInLogo(.75f));//higher float = faster load
 
     }
 
-    private void Start()
-    {
-        
-
-    }
-
     private void Awake()
     {
-        NYPlogoImage.GetComponent<Image>().color = new Color(NYPlogoImage.GetComponent<Image>().color.r, NYPlogoImage.GetComponent<Image>().color.g, NYPlogoImage.GetComponent<Image>().color.b, 0f);
-        logoImage.GetComponent<Image>().color = new Color(logoImage.GetComponent<Image>().color.r, logoImage.GetComponent<Image>().color.g, logoImage.GetComponent<Image>().color.b, 0f);
-        tapScreenText.GetComponent<TMP_Text>().color = new Color(tapScreenText.GetComponent<TMP_Text>().color.r, tapScreenText.GetComponent<TMP_Text>().color.g, tapScreenText.GetComponent<TMP_Text>().color.b, 0f);
+        //Assign Images variables
+        logoImage    = LogoGameObject.GetComponent<Image>();
+        nypLogoImage = NypLogoGameObject.GetComponent<Image>();
+        tapScreenTMP = TapScreenTextGameObject.GetComponent<TMP_Text>();
+
+        //Set every image & text alpha to 0 at the start
+        logoColor    = new Color(logoImage.color.r, logoImage.color.g, logoImage.color.b, 0f);
+        nypLogoColor = new Color(nypLogoImage.color.r, nypLogoImage.color.g, nypLogoImage.color.b, 0f);
+        textColor    = new Color(tapScreenTMP.color.r, tapScreenTMP.color.g, tapScreenTMP.color.b, 0f);
+
+        logoImage.color    = logoColor;
+        nypLogoImage.color = nypLogoColor;
+        tapScreenTMP.color = textColor;
     }
 
 
     public void TouchedScreen()
     {
-        if(ableToTapScreen)
+        if (ableToTapScreen)//Force the user to wait till see the "Tap Screen"
+        {
             SceneManager.LoadScene("Main Scene");
+        }
     }
 
   
@@ -45,36 +58,44 @@ public class SplashScreenTouchScreen : MonoBehaviour
     private IEnumerator FadeInLogo(float fadeSpeed)
     {
         float fadeAmount;
-        Color LogoColor = logoImage.GetComponent<Image>().color;
-        Color NYPLogoColor = NYPlogoImage.GetComponent<Image>().color;
+        Color tempLogoColor = LogoGameObject.GetComponent<Image>().color;
+        Color tempNypLogoColor = NypLogoGameObject.GetComponent<Image>().color;
 
 
-        while (logoImage.GetComponent<Image>().color.a < 1)
+        while (logoImage.color.a < 1)//while loop to fade in the logos... ik while loop is bad
         {
-            fadeAmount = LogoColor.a + (fadeSpeed * Time.deltaTime);
-            //Debug.Log(fadeAmount);
+            fadeAmount = tempLogoColor.a + (fadeSpeed * Time.deltaTime);//increment the fadeAmount from 0f to 1f based on fadeSpeed
 
-            NYPLogoColor = new Color(NYPLogoColor.r, NYPLogoColor.g, NYPLogoColor.b, fadeAmount);
-            LogoColor = new Color(LogoColor.r, LogoColor.g, LogoColor.b, fadeAmount);
-            NYPlogoImage.GetComponent<Image>().color = NYPLogoColor;
-            logoImage.GetComponent<Image>().color = LogoColor;
-            yield return null;
+            //Set the fadeAmount into a temp Color variables
+            tempNypLogoColor = new Color(tempNypLogoColor.r, tempNypLogoColor.g, tempNypLogoColor.b, fadeAmount);
+            tempLogoColor = new Color(tempLogoColor.r, tempLogoColor.g, tempLogoColor.b, fadeAmount);
+
+            //Replace the logos color with the temp color
+            nypLogoImage.color = tempNypLogoColor;
+            logoImage.color = tempLogoColor;
+
+            yield return null;  
         }
-        yield return null;
-
-        Color textColor = tapScreenText.GetComponent<TMP_Text>().color;
-        fadeSpeed *= 2;
-        while (tapScreenText.GetComponent<TMP_Text>().color.a < 1)
+        
+        //After Logo is shown, show the tap screen
+        Color tempTextColor = tapScreenTMP.color;
+        fadeSpeed *= 2;//Have the fade in faster then the logo
+       
+        while (tapScreenTMP.color.a < 1) //While loop to fade in the tap screen ... i get it. while loop bad
         {
-            if (tapScreenText.GetComponent<TMP_Text>().color.a > .25f)
+            if (tapScreenTMP.color.a > .25f) //allow the user to be able to proceed to the next screen once the alpha reach about a certain point
             {
                 ableToTapScreen = true;
             }
-            fadeAmount = textColor.a + (fadeSpeed * Time.deltaTime);
-            //Debug.Log(fadeAmount);
 
-            textColor = new Color(textColor.r, textColor.g, textColor.b, fadeAmount);
-            tapScreenText.GetComponent<TMP_Text>().color = textColor;
+            fadeAmount = tempTextColor.a + (fadeSpeed * Time.deltaTime);
+
+            //Set the fadeAmount into a temp Color variables
+            tempTextColor = new Color(tempTextColor.r, tempTextColor.g, tempTextColor.b, fadeAmount);
+
+            //Replace the logos color with the temp color
+            tapScreenTMP.color = tempTextColor;
+
             yield return null;
         }
     }
