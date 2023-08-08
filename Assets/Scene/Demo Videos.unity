@@ -576,7 +576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545e2f4e65a66594c9a8641d71f8721e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DTColor: {r: 0.92941177, g: 0.5568628, b: 0, a: 1}
+  DTColor: {r: 0.8, g: 0.33333334, b: 0, a: 1}
   DHColor: {r: 0.02745098, g: 0.20392157, b: 0.36862746, a: 1}
   settingsPage: {fileID: 0}
   creditsPage: {fileID: 0}
@@ -1482,7 +1482,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 70
-  m_fontStyle: 16
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535

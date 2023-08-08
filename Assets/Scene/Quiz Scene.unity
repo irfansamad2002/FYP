@@ -5308,7 +5308,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 213.18784, y: -617.4601}
+  m_AnchoredPosition: {x: 230, y: -578.4505}
   m_SizeDelta: {x: 450, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1461480269
@@ -5621,8 +5621,6 @@ MonoBehaviour:
   scoreText: {fileID: 2129372301}
   quizManager: {fileID: 1172908148}
   highScoreTable: {fileID: 1047767939}
-  PlayerNames: []
-  PlayerScores: 
 --- !u!4 &1568569713
 Transform:
   m_ObjectHideFlags: 0
@@ -5749,7 +5747,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 213.18784, y: -261.85623}
+  m_AnchoredPosition: {x: 230, y: -238.4505}
   m_SizeDelta: {x: 450, y: 330}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1607502951
@@ -5836,7 +5834,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Try again?
+  m_text: Try Again
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1bdeff890fef0bd42990b8b47b196e9f, type: 2}
   m_sharedMaterial: {fileID: -1961145015194662436, guid: 1bdeff890fef0bd42990b8b47b196e9f, type: 2}
@@ -6750,7 +6748,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 213.18784, y: -44.52716}
+  m_AnchoredPosition: {x: 230, y: -36.72525}
   m_SizeDelta: {x: 300, y: 73.4505}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2004771433

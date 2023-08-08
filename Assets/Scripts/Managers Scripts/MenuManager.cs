@@ -13,8 +13,6 @@ public class MenuManager : MonoBehaviour
 
     [Header("Main Menu")]
     [SerializeField] private GameObject MainMenu;
-    //[SerializeField] private Button DentalTherapyButton;
-    //[SerializeField] private Button DentalHealthButton;
 
     [Header("Tool Selection")]
     [SerializeField] private GameObject ToolSelectionMenu;
@@ -36,6 +34,7 @@ public class MenuManager : MonoBehaviour
     public SettingsManager settingsManager;
     void Start()
     {
+        // only dt/dh, scoreboard and settings buttons active on start
         if (startFromMenu)
         {
             Logo.SetActive(true);
@@ -44,20 +43,17 @@ public class MenuManager : MonoBehaviour
             MainMenu.SetActive(true);
             ToolSelectionMenu.SetActive(false);
             ToolInfoMenu.SetActive(false);
-            //ScanButton.SetActive(false);
             SettingsMenu.SetActive(false);
             CreditsMenu.SetActive(false);
         }
         AssessmentButton.SetActive(false);
         if (ButtonReferenceManager.Instance.storedButtonID == ButtonENUM.MAINSCENE)
         {
-            //Debug.Log("Suppose to g back home");
             HomeButton.SetActive(false);
             BackButton.SetActive(false);
             MainMenu.SetActive(true);
             ToolSelectionMenu.SetActive(false);
             ToolInfoMenu.SetActive(false);
-            //ScanButton.SetActive(false);
             SettingsMenu.SetActive(false);
             CreditsMenu.SetActive(false);
             AssessmentButton.SetActive(false);
@@ -86,7 +82,6 @@ public class MenuManager : MonoBehaviour
     // or DH button from main menu
     public void OnDHorDTClicked()
     {
-        //AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         Logo.SetActive(false);
         MainMenu.SetActive(false);
         ToolSelectionMenu.SetActive(true);
@@ -105,18 +100,20 @@ public class MenuManager : MonoBehaviour
         //}
     }   
 
-    //  from main menu to ar scene
-    public void OnScanClicked()
-    {
-        //AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
-        sceneChanger.ChangeToScanScene();
-    }
+    // from main menu to ar scene
+    // NOT IN USE, PART OF EXPLORATION
+    //public void OnScanClicked()
+    //{
+    //    sceneChanger.ChangeToScanScene();
+    //}
 
+    // change to leaderboard scene
     public void OnScoresClicked()
     {
         sceneChanger.ChangeToScoreScene();
     }
 
+    // go to settings page
     public void OnSettingsClicked()
     {
         Logo.SetActive(false);
@@ -127,9 +124,8 @@ public class MenuManager : MonoBehaviour
     }
     #endregion
 
-
     #region from tool selection
-    //  from tool selection to assesment
+    //  from tool selection to assessment
     public void OnAssessmentClicked()
     {
         AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
@@ -139,7 +135,6 @@ public class MenuManager : MonoBehaviour
     //  from tool selection to tool info
     public void OnToolClicked()
     {
-        //AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         ToolSelectionMenu.SetActive(false);
         ToolInfoMenu.SetActive(true);
         BackButton.SetActive(true);
@@ -147,12 +142,12 @@ public class MenuManager : MonoBehaviour
         AssessmentButton.SetActive(false);
     }
 
+    // change to spawn scene
     public void OnSpawnClicked()
     {
         AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
         sceneChanger.ChangeToSpawnScene();
     }
-
     #endregion
 
 
@@ -172,6 +167,7 @@ public class MenuManager : MonoBehaviour
     #endregion
 
     //  irfan note: NEED TO CHANGE CFM DOUBLE CFM
+    // change to demo video scene
     public void OnDemoVidClicked()
     {
         AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
@@ -193,6 +189,7 @@ public class MenuManager : MonoBehaviour
         CreditsMenu.SetActive(false);
     }
 
+    // change to credits page
     public void OnCreditsClicked()
     {
         AudioPlayer.Instance.PlayAudioOneShot(0, .5f);
@@ -202,6 +199,7 @@ public class MenuManager : MonoBehaviour
         HomeButton.SetActive(true);
     }
 
+    // go back to settings from credits
     public void FromCreditsToSettings()
     {
         ButtonReferenceManager.Instance.storedDTHButtonID = DTHEnum.NONE;
