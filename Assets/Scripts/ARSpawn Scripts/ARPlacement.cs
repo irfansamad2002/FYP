@@ -91,6 +91,8 @@ public class ARPlacement : MonoBehaviour
         }
        
     }
+
+    // swap between rotating and scaling when pressing button
     public void OnRSButtonPressed()
     {
         leanPinchScale.enabled = !leanPinchScale.enabled;
@@ -130,6 +132,7 @@ public class ARPlacement : MonoBehaviour
     }
     #endregion
 
+    // update placement indicator position 
     void UpdatePlacementIndicator()
     {
         if (spawnedObject == null && placementPoseIsValid)
@@ -145,6 +148,7 @@ public class ARPlacement : MonoBehaviour
 
     void UpdatePlacementPose()
     {
+        // place placement indicator in middle of screen
         var screenCenter = Camera.current.ViewportToScreenPoint(new Vector3(0.5f, 0.5f));
         var hits = new List<ARRaycastHit>();
         aRRaycastManager.Raycast(screenCenter, hits, TrackableType.Planes);
@@ -155,6 +159,8 @@ public class ARPlacement : MonoBehaviour
             PlacementPose = hits[0].pose;
         }
     }
+
+    // spawn 3d model when placement indicator is shown + when user taps on screen
     void ARPlaceObject()
     {
         Debug.Log("ARPlaceObject");

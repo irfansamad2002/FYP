@@ -8,6 +8,7 @@ using TMPro;
 
 public class SplashScreenTouchScreen : MonoBehaviour
 {
+    [SerializeField] GameObject NYPlogoImage;
     [SerializeField] GameObject logoImage;
     [SerializeField] GameObject tapScreenText;
 
@@ -27,6 +28,7 @@ public class SplashScreenTouchScreen : MonoBehaviour
 
     private void Awake()
     {
+        NYPlogoImage.GetComponent<Image>().color = new Color(NYPlogoImage.GetComponent<Image>().color.r, NYPlogoImage.GetComponent<Image>().color.g, NYPlogoImage.GetComponent<Image>().color.b, 0f);
         logoImage.GetComponent<Image>().color = new Color(logoImage.GetComponent<Image>().color.r, logoImage.GetComponent<Image>().color.g, logoImage.GetComponent<Image>().color.b, 0f);
         tapScreenText.GetComponent<TMP_Text>().color = new Color(tapScreenText.GetComponent<TMP_Text>().color.r, tapScreenText.GetComponent<TMP_Text>().color.g, tapScreenText.GetComponent<TMP_Text>().color.b, 0f);
     }
@@ -44,6 +46,7 @@ public class SplashScreenTouchScreen : MonoBehaviour
     {
         float fadeAmount;
         Color LogoColor = logoImage.GetComponent<Image>().color;
+        Color NYPLogoColor = NYPlogoImage.GetComponent<Image>().color;
 
 
         while (logoImage.GetComponent<Image>().color.a < 1)
@@ -51,7 +54,9 @@ public class SplashScreenTouchScreen : MonoBehaviour
             fadeAmount = LogoColor.a + (fadeSpeed * Time.deltaTime);
             //Debug.Log(fadeAmount);
 
+            NYPLogoColor = new Color(NYPLogoColor.r, NYPLogoColor.g, NYPLogoColor.b, fadeAmount);
             LogoColor = new Color(LogoColor.r, LogoColor.g, LogoColor.b, fadeAmount);
+            NYPlogoImage.GetComponent<Image>().color = NYPLogoColor;
             logoImage.GetComponent<Image>().color = LogoColor;
             yield return null;
         }
