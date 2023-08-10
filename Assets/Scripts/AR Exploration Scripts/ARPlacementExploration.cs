@@ -74,15 +74,18 @@ public class ARPlacementExploration : MonoBehaviour
     // need to update placement indicator, placement pose and spawn 
     void Update()
     {
+        // if no object is spawned + placement indicator is at valid pos + user tapped screen, spawn 3d object in AR
         if (spawnedObject == null && placementPoseIsValid && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             ARPlaceObject();
         }
 
+        // update placement indicator pos every frame
         UpdatePlacementPose();
         UpdatePlacementIndicator();
-        if(leanPinchScale)
+        if (leanPinchScale)
         {
+            // if scaling enabled, rotate scale button sprite change to scale icon
             if (leanPinchScale.enabled == true)
             {
                 rotationButtons.SetActive(false);
@@ -90,6 +93,7 @@ public class ARPlacementExploration : MonoBehaviour
                 XYZText.enabled = false;
                 RSButton.GetComponent<Image>().sprite = scaleSprite;
             }
+            // if rotation enabled, rotate scale button sprite change to rotate icon
             else
             {
                 rotationButtons.SetActive(true);
@@ -99,8 +103,10 @@ public class ARPlacementExploration : MonoBehaviour
 
             }
         }
-       
+
     }
+
+    // swap between rotating and scaling when pressing button
     public void OnRSButtonPressed()
     {
         leanPinchScale.enabled = !leanPinchScale.enabled;
@@ -143,7 +149,7 @@ public class ARPlacementExploration : MonoBehaviour
         //Debug.Log(spawnedObject.GetComponent<LeanTwistRotateAxis>().Axis);
     }
     #endregion
-
+    // update placement indicator position 
     void UpdatePlacementIndicator()
     {
         if (spawnedObject == null && placementPoseIsValid)
@@ -159,6 +165,7 @@ public class ARPlacementExploration : MonoBehaviour
 
     void UpdatePlacementPose()
     {
+        // update placement indicator position 
         var screenCenter = Camera.current.ViewportToScreenPoint(new Vector3(0.5f, 0.5f));
         var hits = new List<ARRaycastHit>();
         aRRaycastManager.Raycast(screenCenter, hits, TrackableType.Planes);
@@ -169,6 +176,7 @@ public class ARPlacementExploration : MonoBehaviour
             PlacementPose = hits[0].pose;
         }
     }
+    // spawn 3d model
     void ARPlaceObject()
     {
 
