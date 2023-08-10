@@ -18,6 +18,7 @@ public class ARSpawnManager : MonoBehaviour
     public SceneChanger sceneChanger;
     private void Awake()
     {
+        // start with dragging tutorial
         if (!shownDragGuide && !shownPinchGuide && !shownTwistGuide)
         {
             dragTutorial.SetActive(true);
@@ -25,17 +26,11 @@ public class ARSpawnManager : MonoBehaviour
             twistTutorial.SetActive(false);
             BlockerGameObject.SetActive(true);
         }
-
-        //if (!shownGestureGuide)
-        //    BlockerGameObject.SetActive(true);
-        //else
-        //    BlockerGameObject.SetActive(false);
-
-        //leanTwistRotateAxis.Axis.Set(-1, 0, 0);
     }
 
     private void Update()
     {
+        // check if drag tutorial is done, then show pinch
         if (shownDragGuide && !shownPinchGuide && !shownTwistGuide)
         {
             dragTutorial.SetActive(false);
@@ -43,6 +38,7 @@ public class ARSpawnManager : MonoBehaviour
             twistTutorial.SetActive(false);
             BlockerGameObject.SetActive(true);
         }
+        // check if pinch tutorial is done, then show twist
         if (shownDragGuide && shownPinchGuide && !shownTwistGuide)
         {
             dragTutorial.SetActive(false);
@@ -66,14 +62,13 @@ public class ARSpawnManager : MonoBehaviour
     {
         BlockerGameObject.SetActive(false);
         shownTwistGuide = true;
-        //shownGestureGuide = true;
     }
 
     public void OnHomeClicked()
     {
+        // reset DTH ID to none, button ID to mainscene when home is pressed
         ButtonReferenceManager.Instance.storedDTHButtonID = DTHEnum.NONE;
         ButtonReferenceManager.Instance.storedButtonID = ButtonENUM.MAINSCENE;
         sceneChanger.ChangeToMainScene();
-        //AudioPlayer.Instance.PlayAudioOneShot(0);
     }
 }

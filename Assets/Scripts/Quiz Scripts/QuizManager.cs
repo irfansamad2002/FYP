@@ -32,24 +32,24 @@ public class QuizManager : MonoBehaviour
         GenerateQn();
     }
 
-
+    // reload scene when user retries quia
     public void Retry()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    // add score if answer is correct
     public void Correct()
     {
-        //Debug.Log("preesed next");
         score += 1;
         QnA.RemoveAt(currentQn);
         GenerateQn();
         AudioPlayer.Instance.PlayAudioOneShot(1);
     }
 
+    // dont add score and generate next qn
     public void Wrong()
     {
-        // wrong answer
         QnA.RemoveAt(currentQn);
         GenerateQn();
         AudioPlayer.Instance.PlayAudioOneShot(2);
@@ -57,6 +57,7 @@ public class QuizManager : MonoBehaviour
 
     void SetAnswers()
     {
+        // set 3 options to wrong answer, 1 correct
         for (int i = 0; i < options.Length; i++)
         {
             options[i].GetComponent<AnswerScript>().isCorrect = false;
@@ -71,6 +72,7 @@ public class QuizManager : MonoBehaviour
        Debug.Log("Correct answer: " + QnA[currentQn].correctAnswer);
     }
 
+    // check if correct answer is clicked
     public bool CheckIfButtonIsCorrect(int index)
     {
         if (index == QnA[currentQn].correctAnswer)
@@ -85,8 +87,7 @@ public class QuizManager : MonoBehaviour
         }
     }
 
-
-
+    // generate random question
     void GenerateQn()
     {
         if (QnA.Count > 5) // number of questions - 10, if 50 questions, input "> 40"

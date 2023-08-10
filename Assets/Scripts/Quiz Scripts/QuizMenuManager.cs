@@ -68,6 +68,7 @@ public class QuizMenuManager : MonoBehaviour
 
     void Start()
     {
+        // start on enter name page
         TopParent.SetActive(true);
         EnterNamePage.SetActive(true);
         HomeButton.SetActive(false);
@@ -85,23 +86,27 @@ public class QuizMenuManager : MonoBehaviour
 
     void Update()
     {
+        // update question timer
         timerText.text = "Time Remaining: " + quizTimer.getTimeRemaining().ToString("#");
         if (quizTimer.getIsTimerMoving() == true && quizTimer.getTimeRemaining() > 0)
         {
             quizTimer.updateTimer();
         }
 
+        // if timer reaches 0, timer is reset for next question and no point is rewarded
         if (quizTimer.getTimeRemaining() < 0)
         {
             quizTimer.resetTimer();
             quizManager.Wrong();
         }
 
+        // if on enter name page or quiz menu page, have top parent be active
         if (EnterNamePage.activeInHierarchy == true || QuizMenu.activeInHierarchy == true)
         {
             topParentColor.a = 255f;
             TopParent.GetComponent<Image>().color = topParentColor;
         }
+        // else no top parent
         else
         {
             topParentColor.a = 0f;
@@ -113,13 +118,12 @@ public class QuizMenuManager : MonoBehaviour
     {
         Debug.Log("Button id " + ButtonReferenceManager.Instance.storedButtonID);
         ButtonReferenceManager.Instance.storedIndex = 0;
-        //ButtonReferenceManager.Instance.storedDTHButtonID = DTHEnum.NONE;
         sceneChanger.ChangeToMainScene();
-        //AudioPlayer.Instance.PlayAudioOneShot(0);
     }
 
     public void OnContinueClicked()
     {
+        // make sure enter name input has input before letting user continue to quiz
         if (quizData.nameInput.text != "")
         {
             // save name playerprefs
@@ -134,14 +138,6 @@ public class QuizMenuManager : MonoBehaviour
             // start timer when player starts quiz
             quizTimer.startTimer();
         }
-        //AudioPlayer.Instance.PlayAudioOneShot(0);
-    }
-
-    public void OnHomeClicked()
-    {
-        ButtonReferenceManager.Instance.storedDTHButtonID = DTHEnum.NONE;
-        sceneChanger.ChangeToMainScene();
-        //AudioPlayer.Instance.PlayAudioOneShot(0);
     }
 
     public void SetLatestButtonIndex(int index)
@@ -158,14 +154,15 @@ public class QuizMenuManager : MonoBehaviour
         TopParent.SetActive(false);
         QuizMenu.SetActive(false);
 
-        // if on questions <= 9
+        // if on questions <= 10
         if (qnNumber <= 10)
         {
+            // stop timer, increment qn number, go to correct/wrong page
             quizTimer.setIsTimerMoving(false);
-            //Debug.Log("Timer stopped");
             qnNumber += 1;
             CorrectWrongPage.SetActive(true);
         
+            // check if answer is correct or wrong, set page elements according to that
             if (quizManager.CheckIfButtonIsCorrect(GetLatestButtonIndex()))
             {
                 CorrectWrongText.text = "Good Job!";
@@ -181,25 +178,13 @@ public class QuizMenuManager : MonoBehaviour
                 NextQnButton.GetComponent<Image>().sprite = nextQnWrong;
             }
         }
-        //else if (qnNumber == 11)
-        //{
-        //    QuizOver();
-        //}
-        //else
-        //{
-        //    // if on question 10 
-        //    CorrectWrongPage.SetActive(true);
-        //    if (CorrectWrongPage.activeInHierarchy == true)
-        //    {
-        //        QuizOverMenu.SetActive(true);
-        //    }
-        //}
     }
 
     public void OnNextQnClicked()
     {
         CorrectWrongPage.SetActive(false);
         TopParent.SetActive(true);
+        // go to next question if current question is not 10
         if (qnNumber <= 10)
         {
             QuizMenu.SetActive(true);
@@ -207,8 +192,10 @@ public class QuizMenuManager : MonoBehaviour
             // start timer after next question is pressed
             quizTimer.startTimer();
         }
+        // if finished 10 questions 
         else if (qnNumber == 11)
         {
+            // end quiz, go to quiz over menu
             QuizOver();
             QuizOverMenu.SetActive(true);
             QuizOverBacking.SetActive(true);
@@ -218,34 +205,29 @@ public class QuizMenuManager : MonoBehaviour
                 changeQuizBG(1);
             }
         }
-        //AudioPlayer.Instance.PlayAudioOneShot(0);
     }
 
     public void QuizOver()
     {
-        
+        // end quiz, display and save player scores, stop timer
         BackButton.SetActive(false);
         QuizMenu.SetActive(false);
         questionText.SetActive(false);
         ScoreText.text = quizManager.score + "/10";
         quizData.SaveScores();
         quizData.LoadData();
-
-        //changeQuizBG(1);
         quizTimer.setIsTimerMoving(false);
-        //Debug.Log(quizManager.score + "/10");
-        //Debug.Log("Timer stopped");
     }
 
     #region when on score page
     public void OnTryAgainClicked()
     {
+        // retry quiz
         TopParent.SetActive(true);
         QuizMenu.SetActive(true);
         QuizOverMenu.SetActive(false);
         QuizOverBacking.SetActive(false);
         quizManager.Retry();
-        //AudioPlayer.Instance.PlayAudioOneShot(0);
     }
     #endregion
     public void changeQuizBG(int index)

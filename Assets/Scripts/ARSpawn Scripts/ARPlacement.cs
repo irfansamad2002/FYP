@@ -42,6 +42,7 @@ public class ARPlacement : MonoBehaviour
 
     void Start()
     {
+        // get appropriate 3d model and name based on DT/DH
         if (ButtonReferenceManager.Instance.storedDTHButtonID == DTHEnum.DT)
         {
             placedInstrument = ButtonReferenceManager.Instance.dtTools[ButtonReferenceManager.Instance.storedIndex].dentalItem;
@@ -68,20 +69,24 @@ public class ARPlacement : MonoBehaviour
     // need to update placement indicator, placement pose and spawn 
     void Update()
     {
+        // if no object is spawned + placement indicator is at valid pos + user tapped screen, spawn 3d object in AR
         if (spawnedObject == null && placementPoseIsValid && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             ARPlaceObject();
         }
 
+        // update placement indicator pos every frame
         UpdatePlacementPose();
         UpdatePlacementIndicator();
         if(leanPinchScale)
         {
+            // if scaling enabled, rotate scale button sprite change to scale icon
             if (leanPinchScale.enabled == true)
             {
                 rotationButtons.SetActive(false);
                 RSButton.GetComponent<Image>().sprite = scaleSprite;
             }
+            // if rotation enabled, rotate scale button sprite change to rotate icon
             else
             {
                 rotationButtons.SetActive(true);
@@ -160,7 +165,7 @@ public class ARPlacement : MonoBehaviour
         }
     }
 
-    // spawn 3d model when placement indicator is shown + when user taps on screen
+    // spawn 3d model
     void ARPlaceObject()
     {
         Debug.Log("ARPlaceObject");

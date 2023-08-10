@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ButtonClickAudio : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // function assigned to some buttons to play audio on click
     public void ButtonClickSound(int index)
     {
         AudioPlayer.Instance.PlayAudioOneShot(index);

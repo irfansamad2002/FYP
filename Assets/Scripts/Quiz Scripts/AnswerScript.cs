@@ -7,6 +7,7 @@ public class AnswerScript : MonoBehaviour
     public bool isCorrect = false;
     public QuizManager quizManager;
   
+    // assigned to quiz options buttons, assigning which option is correct/wrong 
     public void Answer()
     {
         if (isCorrect)

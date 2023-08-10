@@ -17,6 +17,7 @@ public class VideoProgressBar : MonoBehaviour, IDragHandler, IPointerDownHandler
 
     private void Update()
     {
+        // update progress bar fill area based on video duration
         if (videoPlayer.frameCount > 0)
             progress.fillAmount = (float)videoPlayer.frame / (float)videoPlayer.frameCount;
     }
@@ -32,6 +33,7 @@ public class VideoProgressBar : MonoBehaviour, IDragHandler, IPointerDownHandler
         //AudioPlayer.Instance.PlayAudioOneShot(0);
     }
 
+    // find where user clicks on progress bar to skip to that section of video
     private void TrySkip(PointerEventData eventData)
     {
         Vector2 localPoint;

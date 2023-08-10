@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+// Marcus
 public class SettingsManager : MonoBehaviour
 {
     public static SettingsManager Instance { get; private set; }
@@ -21,16 +22,21 @@ public class SettingsManager : MonoBehaviour
     {
         // start at full volume
         PlayerPrefs.SetFloat("VolumeValue", volumeValue);
+        // find audioplayer via tag
         audioPlayer = GameObject.FindGameObjectWithTag("AudioPlayerTag");
         audioPlay = audioPlayer.GetComponent<AudioPlayer>();
+        // load volume on start
         LoadVolume();
     }
 
+    // update volume slider text value
     public void VolumeSlider(float volume)
     {
         volumeText.text = volume.ToString("0.0");
     }
 
+    // save volume
+    // set volume based on value from slider, set into playerprefs then load volume
     public void SaveVolume()
     {
         volumeValue = volumeSlider.value;
@@ -39,18 +45,20 @@ public class SettingsManager : MonoBehaviour
         //Debug.Log("saved volume: " + PlayerPrefs.GetFloat("VolumeValue"));
     }
 
+    // get volume value saved in playerprefs
     public void LoadVolume()
     {
         volumeValue = PlayerPrefs.GetFloat("VolumeValue");
         volumeSlider.value = volumeValue;
         audioPlay.audioSrc.volume = volumeValue;
-        //Debug.Log("volume value loaded: " + volumeValue);
     }
 
-    // on reset data button pressed
+    // on reset leaderboard button pressed
     public void OnResetLeaderboardPressed()
     {
+        // load volume first
         LoadVolume();
+        // do not reset donotshowagain playerpref
         if (PlayerPrefs.GetInt("doNotShowAgainChecked") != 0)
         {
             PlayerPrefs.DeleteAll();
@@ -61,6 +69,7 @@ public class SettingsManager : MonoBehaviour
             PlayerPrefs.DeleteAll();
             PlayerPrefs.SetInt("doNotShowAgainChecked", 0);
         }
+        // then save so that volume is not reset
         SaveVolume();
         Debug.Log("Reset Leaderboard");
     }

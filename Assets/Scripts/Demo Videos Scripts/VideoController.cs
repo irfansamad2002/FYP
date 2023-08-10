@@ -12,7 +12,6 @@ public class VideoController : MonoBehaviour
     [SerializeField]private VideoPlayer videoPlayer;
     [SerializeField]private TMP_Text toolNameText;
     private Texture vidTex;
-    //private Image progressBar;
 
     public Button playPauseButton;
     public Sprite startSprite;
@@ -27,6 +26,7 @@ public class VideoController : MonoBehaviour
     private void Start()
     {
         placeHolder.SetActive(false);
+        // get tool name and video from dt/dh and tool clicked
         if (ButtonReferenceManager.Instance.storedDTHButtonID == DTHEnum.DT)
         {
             toolNameText.text = ButtonReferenceManager.Instance.dtTools[ButtonReferenceManager.Instance.storedIndex].Name;
@@ -38,6 +38,8 @@ public class VideoController : MonoBehaviour
             videoPlayer.clip = ButtonReferenceManager.Instance.dhTools[ButtonReferenceManager.Instance.storedIndex].videoClip;
         }
 
+        // placeholder for video section for tools with no video yet
+        // if no video, put placeholder
         if (videoPlayer.clip == null)
         {
             placeHolder.SetActive(true);
@@ -47,34 +49,31 @@ public class VideoController : MonoBehaviour
             placeHolder.SetActive(false);
         }
 
+        // play video
         videoPlayer.Play();
         playPauseButton.image.sprite = pauseSprite;
     }
 
     private void Update()
     {
-        if (videoPlayer.isPrepared == true)
-        {
-            vidTex = videoPlayer.texture;
-
-            float videoWidth = vidTex.width;
-            float videoHeight = vidTex.height;
-        }
-
         videoTimeText.text = videoPlayer.time.ToString("0.00");
     }
 
+    // rewind video 5s
     public void OnSkipBackward()
     {
         videoPlayer.time -= 5f;
         //AudioPlayer.Instance.PlayAudioOneShot(0);
     }
 
+    // fast forward video 5s
     public void OnSkipForward()
     {
         videoPlayer.time += 5f;
         //AudioPlayer.Instance.PlayAudioOneShot(0);
     }
+
+    // play/pause video on button press
     public void OnStartPausePressed()
     {
         if (videoPlayer.isPlaying == false)
@@ -92,9 +91,9 @@ public class VideoController : MonoBehaviour
 
     public void OnHomeClicked()
     {
+        // reset DTH ID to none, button ID to mainscene when home is pressed
         ButtonReferenceManager.Instance.storedDTHButtonID = DTHEnum.NONE;
         ButtonReferenceManager.Instance.storedButtonID = ButtonENUM.MAINSCENE;
         sceneChanger.ChangeToMainScene();
-        //AudioPlayer.Instance.PlayAudioOneShot(0);
     }
 }

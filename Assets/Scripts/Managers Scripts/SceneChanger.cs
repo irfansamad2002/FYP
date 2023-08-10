@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Marcus
 public class SceneChanger : MonoBehaviour
 {
     public static SceneChanger Instance { get; private set; }
     private void Awake()
     {
+        // irfan
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);

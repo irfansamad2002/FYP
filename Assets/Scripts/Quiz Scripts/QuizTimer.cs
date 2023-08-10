@@ -4,32 +4,22 @@ using UnityEngine;
 
 public class QuizTimer : MonoBehaviour
 {
-    private float timeRemaining = 15;
+    private float timeRemaining;
     private bool isTimerMoving = false;
 
     [Header("Scripts")]
     public QuizMenuManager quizMenuManager;
     public QuizManager quizManager;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void startTimer()
     {
         timeRemaining = 15;
         isTimerMoving = true;
-        Debug.Log("Timer started");
     }
 
+    // used when timer expires on a question 
     public void resetTimer()
     {
+        // set timer back to default value and pause first
         timeRemaining = 15;
         isTimerMoving = false;
         quizMenuManager.OnOptionClicked();
@@ -41,6 +31,7 @@ public class QuizTimer : MonoBehaviour
         timeRemaining -= Time.deltaTime;
     }
 
+    #region timer moving getter and setter
     public bool getIsTimerMoving()
     {
         return isTimerMoving;
@@ -49,6 +40,7 @@ public class QuizTimer : MonoBehaviour
     {
         isTimerMoving = timerMoving;
     }
+    #endregion
 
     public float getTimeRemaining()
     {
