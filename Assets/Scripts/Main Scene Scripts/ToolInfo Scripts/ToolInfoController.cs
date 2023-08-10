@@ -9,33 +9,28 @@ public class ToolInfoController : MonoBehaviour
     [SerializeField] private TMP_Text toolDescText;
     [SerializeField] private Image toolImage;
 
-    private void Start()
-    {
-        //LoadContent(ButtonReferenceManager.Instance.dhTools[0]);
-    }
-
     private void OnEnable()
     {
-        //LoadContent(ButtonReferenceManager.Instance.dhTools[ButtonReferenceManager.Instance.storedIndex]);
         if (!ButtonReferenceManager.Instance)
             return;
         if (ButtonReferenceManager.Instance.storedDTHButtonID == DTHEnum.DH)
         {
+            //If DTH is DH, show DH stuff..
             LoadContent(ButtonReferenceManager.Instance.dhTools[ButtonReferenceManager.Instance.storedIndex]);
         }
         else if (ButtonReferenceManager.Instance.storedDTHButtonID == DTHEnum.DT)
         {
+            //If DTH is DH, show DH stuff..
             LoadContent(ButtonReferenceManager.Instance.dtTools[ButtonReferenceManager.Instance.storedIndex]);
         }
 
     }
     public void LoadContent(DentistTool dentistTool)
     {
+        //Load the data from scriptableObject and assign them
         toolNameText.text = dentistTool.Name;
         toolDescText.text = dentistTool.Usage + "\n" + dentistTool.InstrumentGrasp + "\n" + dentistTool.Instrumentation;
-
         toolImage.sprite = dentistTool.Icon;
-        //Debug.Log("ToolInfo loaded with " + dentistTool.Name);
     }
 
   

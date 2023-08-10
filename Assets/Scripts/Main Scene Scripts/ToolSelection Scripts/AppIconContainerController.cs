@@ -10,14 +10,12 @@ public class AppIconContainerController : MonoBehaviour
     private int index;
     private Button button;
     private MenuManager menuManager;
-    //[SerializeField] private GameObject nameDisplay;
-    // Start is called before the first frame update
 
     private void Start()
     {
         menuManager = GameObject.FindGameObjectWithTag("MenuTag").GetComponent<MenuManager>();
     }
-    public void Initialize(int index,Sprite image, string toolName)
+    public void Initialize(int index,Sprite image, string toolName)//Init the data from scriptable into the prefab
     {
         this.index = index;
         imageIcon.sprite = image;
@@ -29,13 +27,16 @@ public class AppIconContainerController : MonoBehaviour
     private void SetupButtons()
     {
         button = GetComponent<Button>();
+        //Each button is unique and have their own index
         button.onClick.AddListener(() =>
         {
+            //Assign the index so that tru out the app will able to know which tool was last picked
             ButtonReferenceManager.Instance.storedIndex = index;
+
+            //Assign the ID to ToolSelection so that we can know where we came from
             ButtonReferenceManager.Instance.storedButtonID = ButtonENUM.TOOLSELECTION;
+
             menuManager.OnToolClicked();
-            //Debug.Log(index + " name: " + name);
-            
         });
     }
 }

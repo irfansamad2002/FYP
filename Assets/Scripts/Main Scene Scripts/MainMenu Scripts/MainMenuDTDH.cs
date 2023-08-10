@@ -13,14 +13,10 @@ public class MainMenuDTDH : MonoBehaviour
 
     public void ClickedDTorDH()
     {
-        //PlayAnimationClick.Clicked();
-        //animationDuration = PlayAnimationClick.animationDuration;
-        //buttonID.AssignDTHButtonID();
-        //buttonID.AssignBackButtonID();
-        //menuManager.OnDHorDTClicked();
+        //Start coroutine so that i can use WaitForSeconds, trying to get the animation play before changing scene
         StartCoroutine(ClickedBtn());
     }
-    // Start is called before the first frame update
+
     void Start()
     {
         menuManager = GameObject.FindGameObjectWithTag(TAG_MENUMGR).GetComponent<MenuManager>();
@@ -28,14 +24,18 @@ public class MainMenuDTDH : MonoBehaviour
 
     IEnumerator ClickedBtn()
     {
+        //Play animation
         playAnimationClick.Clicked();
+
+        //I cant think of a soft coded way to do this, wait for the animation to be done
         yield return new WaitForSeconds(playAnimationClick.GetAnimationDuration());
         
+        //Assign the button DTH ID - DT / DH / NONE
         buttonID.AssignDTHButtonID();
+        //Assign the button ID -  MAINSCENE / TOOLSELECTION / ARBIT / TOOLINFO / ASSESSMENT / DEMOVID / SETTINGS
         buttonID.AssignBackButtonID();
+        //switch to the tool selection panel
         menuManager.OnDHorDTClicked();
-
-
     }
 
 

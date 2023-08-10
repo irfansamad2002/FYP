@@ -11,7 +11,6 @@ public class ButtonID : MonoBehaviour
     public void AssignBackButtonID()
     {
         ButtonReferenceManager.Instance.storedButtonID = buttonID;
-        //Debug.Log("stored buttonID with" + buttonID);
     }
 
     public void AssignDTHButtonID()

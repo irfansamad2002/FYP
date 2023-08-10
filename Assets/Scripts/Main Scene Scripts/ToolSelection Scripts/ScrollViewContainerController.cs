@@ -11,34 +11,39 @@ public class ScrollViewContainerController : MonoBehaviour
     [SerializeField] private Transform contentTransform;
     [SerializeField] private GameObject topParentGameObject;
     [SerializeField] private Color textColor;
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
 
     public void LoadTheContent(DTHEnum dth)
     {
-        //Debug.Log("loadTheCntent scrollviewcontainercontroller");//
+        //Change the text based on top title thingy background color
         textColor = topParentGameObject.GetComponent<TopParentColor>().GetcurrentTopParentColor();
+        
+        //Clear the table 
         ClearContent();
+
         if (dth == DTHEnum.DT)
         {
-            //Debug.Log("loading for dt");
+            //Having i as a index so that i can assign it into the prefab
+            //Able to know which index the user last picked 
             int i = 0;
+
+            //ButtonReferenceManager.Instance.dtTools is the list of tools that is stored in Resources/AllTheTools/DT
             foreach (DentistTool dentistTools in ButtonReferenceManager.Instance.dtTools)
             {
-                //Debug.Log("Loaded: " + dentistTools.name + "Index: " + i);
+                //Assign the index and the Scriptable Object into the prefab
                 GenerateContainerWithTool(i, dentistTools);
                 i++;
             }
         }
         else if (dth == DTHEnum.DH)
         {
+            //Having i as a index so that i can assign it into the prefab
+            //Able to know which index the user last picked 
             int i = 0;
-            //Debug.Log("loading for dh");
 
+            //ButtonReferenceManager.Instance.dtTools is the list of tools that is stored in Resources/AllTheTools/DH
             foreach (DentistTool dentistTools in ButtonReferenceManager.Instance.dhTools)
             {
+                //Assign the index and the Scriptable Object into the prefab
                 GenerateContainerWithTool(i, dentistTools);
                 i++;
             }
@@ -50,6 +55,7 @@ public class ScrollViewContainerController : MonoBehaviour
 
     }
 
+    //Assigning the index and the scriptableObject data into the prefab
     void GenerateContainerWithTool(int index, DentistTool dentistTool)
     {
         GameObject container = Instantiate(containerPrefab, scroll.content);
@@ -70,18 +76,13 @@ public class ScrollViewContainerController : MonoBehaviour
         ClearContent();
         if (ButtonReferenceManager.Instance)
         {
-            //Debug.Log("OnEnable tool selection" + ButtonReferenceManager.Instance.storedDTHButtonID);
             LoadTheContent(ButtonReferenceManager.Instance.storedDTHButtonID);
-
         }
     }
 
     private void OnDisable()
     {
-        //Debug.Log("OnDisable tool selection" + ButtonReferenceManager.Instance.storedDTHButtonID);
-        
         ClearContent();
-
     }
 
 }

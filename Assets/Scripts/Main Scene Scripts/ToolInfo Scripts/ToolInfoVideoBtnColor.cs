@@ -8,7 +8,7 @@ public class ToolInfoVideoBtnColor : MonoBehaviour
     public Sprite dtVideo;
     public Sprite dhVideo;
 
-
+    //On Enable, change the sprite of this component based on the DTH ID - DH / DT
     private void OnEnable()
     {
         if (!ButtonReferenceManager.Instance)

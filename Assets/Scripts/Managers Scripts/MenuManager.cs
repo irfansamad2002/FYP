@@ -89,6 +89,8 @@ public class MenuManager : MonoBehaviour
         HomeButton.SetActive(false);
         AssessmentButton.SetActive(true);
 
+        //We had to take this out since it was unstable D;
+        //Only show for DT but not for DH
         //// scan only for DT page
         //if (ButtonReferenceManager.Instance.storedDTHButtonID == DTHEnum.DT)
         //{
