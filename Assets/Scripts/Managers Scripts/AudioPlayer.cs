@@ -22,19 +22,6 @@ public class AudioPlayer : MonoBehaviour
         }
         DontDestroyOnLoad(this.gameObject);
         audioSrc = GetComponent<AudioSource>();
-
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void PlayAudioOneShot(int index, float volume = 1f)

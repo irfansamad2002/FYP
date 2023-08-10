@@ -9,7 +9,7 @@ public class GestureManager : MonoBehaviour
     public TMP_Text TextObject;
     public BackController backController;
     public GameObject MainScene;
-    //public bool constantlyShowBlocker;
+    [HideInInspector]
     public bool inPosition;
 
 
@@ -18,25 +18,22 @@ public class GestureManager : MonoBehaviour
     private Vector2 beginTouchPos, endTouchPos;
     private float initialXPlacement;
 
-
-
-
     private void Start()
     {
-        initialXPlacement = Screen.width * .1f;
+        //Set how far left of the screen the player will have to swipe to go back
+        initialXPlacement = Screen.width * .1f;//rn is based on the 10% of screen width
     }
 
     private void OnEnable()
     {
+        //Reset the variables once go back to the screen
         inPosition = false;
         SucceedBack = false;
     }
    
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (MainScene.activeInHierarchy)
+        if (MainScene.activeInHierarchy)//In case the gesture manager for some reason in a different scene...
         {
             return;
         }
@@ -47,12 +44,11 @@ public class GestureManager : MonoBehaviour
 
             switch (touch.phase)
             {
-                case TouchPhase.Began:
+                case TouchPhase.Began://User will have to touch from the left screen
                     beginTouchPos = touch.position;
                     CheckIfRightSpot(beginTouchPos.x);
                     break;
-
-                case TouchPhase.Ended:
+                case TouchPhase.Ended://User will have to let go once they reach about half way of the screen to go back
                     endTouchPos = touch.position;
                     if (inPosition && endTouchPos.x > Screen.width * 0.4f)
                     {
@@ -65,6 +61,7 @@ public class GestureManager : MonoBehaviour
         }
         else
         {
+            //User will have to let go once they reach about half way of the screen to go back
             endTouchPos = touch.position;
             if (inPosition && endTouchPos.x > Screen.width * 0.4f)
             {
@@ -74,6 +71,7 @@ public class GestureManager : MonoBehaviour
             inPosition = false;
         }
 
+        //If all condition met, go back to previous state
         if (SucceedBack)
         {
             SucceedBack = false;
@@ -86,12 +84,12 @@ public class GestureManager : MonoBehaviour
     {
         if (position < initialXPlacement)
         {
-            TextObject.text = "in the rite spot";
+            TextObject.text = "in the rite spot";//This is for debug
             inPosition = true;
         }
         else
         {
-            TextObject.text = "in the wrong spot";
+            TextObject.text = "in the wrong spot";//This is for debug
         }
     }
 
