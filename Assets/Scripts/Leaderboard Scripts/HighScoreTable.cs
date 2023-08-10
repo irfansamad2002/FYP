@@ -17,53 +17,13 @@ public class HighScoreTable : MonoBehaviour
         //Turn off the template
         entrytemplate.gameObject.SetActive(false);
 
-        #region test entries
-        //for (int i = 0; i < 50; i++)
-        //{
-        //    AddHighscoreEntry(9 + i, "man" + i.ToString());
-        //}
-
-        //AddHighscoreEntry(8, "guy10");
-        //AddHighscoreEntry(9, "guy100");
-        //AddHighscoreEntry(7, "guy19");
-        //AddHighscoreEntry(6, "guy18");
-        //AddHighscoreEntry(0, "guy17");
-        //AddHighscoreEntry(5, "guy16");
-        //AddHighscoreEntry(4, "guy13");
-        //AddHighscoreEntry(3, "guy15");
-        //AddHighscoreEntry(2, "guy12");
-        //AddHighscoreEntry(1, "guy1");
-        //AddHighscoreEntry(1, "guy2");
-        //AddHighscoreEntry(1, "guy3");
-        //AddHighscoreEntry(1, "guy4");
-        //AddHighscoreEntry(1, "guy5");
-        //AddHighscoreEntry(1, "guy6");
-        //AddHighscoreEntry(1, "guy7");
-        //AddHighscoreEntry(1, "guy8");
-        //AddHighscoreEntry(1, "guy20");
-        //AddHighscoreEntry(1, "guy11");
-        //AddHighscoreEntry(1, "guy20");
-        //AddHighscoreEntry(1, "guy21");
-        //AddHighscoreEntry(1, "guy22");
-        //AddHighscoreEntry(1, "guy23");
-        //AddHighscoreEntry(1, "gu24");
-        //AddHighscoreEntry(1, "guy57");
-        //AddHighscoreEntry(1, "gu879");
-        //AddHighscoreEntry(1, "guy66");
-        //AddHighscoreEntry(1, "gu56765");
-        #endregion
-
         //Get the data
         string jsonString = PlayerPrefs.GetString(PLAYERPREFDATABASE);
         HighScores highscores = JsonUtility.FromJson<HighScores>(jsonString);
 
-
-
-
         //no nd check if there is no data
         if (CheckIfPlayerPrefSet())
         {
-            Debug.Log("has highscoretable");
             //sort entry based on score
             for (int i = 0; i < highscores.highscoreEntryList.Count; i++)
             {
@@ -79,8 +39,8 @@ public class HighScoreTable : MonoBehaviour
                     }
                 }
             }
-
-
+            
+            //Cycle tru that list
             highscoreEntryTransformList = new List<Transform>();
             foreach (HighscoreEntry highscoreEntry in highscores.highscoreEntryList)
             {
@@ -104,18 +64,30 @@ public class HighScoreTable : MonoBehaviour
             return false;
         }
     }
+
+    //Recieve a highscoreEntry object
+    //transform for the container
+    //list of instianted transform object
     private void CreateHighScoreEntryTransform(HighscoreEntry highscoreEntry, Transform container, List<Transform> transformList)
     {
+        //Making the template height to 30f
         float templateHeight = 30f;
 
+        //Instantiate the template into the container
         Transform entryTransform = Instantiate(entrytemplate, container);
+
+        //Reposition the anchoredPosition, goes down based on templateHeight and the amount of entry in the list currently
         RectTransform entryRectTransform = entryTransform.GetComponent<RectTransform>();
         entryRectTransform.anchoredPosition = new Vector2(0, -templateHeight * transformList.Count);
+
+        //Set the entry into true
         entryTransform.gameObject.SetActive(true);
+
 
         int rank = transformList.Count + 1;
         string rankString;
 
+        //Setting the rank for the leaderboard, 1st 2nd 3rd have special text thingy, others can have their basic ass th
         switch (rank)
         {
             default:
@@ -125,17 +97,21 @@ public class HighScoreTable : MonoBehaviour
             case 2: rankString = "2ND"; break;
             case 3: rankString = "3RD"; break;
         }
+
+        //Abit hard coded since it is base on Find so sorry bout that...
+        //Set the rank text
         entryTransform.Find("posText").GetComponent<TMP_Text>().text = rankString;
 
+        //Set the score text
         int score = highscoreEntry.score;
         entryTransform.Find("scoreText").GetComponent<TMP_Text>().text = score.ToString();
 
-
+        //Set the name text
         string name = highscoreEntry.name;
         entryTransform.Find("nameText").GetComponent<TMP_Text>().text = name;
 
+        //Add highscoreEntry to our transformList
         transformList.Add(entryTransform);
-
     }
 
     public void AddHighscoreEntry(int score, string name)
@@ -146,14 +122,11 @@ public class HighScoreTable : MonoBehaviour
         //Create HighscoreEntry
         HighscoreEntry highscoreEntry = new HighscoreEntry { score = score, name = name };
 
-       
-        
         if (CheckIfPlayerPrefSet())//Check if there is data in playerpref
         {
             //Load saved Highscores
             jsonString = PlayerPrefs.GetString("highscoreTable");
             highscores = JsonUtility.FromJson<HighScores>(jsonString);
-
 
             //check if name already exist in database
             if (CheckNameInDatabase(name, highscores))
@@ -165,9 +138,6 @@ public class HighScoreTable : MonoBehaviour
                 //Add new entry to Highscores
                 highscores.highscoreEntryList.Add(highscoreEntry);
             }
-
-
-
 
             //Save updated Highscores
             string json = JsonUtility.ToJson(highscores);
@@ -189,7 +159,6 @@ public class HighScoreTable : MonoBehaviour
         }
     }
 
-
     private bool CheckNameInDatabase(string name, HighScores highscores)
     {
         //check if name already exist
@@ -206,7 +175,6 @@ public class HighScoreTable : MonoBehaviour
         return false;
 
     }
-
 
     private void UpdateScore(string name, int score, HighScores highscores)
     {
@@ -233,8 +201,7 @@ public class HighScoreTable : MonoBehaviour
         public List<HighscoreEntry> highscoreEntryList;
     }
 
-
-
+    //Represent a single High score entry
     [System.Serializable]
     private class HighscoreEntry
     {

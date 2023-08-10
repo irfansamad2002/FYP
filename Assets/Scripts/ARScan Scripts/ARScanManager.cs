@@ -15,9 +15,6 @@ public class ARScanManager : MonoBehaviour
     [SerializeField] TMP_Text toolInfoName;
     [SerializeField] TMP_Text toolInfoContent;
 
-
-
-
     private Button infoButton;
     private Button videoButton;
     private DentistTool dentistTool;
@@ -50,7 +47,6 @@ public class ARScanManager : MonoBehaviour
         this.dentistTool = modelTargetToolInfo.dentistTool;
     }
 
-
     //if info btn
     //show info base on dentistTool
     public void ShowInfo()
@@ -62,14 +58,4 @@ public class ARScanManager : MonoBehaviour
         toolInfoContent.text = dentistTool.Usage + "\n" + dentistTool.InstrumentGrasp + "\n" + dentistTool.Instrumentation;
 
     }
-
-
-
-
-    //if video btn
-    //go to video scene
-
-
-
-
 }
