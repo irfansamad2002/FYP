@@ -98,14 +98,14 @@ public class MenuManager : MonoBehaviour
         //{
         //    ScanButton.SetActive(false);
         //}
-    }   
+    }
 
     // from main menu to ar scene
     // NOT IN USE, PART OF EXPLORATION
-    //public void OnScanClicked()
-    //{
-    //    sceneChanger.ChangeToScanScene();
-    //}
+    public void OnScanClicked()
+    {
+        sceneChanger.ChangeToScanScene();
+    }
 
     // change to leaderboard scene
     public void OnScoresClicked()

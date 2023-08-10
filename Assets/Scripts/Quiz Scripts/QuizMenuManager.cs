@@ -96,7 +96,7 @@ public class QuizMenuManager : MonoBehaviour
         // if timer reaches 0, timer is reset for next question and no point is rewarded
         if (quizTimer.getTimeRemaining() < 0)
         {
-            quizTimer.resetTimer();
+            quizTimer.resetTimer(); 
             quizManager.Wrong();
         }
 
