@@ -45,4 +45,8 @@ public class SceneChanger : MonoBehaviour
     {
         SceneManager.LoadScene("Leaderboard");
     }
+    public void ChangeToExploration()
+    {
+        SceneManager.LoadScene("Scene/AR Exploration (for next batch)/AR Exploration");
+    }
 }

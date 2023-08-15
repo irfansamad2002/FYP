@@ -148,14 +148,16 @@ public class HighScoreTable : MonoBehaviour
         else //if there is no data in playerpref
         {
             Debug.Log("trying to add without player pref being set");
-            List<HighscoreEntry> highscoreEntrylist = new List<HighscoreEntry>();
-            HighscoreEntry tempHighscoreEntry = new HighscoreEntry { score = score, name = name };
-            highscoreEntrylist.Add(tempHighscoreEntry);
+            List<HighscoreEntry> highscoreEntrylist = new List<HighscoreEntry>();//make a new list of HighscoreEntry
+            HighscoreEntry tempHighscoreEntry = new HighscoreEntry { score = score, name = name };// make a new HighscoreEntry
+            highscoreEntrylist.Add(tempHighscoreEntry);//add the new HighscoreEntry into the list
 
-            HighScores tempHighscores = new HighScores { highscoreEntryList = highscoreEntrylist };
-            string json = JsonUtility.ToJson(tempHighscores);
-            PlayerPrefs.SetString("highscoreTable", json);
-            PlayerPrefs.Save();
+
+            HighScores tempHighscores = new HighScores { highscoreEntryList = highscoreEntrylist };// Make a new HighScores and store the list
+            string json = JsonUtility.ToJson(tempHighscores);// convert the list into jason
+            PlayerPrefs.SetString("highscoreTable", json);// save it to playerpref
+            PlayerPrefs.Save();// save that shit
+
         }
     }
 
